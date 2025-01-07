@@ -2,36 +2,37 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'sp_screen_model.dart';
-export 'sp_screen_model.dart';
+import 'sp_screen2_model.dart';
+export 'sp_screen2_model.dart';
 
-class SpScreenWidget extends StatefulWidget {
-  const SpScreenWidget({super.key});
+class SpScreen2Widget extends StatefulWidget {
+  const SpScreen2Widget({super.key});
 
   @override
-  State<SpScreenWidget> createState() => _SpScreenWidgetState();
+  State<SpScreen2Widget> createState() => _SpScreen2WidgetState();
 }
 
-class _SpScreenWidgetState extends State<SpScreenWidget> {
-  late SpScreenModel _model;
+class _SpScreen2WidgetState extends State<SpScreen2Widget> {
+  late SpScreen2Model _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SpScreenModel());
+    _model = createModel(context, () => SpScreen2Model());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      await Future.delayed(const Duration(milliseconds: 3000));
+      await Future.delayed(const Duration(milliseconds: 1000));
 
       context.pushNamed(
-        'spScreen2',
+        'signUp',
         extra: <String, dynamic>{
           kTransitionInfoKey: const TransitionInfo(
             hasTransition: true,
-            transitionType: PageTransitionType.rightToLeft,
+            transitionType: PageTransitionType.fade,
+            duration: Duration(milliseconds: 0),
           ),
         },
       );
@@ -54,7 +55,7 @@ class _SpScreenWidgetState extends State<SpScreenWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primary,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Container(
           width: double.infinity,
           decoration: const BoxDecoration(),
@@ -66,7 +67,7 @@ class _SpScreenWidgetState extends State<SpScreenWidget> {
                 'QUISINE',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Poppins',
-                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      color: FlutterFlowTheme.of(context).primary,
                       fontSize: 45.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.bold,

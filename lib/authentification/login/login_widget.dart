@@ -317,6 +317,13 @@ class _LoginWidgetState extends State<LoginWidget> {
 
                                           if ((_model.apiResultd39?.succeeded ??
                                               true)) {
+                                            FFAppState().userId = getJsonField(
+                                              (_model.apiResultd39?.jsonBody ??
+                                                  ''),
+                                              r'''$.user.id''',
+                                            );
+                                            safeSetState(() {});
+
                                             context.goNamed(
                                               'ChoixVille',
                                               extra: <String, dynamic>{

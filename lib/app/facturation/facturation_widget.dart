@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -231,7 +232,14 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: '1234',
+                                      text: functions
+                                          .sommeTotal(
+                                              functions.total(
+                                                  FFAppState().panier.toList()),
+                                              functions.calculeFraisLiv(
+                                                  FFAppState().zones.toList(),
+                                                  widget.zoneId!))
+                                          .toString(),
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
@@ -470,20 +478,42 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(
                                 Icons.location_on,
                                 color: FlutterFlowTheme.of(context).primary,
                                 size: 24.0,
                               ),
-                              Text(
-                                '123 Avenue du Commerce, Kinshasa',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyLarge
-                                    .override(
-                                      fontFamily: 'Inter',
-                                      letterSpacing: 0.0,
+                              RichText(
+                                textScaler: MediaQuery.of(context).textScaler,
+                                text: TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: FFAppState().numero.toString(),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyLarge
+                                          .override(
+                                            fontFamily: 'Inter',
+                                            letterSpacing: 0.0,
+                                          ),
                                     ),
+                                    const TextSpan(
+                                      text: '  ',
+                                      style: TextStyle(),
+                                    ),
+                                    TextSpan(
+                                      text: FFAppState().rue,
+                                      style: const TextStyle(),
+                                    )
+                                  ],
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .override(
+                                        fontFamily: 'Inter',
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
                               ),
                             ].divide(const SizedBox(width: 12.0)),
                           ),
@@ -494,16 +524,25 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                 ),
                 FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed(
-                      'commandeReussie',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: const TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.rightToLeft,
-                          duration: Duration(milliseconds: 300),
-                        ),
-                      },
+                    _model.orderResult = await OrderApiCall.call(
+                      zoneId: widget.zoneId,
+                      usersId: FFAppState().userId,
+                      rue: FFAppState().rue,
+                      numero: FFAppState().numero,
+                      referencei: FFAppState().referenceLiv,
+                      comment: widget.zoneId,
+                      propaDataJson:
+                          functions.propaData(FFAppState().panier.toList()),
+                      citieId: FFAppState().selectedCityId,
                     );
+
+                    if ((_model.orderResult?.succeeded ?? true)) {
+                      context.pushNamed('commandeReussi');
+                    } else {
+                      context.pushNamed('echecCommande');
+                    }
+
+                    safeSetState(() {});
                   },
                   text: 'Confirmer la commande',
                   options: FFButtonOptions(

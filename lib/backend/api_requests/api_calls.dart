@@ -204,6 +204,52 @@ class GetcatalogsCall {
       );
 }
 
+class OrderApiCall {
+  static Future<ApiCallResponse> call({
+    String? zoneId = '',
+    int? usersId,
+    String? rue = '',
+    int? numero,
+    String? referencei = '',
+    String? comment = 'je ne l\'ai pas encore fait',
+    dynamic propaDataJson,
+    String? citieId = '',
+  }) async {
+    final propaData = _serializeJson(propaDataJson, true);
+    final ffApiRequestBody = '''
+{
+  "zone_id": "${escapeStringForJson(zoneId)}",
+  "users_id": "$usersId",
+  "rue": "${escapeStringForJson(rue)}",
+  "numero": "$numero",
+  "reference": "${escapeStringForJson(referencei)}",
+  "comment": "${escapeStringForJson(comment)}",
+  "propaData": "$propaData",
+  "citie_id": "${escapeStringForJson(citieId)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'orderApi',
+      apiUrl: 'https://test.systematik.tech/api/create_order',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+
+  static dynamic orders(dynamic response) => getJsonField(
+        response,
+        r'''$''',
+      );
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;

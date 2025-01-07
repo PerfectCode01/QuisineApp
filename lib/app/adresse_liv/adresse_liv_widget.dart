@@ -7,34 +7,34 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'detailcommande_model.dart';
-export 'detailcommande_model.dart';
+import 'adresse_liv_model.dart';
+export 'adresse_liv_model.dart';
 
-class DetailcommandeWidget extends StatefulWidget {
-  const DetailcommandeWidget({super.key});
+class AdresseLivWidget extends StatefulWidget {
+  const AdresseLivWidget({super.key});
 
   @override
-  State<DetailcommandeWidget> createState() => _DetailcommandeWidgetState();
+  State<AdresseLivWidget> createState() => _AdresseLivWidgetState();
 }
 
-class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
-  late DetailcommandeModel _model;
+class _AdresseLivWidgetState extends State<AdresseLivWidget> {
+  late AdresseLivModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DetailcommandeModel());
+    _model = createModel(context, () => AdresseLivModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.avenueTextController ??= TextEditingController();
+    _model.avenueFocusNode ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.numeroTextController ??= TextEditingController();
+    _model.numeroFocusNode ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.referenceLivTextController ??= TextEditingController();
+    _model.referenceLivFocusNode ??= FocusNode();
   }
 
   @override
@@ -114,10 +114,10 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                               child: SizedBox(
                                 width: 200.0,
                                 child: TextFormField(
-                                  controller: _model.textController1,
-                                  focusNode: _model.textFieldFocusNode1,
+                                  controller: _model.avenueTextController,
+                                  focusNode: _model.avenueFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
-                                    '_model.textController1',
+                                    '_model.avenueTextController',
                                     const Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
@@ -180,7 +180,8 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                       ),
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textController1Validator
+                                  validator: _model
+                                      .avenueTextControllerValidator
                                       .asValidator(context),
                                 ),
                               ),
@@ -193,10 +194,10 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                               child: SizedBox(
                                 width: 200.0,
                                 child: TextFormField(
-                                  controller: _model.textController2,
-                                  focusNode: _model.textFieldFocusNode2,
+                                  controller: _model.numeroTextController,
+                                  focusNode: _model.numeroFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
-                                    '_model.textController2',
+                                    '_model.numeroTextController',
                                     const Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
@@ -260,7 +261,8 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                   keyboardType: TextInputType.streetAddress,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textController2Validator
+                                  validator: _model
+                                      .numeroTextControllerValidator
                                       .asValidator(context),
                                 ),
                               ),
@@ -282,10 +284,10 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                               child: SizedBox(
                                 width: 200.0,
                                 child: TextFormField(
-                                  controller: _model.textController3,
-                                  focusNode: _model.textFieldFocusNode3,
+                                  controller: _model.referenceLivTextController,
+                                  focusNode: _model.referenceLivFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
-                                    '_model.textController3',
+                                    '_model.referenceLivTextController',
                                     const Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
@@ -348,7 +350,8 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                       ),
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primaryText,
-                                  validator: _model.textController3Validator
+                                  validator: _model
+                                      .referenceLivTextControllerValidator
                                       .asValidator(context),
                                 ),
                               ),
@@ -462,16 +465,17 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(5.0, 55.0, 5.0, 0.0),
                 child: FFButtonWidget(
-                  onPressed: ((_model.textController1.text == '') ||
-                          (_model.textController2.text == '') ||
-                          (_model.textController3.text == '') ||
+                  onPressed: ((_model.avenueTextController.text == '') ||
+                          (_model.numeroTextController.text == '') ||
+                          (_model.referenceLivTextController.text == '') ||
                           (_model.dropDownValue == null ||
                               _model.dropDownValue == ''))
                       ? null
                       : () async {
-                          if ((_model.textController1.text == '') &&
-                              (_model.textController2.text == '') &&
-                              (_model.textController3.text == '') &&
+                          if ((_model.avenueTextController.text == '') &&
+                              (_model.numeroTextController.text == '') &&
+                              (_model.referenceLivTextController.text ==
+                                      '') &&
                               (_model.dropDownValue == null ||
                                   _model.dropDownValue == '')) {
                             ScaffoldMessenger.of(context).showSnackBar(
@@ -489,6 +493,13 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                               ),
                             );
                           } else {
+                            FFAppState().rue = _model.avenueTextController.text;
+                            FFAppState().numero =
+                                int.parse(_model.numeroTextController.text);
+                            FFAppState().referenceLiv =
+                                _model.referenceLivTextController.text;
+                            safeSetState(() {});
+
                             context.pushNamed(
                               'Facturation',
                               queryParameters: {

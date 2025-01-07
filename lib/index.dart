@@ -8,8 +8,7 @@ export '/authentification/otp_code/otp_code_widget.dart' show OtpCodeWidget;
 export '/app/sp_screen/sp_screen_widget.dart' show SpScreenWidget;
 export '/pagessss/detail_produit/detail_produit_widget.dart'
     show DetailProduitWidget;
-export '/app/detailcommande/detailcommande_widget.dart'
-    show DetailcommandeWidget;
+export '/app/adresse_liv/adresse_liv_widget.dart' show AdresseLivWidget;
 export '/order_history/order_history_widget.dart' show OrderHistoryWidget;
 export '/app/panier/panier_widget.dart' show PanierWidget;
 export '/pagessss/commande_reussi/commande_reussi_widget.dart'
@@ -35,3 +34,5 @@ export '/app/pages_nav/cataloguess/cataloguess_widget.dart'
     show CataloguessWidget;
 export '/app/pages_nav/notifications/notifications_widget.dart'
     show NotificationsWidget;
+export '/app/sp_screen2/sp_screen2_widget.dart' show SpScreen2Widget;
+export '/echec_commande/echec_commande_widget.dart' show EchecCommandeWidget;

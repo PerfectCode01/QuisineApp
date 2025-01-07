@@ -203,7 +203,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                                 10.0, 0.0, 10.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                context.pushNamed('Detailcommande');
+                                context.pushNamed('AdresseLiv');
                               },
                               text: 'Continuer',
                               options: FFButtonOptions(

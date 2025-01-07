@@ -25,9 +25,26 @@ double calculeFraisLiv(
 ) {
   for (var zone in zones) {
     if (zone['id'] == int.parse(id)) {
-      return zone['delivery_cost'];
+      return double.parse(zone['delivery_cost']);
     }
   }
 
   return 0.0;
+}
+
+double sommeTotal(
+  double tot1,
+  double liv,
+) {
+  return tot1 + liv;
+}
+
+List<dynamic> propaData(List<dynamic> panier) {
+  return panier.map((item) {
+    return {
+      'quantity': item['qte'],
+      'product_id': item['product_id'],
+      'unit_price': item['unit_price'],
+    };
+  }).toList();
 }

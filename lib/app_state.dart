@@ -101,4 +101,28 @@ class FFAppState extends ChangeNotifier {
   void insertAtIndexInZones(int index, dynamic value) {
     zones.insert(index, value);
   }
+
+  int _userId = 0;
+  int get userId => _userId;
+  set userId(int value) {
+    _userId = value;
+  }
+
+  String _rue = '';
+  String get rue => _rue;
+  set rue(String value) {
+    _rue = value;
+  }
+
+  int _numero = 0;
+  int get numero => _numero;
+  set numero(int value) {
+    _numero = value;
+  }
+
+  String _referenceLiv = '';
+  String get referenceLiv => _referenceLiv;
+  set referenceLiv(String value) {
+    _referenceLiv = value;
+  }
 }

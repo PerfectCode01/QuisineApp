@@ -146,9 +146,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'Detailcommande',
-          path: '/detailcommande',
-          builder: (context, params) => const DetailcommandeWidget(),
+          name: 'AdresseLiv',
+          path: '/adresseLiv',
+          builder: (context, params) => const AdresseLivWidget(),
         ),
         FFRoute(
           name: 'OrderHistory',
@@ -270,6 +270,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'notifications')
               : const NotificationsWidget(),
+        ),
+        FFRoute(
+          name: 'spScreen2',
+          path: '/spScreen2',
+          builder: (context, params) => const SpScreen2Widget(),
+        ),
+        FFRoute(
+          name: 'echecCommande',
+          path: '/echecCommande',
+          builder: (context, params) => const EchecCommandeWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
