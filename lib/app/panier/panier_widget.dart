@@ -3,11 +3,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pagessss/components/card_produit/card_produit_widget.dart';
 import '/pagessss/components/panier_vide_c/panier_vide_c_widget.dart';
-import 'dart:ui';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'panier_model.dart';
 export 'panier_model.dart';
@@ -48,9 +45,9 @@ class _PanierWidgetState extends State<PanierWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFF1F5F8),
+        backgroundColor: const Color(0xFFF1F5F8),
         appBar: AppBar(
-          backgroundColor: Color(0xFFF1F5F8),
+          backgroundColor: const Color(0xFFF1F5F8),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -70,13 +67,13 @@ class _PanierWidgetState extends State<PanierWidget> {
             'Mon Panier',
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Outfit',
-                  color: Color(0xFF0F1113),
+                  color: const Color(0xFF0F1113),
                   fontSize: 32.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -86,14 +83,14 @@ class _PanierWidgetState extends State<PanierWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              if (FFAppState().panier.length > 0)
+              if (FFAppState().panier.isNotEmpty)
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Text(
                     'Vous trouverez ci-dessous les articles contenus dans votre panier.',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
                           fontFamily: 'Plus Jakarta Sans',
-                          color: Color(0xFF57636C),
+                          color: const Color(0xFF57636C),
                           fontSize: 14.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
@@ -105,7 +102,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                   final cardProduit =
                       FFAppState().panier.map((e) => e).toList();
                   if (cardProduit.isEmpty) {
-                    return Center(
+                    return const Center(
                       child: PanierVideCWidget(),
                     );
                   }
@@ -140,15 +137,15 @@ class _PanierWidgetState extends State<PanierWidget> {
                   );
                 },
               ),
-              if (FFAppState().panier.length > 0)
+              if (FFAppState().panier.isNotEmpty)
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 4.0, 24.0, 12.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -163,7 +160,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Plus Jakarta Sans',
-                                          color: Color(0xFF57636C),
+                                          color: const Color(0xFF57636C),
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
@@ -179,9 +176,9 @@ class _PanierWidgetState extends State<PanierWidget> {
                                       text: functions
                                           .total(FFAppState().panier.toList())
                                           .toString(),
-                                      style: TextStyle(),
+                                      style: const TextStyle(),
                                     ),
-                                    TextSpan(
+                                    const TextSpan(
                                       text: 'FC',
                                       style: TextStyle(),
                                     )
@@ -190,7 +187,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                                       .displaySmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: Color(0xFF0F1113),
+                                        color: const Color(0xFF0F1113),
                                         fontSize: 32.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
@@ -200,9 +197,9 @@ class _PanierWidgetState extends State<PanierWidget> {
                             ],
                           ),
                         ),
-                        if (FFAppState().panier.length > 0)
+                        if (FFAppState().panier.isNotEmpty)
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 10.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -212,9 +209,9 @@ class _PanierWidgetState extends State<PanierWidget> {
                               options: FFButtonOptions(
                                 width: double.infinity,
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)

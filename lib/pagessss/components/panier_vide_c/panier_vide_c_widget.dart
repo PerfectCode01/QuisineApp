@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'panier_vide_c_model.dart';
 export 'panier_vide_c_model.dart';
@@ -41,15 +39,15 @@ class _PanierVideCWidgetState extends State<PanierVideCWidget> {
     context.watch<FFAppState>();
 
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(10.0, 50.0, 0.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 50.0, 0.0, 0.0),
       child: Container(
         width: 315.0,
         height: 293.0,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xFFF1F5F8),
         ),
         child: Visibility(
-          visible: FFAppState().panier.length == 0,
+          visible: FFAppState().panier.isEmpty,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,

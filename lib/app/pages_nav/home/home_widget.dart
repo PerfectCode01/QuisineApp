@@ -4,11 +4,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:badges/badges.dart' as badges;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'home_model.dart';
 export 'home_model.dart';
@@ -49,9 +46,9 @@ class _HomeWidgetState extends State<HomeWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFF9F6F1),
+        backgroundColor: const Color(0xFFF9F6F1),
         body: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(15.0, 25.0, 15.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(15.0, 25.0, 15.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -91,13 +88,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                       badgeColor: FlutterFlowTheme.of(context).primary,
                       elevation: 4.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                       position: badges.BadgePosition.topStart(),
                       animationType: badges.BadgeAnimationType.scale,
                       toAnimate: true,
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                         child: Icon(
                           Icons.shopping_cart_outlined,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -109,7 +106,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -123,7 +120,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               2.0, 0.0, 0.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -145,7 +142,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     },
                                     child: Padding(
                                       padding: MediaQuery.viewInsetsOf(context),
-                                      child: ChangeCityWidget(),
+                                      child: const ChangeCityWidget(),
                                     ),
                                   );
                                 },
@@ -175,12 +172,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 120.0,
                   decoration: BoxDecoration(
-                    color: Color(0xFFFBE8C5),
+                    color: const Color(0xFFFBE8C5),
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   child: Row(
@@ -188,7 +185,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 10.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -244,9 +241,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                               text: 'COMMANDE',
                               options: FFButtonOptions(
                                 height: 40.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -266,7 +263,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
@@ -282,7 +279,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                 child: FutureBuilder<ApiCallResponse>(
                   future: MenusCall.call(),
                   builder: (context, snapshot) {
@@ -317,14 +314,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                             return Container(
                               width: 100.0,
                               height: 100.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xFFF6F1F1),
                               ),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   ClipRRect(
-                                    borderRadius: BorderRadius.only(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(80.0),
                                       bottomRight: Radius.circular(80.0),
                                       topLeft: Radius.circular(70.0),
@@ -341,7 +338,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
                                       getJsonField(
@@ -368,13 +365,13 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 45.0,
                   decoration: BoxDecoration(
-                    color: Color(0xF8F1F4F8),
-                    boxShadow: [
+                    color: const Color(0xF8F1F4F8),
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0xFFE3DBDB),
@@ -395,7 +392,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       context.pushNamed(
                         'searchP',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.bottomToTop,
                             duration: Duration(milliseconds: 300),
@@ -407,7 +404,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 10.0, 0.0),
                           child: Icon(
                             Icons.search,
@@ -429,7 +426,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -438,7 +435,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                       'Nos Nouveaux Produit',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
-                            color: Color(0xFF52555C),
+                            color: const Color(0xFF52555C),
                             fontSize: 18.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
@@ -453,7 +450,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                         context.pushNamed(
                           'cataloguess',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
+                            kTransitionInfoKey: const TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.fade,
                               duration: Duration(milliseconds: 0),
@@ -477,10 +474,10 @@ class _HomeWidgetState extends State<HomeWidget> {
               Expanded(
                 child: Container(
                   height: double.infinity,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: FutureBuilder<ApiCallResponse>(
                       future: GetProductsCall.call(
                         cityId: FFAppState().selectedCityId,
@@ -512,7 +509,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             return GridView.builder(
                               padding: EdgeInsets.zero,
                               gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
                                 crossAxisSpacing: 15.0,
                                 mainAxisSpacing: 10.0,
@@ -528,7 +525,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0xFFE3DBDB),
@@ -566,14 +563,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Inter',
-                                              color: Color(0xFF52555C),
+                                              color: const Color(0xFF52555C),
                                               fontSize: 16.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                             ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -598,14 +595,14 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                         .override(
                                                           fontFamily: 'Inter',
                                                           color:
-                                                              Color(0xFF7A6B6B),
+                                                              const Color(0xFF7A6B6B),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                                   ),
-                                                  TextSpan(
+                                                  const TextSpan(
                                                     text: 'FC',
                                                     style: TextStyle(),
                                                   )
@@ -616,7 +613,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                         .override(
                                                           fontFamily: 'Inter',
                                                           color:
-                                                              Color(0xFF52555C),
+                                                              const Color(0xFF52555C),
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:

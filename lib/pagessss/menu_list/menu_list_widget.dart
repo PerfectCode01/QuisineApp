@@ -1,10 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'menu_list_model.dart';
 export 'menu_list_model.dart';
 
@@ -60,14 +56,14 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                   fontWeight: FontWeight.bold,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -84,7 +80,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                         'https://images.unsplash.com/photo-1619337744329-78f4b9074fed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMHx8Zm9vZHN8ZW58MHx8fHwxNzMyMDI4MzI4fDA&ixlib=rb-4.0.3&q=80&w=1080',
                       ).image,
                     ),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -94,7 +90,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                         ),
                       )
                     ],
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                       topLeft: Radius.circular(30.0),
@@ -104,7 +100,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                   child: Container(
                     width: 100.0,
                     height: 100.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0x4214181B),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30.0),
@@ -114,7 +110,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                       ),
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'J\'ai faim',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -139,7 +135,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                         'https://i.pinimg.com/736x/16/03/14/16031420bad5d92e700952fb055b2f5a.jpg',
                       ).image,
                     ),
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                       topLeft: Radius.circular(30.0),
@@ -149,7 +145,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                   child: Container(
                     width: 100.0,
                     height: 100.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0x7314181B),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30.0),
@@ -159,7 +155,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                       ),
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Wenze',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -185,7 +181,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                         'https://i.pinimg.com/736x/2b/82/3a/2b823ac4237c363f323ad481a58af471.jpg',
                       ).image,
                     ),
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(30.0),
                       bottomRight: Radius.circular(30.0),
                       topLeft: Radius.circular(30.0),
@@ -195,7 +191,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                   child: Container(
                     width: 100.0,
                     height: 100.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0x7014181B),
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30.0),
@@ -205,7 +201,7 @@ class _MenuListWidgetState extends State<MenuListWidget> {
                       ),
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         'Super\nMarché',
                         textAlign: TextAlign.center,

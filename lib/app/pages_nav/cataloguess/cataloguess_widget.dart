@@ -1,11 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'cataloguess_model.dart';
 export 'cataloguess_model.dart';
 
@@ -67,14 +63,14 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                   fontWeight: FontWeight.w600,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -106,7 +102,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                           Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: MediaQuery.sizeOf(context).height * 1.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [Color(0x99000000), Colors.transparent],
                                 stops: [0.0, 1.0],
@@ -115,7 +111,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -138,7 +134,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Inter',
-                                          color: Color(0xFFE0E0E0),
+                                          color: const Color(0xFFE0E0E0),
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -177,7 +173,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                           Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: MediaQuery.sizeOf(context).height * 1.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [Color(0x99000000), Colors.transparent],
                                 stops: [0.0, 1.0],
@@ -186,7 +182,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -209,7 +205,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Inter',
-                                          color: Color(0xFFE0E0E0),
+                                          color: const Color(0xFFE0E0E0),
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -248,7 +244,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                           Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: MediaQuery.sizeOf(context).height * 1.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [Color(0x99000000), Colors.transparent],
                                 stops: [0.0, 1.0],
@@ -257,7 +253,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -280,7 +276,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Inter',
-                                          color: Color(0xFFE0E0E0),
+                                          color: const Color(0xFFE0E0E0),
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -319,7 +315,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                           Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: MediaQuery.sizeOf(context).height * 1.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [Color(0x99000000), Colors.transparent],
                                 stops: [0.0, 1.0],
@@ -328,7 +324,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -351,7 +347,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Inter',
-                                          color: Color(0xFFE0E0E0),
+                                          color: const Color(0xFFE0E0E0),
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -390,7 +386,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                           Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: MediaQuery.sizeOf(context).height * 1.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [Color(0x99000000), Colors.transparent],
                                 stops: [0.0, 1.0],
@@ -399,7 +395,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 20.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -422,7 +418,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Inter',
-                                          color: Color(0xFFE0E0E0),
+                                          color: const Color(0xFFE0E0E0),
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -434,7 +430,7 @@ class _CataloguessWidgetState extends State<CataloguessWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(height: 24.0)),
+                ].divide(const SizedBox(height: 24.0)),
               ),
             ),
           ),

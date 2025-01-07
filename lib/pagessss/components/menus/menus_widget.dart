@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'menus_model.dart';
 export 'menus_model.dart';
 
@@ -48,7 +45,7 @@ class _MenusWidgetState extends State<MenusWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(50.0),
               child: Image.network(
@@ -60,7 +57,7 @@ class _MenusWidgetState extends State<MenusWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Text(
               'Wenze',
               style: FlutterFlowTheme.of(context).bodyMedium.override(

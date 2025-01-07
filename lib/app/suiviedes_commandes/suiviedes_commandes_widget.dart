@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'suiviedes_commandes_model.dart';
 export 'suiviedes_commandes_model.dart';
 
@@ -60,7 +57,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -71,7 +68,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Material(
                     color: Colors.transparent,
                     elevation: 2.0,
@@ -85,7 +82,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                         borderRadius: BorderRadius.circular(16.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(16.0),
+                        padding: const EdgeInsets.all(16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -105,22 +102,22 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       4.0, 8.0, 4.0, 8.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFE8F5E9),
+                                      color: const Color(0xFFE8F5E9),
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsets.all(8.0),
+                                      padding: const EdgeInsets.all(8.0),
                                       child: Text(
                                         'En cours',
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
                                               fontFamily: 'Inter',
-                                              color: Color(0xFF2E7D32),
+                                              color: const Color(0xFF2E7D32),
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -174,12 +171,12 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                     ],
                                   ),
                                 ),
-                              ].divide(SizedBox(width: 12.0)),
+                              ].divide(const SizedBox(width: 12.0)),
                             ),
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 4.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xFFF0F0F0),
                               ),
                               child: Container(
@@ -280,14 +277,14 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                 ),
                               ],
                             ),
-                          ].divide(SizedBox(height: 16.0)),
+                          ].divide(const SizedBox(height: 16.0)),
                         ),
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     decoration: BoxDecoration(
@@ -295,12 +292,12 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 12.0, 0.0),
                             child: Text(
                               'Détails de la commande',
@@ -313,7 +310,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 12.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -393,11 +390,11 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(SizedBox(height: 12.0)),
+                              ].divide(const SizedBox(height: 12.0)),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 12.0, 0.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
@@ -408,7 +405,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 12.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -437,13 +434,13 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                               ],
                             ),
                           ),
-                        ].divide(SizedBox(height: 16.0)),
+                        ].divide(const SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     decoration: BoxDecoration(
@@ -451,7 +448,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                       borderRadius: BorderRadius.circular(16.0),
                     ),
                     child: Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -494,9 +491,9 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                 options: FFButtonOptions(
                                   width: 100.0,
                                   height: 36.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -511,14 +508,14 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                   borderRadius: BorderRadius.circular(18.0),
                                 ),
                               ),
-                            ].divide(SizedBox(width: 16.0)),
+                            ].divide(const SizedBox(width: 16.0)),
                           ),
-                        ].divide(SizedBox(height: 16.0)),
+                        ].divide(const SizedBox(height: 16.0)),
                       ),
                     ),
                   ),
                 ),
-              ].divide(SizedBox(height: 16.0)),
+              ].divide(const SizedBox(height: 16.0)),
             ),
           ),
         ),

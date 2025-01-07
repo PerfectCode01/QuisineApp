@@ -1,11 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'sign_up_model.dart';
 export 'sign_up_model.dart';
 
@@ -54,7 +51,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
         key: scaffoldKey,
         backgroundColor: Colors.white,
         body: Align(
-          alignment: AlignmentDirectional(0.0, 0.0),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -65,9 +62,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
               ),
             ),
             child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [Color(0x6E060606), Color(0xAABF0E00)],
                     stops: [0.0, 1.0],
@@ -76,7 +73,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                   ),
                 ),
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -86,17 +83,17 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         child: Container(
                           width: 100.0,
                           height: double.infinity,
-                          decoration: BoxDecoration(),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          decoration: const BoxDecoration(),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsets.all(32.0),
+                                    padding: const EdgeInsets.all(32.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -118,7 +115,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 12.0, 0.0, 24.0),
                                           child: Text(
                                             'Commençons par remplir le formulaire ci-dessous.',
@@ -138,9 +135,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
-                                          child: Container(
+                                          child: SizedBox(
                                             width: 370.0,
                                             child: TextFormField(
                                               controller: _model
@@ -148,7 +145,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               focusNode:
                                                   _model.nameSignUpFocusNode,
                                               autofocus: true,
-                                              autofillHints: [
+                                              autofillHints: const [
                                                 AutofillHints.name
                                               ],
                                               obscureText: false,
@@ -161,7 +158,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF57636C),
+                                                              const Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -169,7 +166,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFF1F4F8),
                                                     width: 2.0,
                                                   ),
@@ -179,7 +176,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFF4B39EF),
                                                     width: 2.0,
                                                   ),
@@ -188,7 +185,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           12.0),
                                                 ),
                                                 errorBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -198,7 +195,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 ),
                                                 focusedErrorBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -207,7 +204,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           12.0),
                                                 ),
                                                 filled: true,
-                                                fillColor: Color(0xFFF1F4F8),
+                                                fillColor: const Color(0xFFF1F4F8),
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -215,7 +212,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF101213),
+                                                    color: const Color(0xFF101213),
                                                     fontSize: 14.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
@@ -230,9 +227,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
-                                          child: Container(
+                                          child: SizedBox(
                                             width: 370.0,
                                             child: TextFormField(
                                               controller: _model
@@ -240,7 +237,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               focusNode:
                                                   _model.numerosignUpFocusNode,
                                               autofocus: true,
-                                              autofillHints: [
+                                              autofillHints: const [
                                                 AutofillHints.password
                                               ],
                                               obscureText: false,
@@ -253,7 +250,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF57636C),
+                                                              const Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -261,7 +258,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFF1F4F8),
                                                     width: 2.0,
                                                   ),
@@ -271,7 +268,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFF4B39EF),
                                                     width: 2.0,
                                                   ),
@@ -280,7 +277,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           12.0),
                                                 ),
                                                 errorBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -290,7 +287,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 ),
                                                 focusedErrorBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -299,7 +296,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           12.0),
                                                 ),
                                                 filled: true,
-                                                fillColor: Color(0xFFF1F4F8),
+                                                fillColor: const Color(0xFFF1F4F8),
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -307,7 +304,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF101213),
+                                                    color: const Color(0xFF101213),
                                                     fontSize: 14.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
@@ -320,9 +317,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
-                                          child: Container(
+                                          child: SizedBox(
                                             width: 370.0,
                                             child: TextFormField(
                                               controller: _model
@@ -330,7 +327,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               focusNode: _model
                                                   .passwordSignUpFocusNode,
                                               autofocus: true,
-                                              autofillHints: [
+                                              autofillHints: const [
                                                 AutofillHints.password
                                               ],
                                               obscureText: !_model
@@ -344,7 +341,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF57636C),
+                                                              const Color(0xFF57636C),
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -352,7 +349,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                         ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFF1F4F8),
                                                     width: 2.0,
                                                   ),
@@ -362,7 +359,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFF4B39EF),
                                                     width: 2.0,
                                                   ),
@@ -371,7 +368,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           12.0),
                                                 ),
                                                 errorBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -381,7 +378,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 ),
                                                 focusedErrorBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Color(0xFFFF5963),
                                                     width: 2.0,
                                                   ),
@@ -390,7 +387,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                           12.0),
                                                 ),
                                                 filled: true,
-                                                fillColor: Color(0xFFF1F4F8),
+                                                fillColor: const Color(0xFFF1F4F8),
                                                 suffixIcon: InkWell(
                                                   onTap: () => safeSetState(
                                                     () => _model
@@ -406,7 +403,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                             .visibility_outlined
                                                         : Icons
                                                             .visibility_off_outlined,
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     size: 24.0,
                                                   ),
                                                 ),
@@ -417,7 +414,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: Color(0xFF101213),
+                                                    color: const Color(0xFF101213),
                                                     fontSize: 14.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
@@ -431,7 +428,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
                                           child: FFButtonWidget(
                                             onPressed: () {
@@ -442,11 +439,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             options: FFButtonOptions(
                                               width: 370.0,
                                               height: 44.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: Color(0xFFBF0E00),
+                                              color: const Color(0xFFBF0E00),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -460,7 +457,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                             FontWeight.w500,
                                                       ),
                                               elevation: 3.0,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -476,7 +473,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 Container(
                                   width: 325.0,
                                   height: 100.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Color(0x9A060606),
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(10.0),
@@ -489,7 +486,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Text(
                                           'Vous avez déjà un compte ?',
@@ -506,7 +503,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             10.0, 10.0, 10.0, 0.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
@@ -514,7 +511,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               'login',
                                               extra: <String, dynamic>{
                                                 kTransitionInfoKey:
-                                                    TransitionInfo(
+                                                    const TransitionInfo(
                                                   hasTransition: true,
                                                   transitionType:
                                                       PageTransitionType.fade,
@@ -529,10 +526,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             width: double.infinity,
                                             height: 40.0,
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 16.0, 0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .alternate,
@@ -569,13 +566,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         Expanded(
                           flex: 6,
                           child: Padding(
-                            padding: EdgeInsets.all(16.0),
+                            padding: const EdgeInsets.all(16.0),
                             child: Container(
                               width: 100.0,
                               height: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                   fit: BoxFit.cover,
                                   image: CachedNetworkImageProvider(
                                     'https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1380&q=80',

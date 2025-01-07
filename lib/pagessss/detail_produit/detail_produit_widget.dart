@@ -4,15 +4,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:badges/badges.dart' as badges;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'detail_produit_model.dart';
 export 'detail_produit_model.dart';
 
@@ -64,8 +58,8 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 60.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 60.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -83,8 +77,8 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 80.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 80.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -102,8 +96,8 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, 140.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 140.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -147,7 +141,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
         ),
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
             child: badges.Badge(
               badgeContent: Text(
                 '0',
@@ -161,7 +155,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
               shape: badges.BadgeShape.circle,
               badgeColor: FlutterFlowTheme.of(context).primary,
               elevation: 4.0,
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               position: badges.BadgePosition.topEnd(),
               animationType: badges.BadgeAnimationType.scale,
               toAnimate: true,
@@ -197,14 +191,14 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                       child: Hero(
-                        tag: widget!.produitImg!,
+                        tag: widget.produitImg!,
                         transitionOnUserGestures: true,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(0.0),
                           child: Image.network(
-                            widget!.produitImg!,
+                            widget.produitImg!,
                             width: double.infinity,
                             height: 430.0,
                             fit: BoxFit.cover,
@@ -214,10 +208,10 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                       child: Text(
                         valueOrDefault<String>(
-                          widget!.produitNom,
+                          widget.produitNom,
                           'nomProduit',
                         ),
                         style:
@@ -228,13 +222,13 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                       ),
                     ),
                     Container(
-                      decoration: BoxDecoration(),
+                      decoration: const BoxDecoration(),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 16.0),
                         child: Text(
                           valueOrDefault<String>(
-                            widget!.produitDesc,
+                            widget.produitDesc,
                             'description',
                           ),
                           textAlign: TextAlign.justify,
@@ -249,7 +243,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 40.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 40.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -260,7 +254,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                               children: [
                                 TextSpan(
                                   text: valueOrDefault<String>(
-                                    widget!.prodPrix.toString(),
+                                    widget.prodPrix.toString(),
                                     '0',
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -270,7 +264,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                                TextSpan(
+                                const TextSpan(
                                   text: 'FC',
                                   style: TextStyle(),
                                 )
@@ -339,7 +333,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
               child: Material(
                 color: Colors.transparent,
                 elevation: 3.0,
@@ -351,7 +345,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                   height: 50.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x320F1113),
@@ -371,9 +365,9 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                     options: FFButtonOptions(
                       height: 50.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -382,7 +376,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                                 letterSpacing: 0.0,
                               ),
                       elevation: 2.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

@@ -3,11 +3,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:badges/badges.dart' as badges;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'prod_menu_p_model.dart';
 export 'prod_menu_p_model.dart';
@@ -74,10 +71,10 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
             ),
           ),
           title: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 10.0),
             child: Text(
               valueOrDefault<String>(
-                widget!.menuName,
+                widget.menuName,
                 'name',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -91,7 +88,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
           ),
           actions: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -101,7 +98,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                   context.pushNamed(
                     'searchP',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
+                      kTransitionInfoKey: const TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.bottomToTop,
                         duration: Duration(milliseconds: 300),
@@ -117,7 +114,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 15.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 15.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -140,7 +137,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                   shape: badges.BadgeShape.circle,
                   badgeColor: FlutterFlowTheme.of(context).primary,
                   elevation: 4.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                   position: badges.BadgePosition.topEnd(),
                   animationType: badges.BadgeAnimationType.scale,
                   toAnimate: true,
@@ -159,7 +156,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
         body: Container(
           width: 477.0,
           height: 879.0,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
@@ -173,11 +170,11 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 89.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Column(
@@ -186,7 +183,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                         child: Container(
                           width: double.infinity,
                           height: 53.0,
@@ -196,7 +193,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                           ),
                           child: FutureBuilder<ApiCallResponse>(
                             future: GetcatalogsCall.call(
-                              menuId: widget!.menuId,
+                              menuId: widget.menuId,
                             ),
                             builder: (context, snapshot) {
                               // Customize what your widget looks like when it's loading.
@@ -232,7 +229,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                                       final catalogsItem =
                                           catalogs[catalogsIndex];
                                       return Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
@@ -247,16 +244,16 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                                           options: FFButtonOptions(
                                             height: 40.0,
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 10.0, 0.0),
                                             iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: catalogsIndex ==
                                                     _model.activeTabIndex
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : Color(0xFFFFA8A8),
+                                                : const Color(0xFFFFA8A8),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -285,16 +282,16 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   height: 552.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                     child: FutureBuilder<ApiCallResponse>(
                       future: GetProductsCall.call(
                         cityId: FFAppState().selectedCityId,
@@ -325,7 +322,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                             return GridView.builder(
                               padding: EdgeInsets.zero,
                               gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
                                 crossAxisSpacing: 10.0,
                                 mainAxisSpacing: 10.0,
@@ -341,7 +338,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
-                                    boxShadow: [
+                                    boxShadow: const [
                                       BoxShadow(
                                         blurRadius: 4.0,
                                         color: Color(0x33000000),
@@ -430,7 +427,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                                             ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -458,7 +455,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
                                                               FontWeight.bold,
                                                         ),
                                                   ),
-                                                  TextSpan(
+                                                  const TextSpan(
                                                     text: 'FC',
                                                     style: TextStyle(),
                                                   )

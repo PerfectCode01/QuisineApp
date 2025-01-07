@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'panier_vide_model.dart';
 export 'panier_vide_model.dart';
@@ -44,9 +41,9 @@ class _PanierVideWidgetState extends State<PanierVideWidget> {
       },
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFF1F5F8),
+        backgroundColor: const Color(0xFFF1F5F8),
         appBar: AppBar(
-          backgroundColor: Color(0xFFF1F5F8),
+          backgroundColor: const Color(0xFFF1F5F8),
           automaticallyImplyLeading: false,
           leading: InkWell(
             splashColor: Colors.transparent,
@@ -66,13 +63,13 @@ class _PanierVideWidgetState extends State<PanierVideWidget> {
             'Mon Panier',
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Outfit',
-                  color: Color(0xFF0F1113),
+                  color: const Color(0xFF0F1113),
                   fontSize: 32.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -84,12 +81,12 @@ class _PanierVideWidgetState extends State<PanierVideWidget> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Visibility(
-                  visible: FFAppState().panier.length == 0,
+                  visible: FFAppState().panier.isEmpty,
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(54.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(54.0, 0.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,

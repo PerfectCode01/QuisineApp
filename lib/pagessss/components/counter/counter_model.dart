@@ -1,10 +1,6 @@
-import '/flutter_flow/flutter_flow_count_controller.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'counter_widget.dart' show CounterWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class CounterModel extends FlutterFlowModel<CounterWidget> {
   ///  Local state fields for this component.

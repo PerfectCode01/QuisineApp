@@ -4,10 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'detailcommande_model.dart';
 export 'detailcommande_model.dart';
@@ -76,7 +74,7 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
             ),
           ),
           title: Align(
-            alignment: AlignmentDirectional(0.0, 1.0),
+            alignment: const AlignmentDirectional(0.0, 1.0),
             child: Text(
               'Adresse de livraison',
               textAlign: TextAlign.center,
@@ -88,39 +86,39 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                   ),
             ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
         body: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 5.0, 0.0),
-                              child: Container(
+                              child: SizedBox(
                                 width: 200.0,
                                 child: TextFormField(
                                   controller: _model.textController1,
                                   focusNode: _model.textFieldFocusNode1,
                                   onChanged: (_) => EasyDebounce.debounce(
                                     '_model.textController1',
-                                    Duration(milliseconds: 100),
+                                    const Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
                                   autofocus: false,
@@ -141,14 +139,14 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -190,16 +188,16 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 5.0, 0.0),
-                              child: Container(
+                              child: SizedBox(
                                 width: 200.0,
                                 child: TextFormField(
                                   controller: _model.textController2,
                                   focusNode: _model.textFieldFocusNode2,
                                   onChanged: (_) => EasyDebounce.debounce(
                                     '_model.textController2',
-                                    Duration(milliseconds: 100),
+                                    const Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
                                   autofocus: false,
@@ -220,14 +218,14 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -273,22 +271,22 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 5.0, 0.0),
-                              child: Container(
+                              child: SizedBox(
                                 width: 200.0,
                                 child: TextFormField(
                                   controller: _model.textController3,
                                   focusNode: _model.textFieldFocusNode3,
                                   onChanged: (_) => EasyDebounce.debounce(
                                     '_model.textController3',
-                                    Duration(milliseconds: 100),
+                                    const Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
                                   autofocus: false,
@@ -309,14 +307,14 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -357,7 +355,7 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 5.0, 0.0, 5.0, 0.0),
                             child: FutureBuilder<ApiCallResponse>(
                               future: ZonesCall.call(
@@ -392,14 +390,14 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                     true,
                                   ) as List)
                                       .map<String>((s) => s.toString())
-                                      .toList()!),
+                                      .toList()),
                                   optionLabels: (getJsonField(
                                     dropDownZonesResponse.jsonBody,
                                     r'''$[:].name''',
                                     true,
                                   ) as List)
                                       .map<String>((s) => s.toString())
-                                      .toList()!,
+                                      .toList(),
                                   onChanged: (val) async {
                                     safeSetState(
                                         () => _model.dropDownValue = val);
@@ -445,7 +443,7 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                   borderColor: Colors.transparent,
                                   borderWidth: 0.0,
                                   borderRadius: 8.0,
-                                  margin: EdgeInsetsDirectional.fromSTEB(
+                                  margin: const EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   hidesUnderline: true,
                                   isOverButton: false,
@@ -462,24 +460,18 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(5.0, 55.0, 5.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(5.0, 55.0, 5.0, 0.0),
                 child: FFButtonWidget(
-                  onPressed: ((_model.textController1.text == null ||
-                              _model.textController1.text == '') ||
-                          (_model.textController2.text == null ||
-                              _model.textController2.text == '') ||
-                          (_model.textController3.text == null ||
-                              _model.textController3.text == '') ||
+                  onPressed: ((_model.textController1.text == '') ||
+                          (_model.textController2.text == '') ||
+                          (_model.textController3.text == '') ||
                           (_model.dropDownValue == null ||
                               _model.dropDownValue == ''))
                       ? null
                       : () async {
-                          if ((_model.textController1.text == null ||
-                                  _model.textController1.text == '') &&
-                              (_model.textController2.text == null ||
-                                  _model.textController2.text == '') &&
-                              (_model.textController3.text == null ||
-                                  _model.textController3.text == '') &&
+                          if ((_model.textController1.text == '') &&
+                              (_model.textController2.text == '') &&
+                              (_model.textController3.text == '') &&
                               (_model.dropDownValue == null ||
                                   _model.dropDownValue == '')) {
                             ScaffoldMessenger.of(context).showSnackBar(
@@ -491,7 +483,7 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: Duration(milliseconds: 4000),
+                                duration: const Duration(milliseconds: 4000),
                                 backgroundColor:
                                     FlutterFlowTheme.of(context).secondary,
                               ),
@@ -506,7 +498,7 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                                 ),
                               }.withoutNulls,
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
+                                kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
                                   duration: Duration(milliseconds: 0),
@@ -520,9 +512,9 @@ class _DetailcommandeWidgetState extends State<DetailcommandeWidget> {
                     width: double.infinity,
                     height: 40.0,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter Tight',

@@ -1,15 +1,7 @@
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'search_p_model.dart';
 export 'search_p_model.dart';
 
@@ -76,7 +68,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -87,7 +79,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 0.0),
                 child: TextFormField(
                   controller: _model.textController,
                   focusNode: _model.textFieldFocusNode,
@@ -150,7 +142,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                     child: Text(
                       'Resultat de recherche',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -161,7 +153,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(4.0, 12.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(4.0, 12.0, 16.0, 0.0),
                     child: Text(
                       '24',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -174,14 +166,14 @@ class _SearchPWidgetState extends State<SearchPWidget>
               ),
               Expanded(
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 0.0),
                   child: ListView(
                     padding: EdgeInsets.zero,
                     scrollDirection: Axis.vertical,
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
                         child: Container(
                           width: 100.0,
                           decoration: BoxDecoration(
@@ -191,7 +183,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                               BoxShadow(
                                 blurRadius: 0.0,
                                 color: FlutterFlowTheme.of(context).alternate,
-                                offset: Offset(
+                                offset: const Offset(
                                   0.0,
                                   1.0,
                                 ),
@@ -199,7 +191,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -219,7 +211,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Randy Rudolph',
@@ -232,13 +224,13 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -253,7 +245,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(4.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'name@domain.com',
@@ -284,7 +276,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.keyboard_arrow_right_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -300,7 +292,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
                         child: Container(
                           width: 100.0,
                           decoration: BoxDecoration(
@@ -310,7 +302,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                               BoxShadow(
                                 blurRadius: 0.0,
                                 color: FlutterFlowTheme.of(context).alternate,
-                                offset: Offset(
+                                offset: const Offset(
                                   0.0,
                                   1.0,
                                 ),
@@ -318,7 +310,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -338,7 +330,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Randie Mcmullens',
@@ -351,13 +343,13 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -372,7 +364,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(4.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'name@domain.com',
@@ -403,7 +395,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.keyboard_arrow_right_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -419,7 +411,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
                         child: Container(
                           width: 100.0,
                           decoration: BoxDecoration(
@@ -429,7 +421,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                               BoxShadow(
                                 blurRadius: 0.0,
                                 color: FlutterFlowTheme.of(context).alternate,
-                                offset: Offset(
+                                offset: const Offset(
                                   0.0,
                                   1.0,
                                 ),
@@ -437,7 +429,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -457,7 +449,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Raney Bold',
@@ -470,13 +462,13 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -491,7 +483,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(4.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'name@domain.com',
@@ -522,7 +514,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.keyboard_arrow_right_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -538,7 +530,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
                         child: Container(
                           width: 100.0,
                           decoration: BoxDecoration(
@@ -548,7 +540,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                               BoxShadow(
                                 blurRadius: 0.0,
                                 color: FlutterFlowTheme.of(context).alternate,
-                                offset: Offset(
+                                offset: const Offset(
                                   0.0,
                                   1.0,
                                 ),
@@ -556,7 +548,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -576,7 +568,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Ragina Smith',
@@ -589,13 +581,13 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -610,7 +602,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(4.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'name@domain.com',
@@ -641,7 +633,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.keyboard_arrow_right_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -657,7 +649,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
                         child: Container(
                           width: 100.0,
                           decoration: BoxDecoration(
@@ -667,7 +659,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                               BoxShadow(
                                 blurRadius: 0.0,
                                 color: FlutterFlowTheme.of(context).alternate,
-                                offset: Offset(
+                                offset: const Offset(
                                   0.0,
                                   1.0,
                                 ),
@@ -675,7 +667,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -695,7 +687,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Ra Kuo',
@@ -708,13 +700,13 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -729,7 +721,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(4.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'name@domain.com',
@@ -760,7 +752,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.keyboard_arrow_right_rounded,
                                       color: FlutterFlowTheme.of(context)
@@ -776,7 +768,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
                         child: Container(
                           width: 100.0,
                           decoration: BoxDecoration(
@@ -786,7 +778,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                               BoxShadow(
                                 blurRadius: 0.0,
                                 color: FlutterFlowTheme.of(context).alternate,
-                                offset: Offset(
+                                offset: const Offset(
                                   0.0,
                                   1.0,
                                 ),
@@ -794,7 +786,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                             ],
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -814,7 +806,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Raku Davis',
@@ -827,13 +819,13 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       12.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -848,7 +840,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(4.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'name@domain.com',
@@ -879,7 +871,7 @@ class _SearchPWidgetState extends State<SearchPWidget>
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       Icons.keyboard_arrow_right_rounded,
                                       color: FlutterFlowTheme.of(context)

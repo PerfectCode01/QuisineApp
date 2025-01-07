@@ -2,10 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pagessss/components/adresse/adresse_widget.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'start_p_model.dart';
 export 'start_p_model.dart';
 
@@ -47,7 +44,7 @@ class _StartPWidgetState extends State<StartPWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,7 +53,7 @@ class _StartPWidgetState extends State<StartPWidget> {
                   width: double.infinity,
                   height: 59.0,
                   decoration: BoxDecoration(
-                    color: Color(0xCCEEE4E4),
+                    color: const Color(0xCCEEE4E4),
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   child: Row(
@@ -65,7 +62,7 @@ class _StartPWidgetState extends State<StartPWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -75,7 +72,7 @@ class _StartPWidgetState extends State<StartPWidget> {
                             context.pushNamed(
                               'Compte',
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: TransitionInfo(
+                                kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,
                                   transitionType:
                                       PageTransitionType.leftToRight,
@@ -93,7 +90,7 @@ class _StartPWidgetState extends State<StartPWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
                         child: Icon(
                           Icons.share_sharp,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -104,7 +101,7 @@ class _StartPWidgetState extends State<StartPWidget> {
                   ),
                 ),
                 Container(
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -118,7 +115,7 @@ class _StartPWidgetState extends State<StartPWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 0.0, 10.0, 0.0),
                         child: Text(
                           'Nous vous apporterons nos produits, dites-nous simplement où',
@@ -136,7 +133,7 @@ class _StartPWidgetState extends State<StartPWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       await showModalBottomSheet(
@@ -152,9 +149,9 @@ class _StartPWidgetState extends State<StartPWidget> {
                             },
                             child: Padding(
                               padding: MediaQuery.viewInsetsOf(context),
-                              child: Container(
+                              child: SizedBox(
                                 height: MediaQuery.sizeOf(context).height * 0.4,
-                                child: AdresseWidget(),
+                                child: const AdresseWidget(),
                               ),
                             ),
                           );
@@ -165,9 +162,9 @@ class _StartPWidgetState extends State<StartPWidget> {
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 10.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(

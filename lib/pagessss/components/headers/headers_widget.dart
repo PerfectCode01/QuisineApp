@@ -1,10 +1,8 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'headers_model.dart';
 export 'headers_model.dart';
@@ -52,7 +50,7 @@ class _HeadersWidgetState extends State<HeadersWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,7 +70,7 @@ class _HeadersWidgetState extends State<HeadersWidget> {
                   },
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 84.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 84.0, 0.0),
                   child: badges.Badge(
                     badgeContent: Text(
                       FFAppState().cardItemCount.toString(),
@@ -86,12 +84,12 @@ class _HeadersWidgetState extends State<HeadersWidget> {
                     shape: badges.BadgeShape.circle,
                     badgeColor: FlutterFlowTheme.of(context).primary,
                     elevation: 4.0,
-                    padding: EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(8.0),
                     position: badges.BadgePosition.topEnd(),
                     animationType: badges.BadgeAnimationType.scale,
                     toAnimate: true,
                     child: Padding(
-                      padding: EdgeInsets.all(2.0),
+                      padding: const EdgeInsets.all(2.0),
                       child: FlutterFlowIconButton(
                         borderColor: Colors.transparent,
                         borderRadius: 30.0,
@@ -102,7 +100,7 @@ class _HeadersWidgetState extends State<HeadersWidget> {
                           size: 25.0,
                         ),
                         onPressed: () async {
-                          if (FFAppState().panier.length == 0) {
+                          if (FFAppState().panier.isEmpty) {
                             context.pushNamed('PanierVide');
                           } else {
                             context.pushNamed('Panier');
@@ -116,7 +114,7 @@ class _HeadersWidgetState extends State<HeadersWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 16.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 16.0, 16.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -140,7 +138,7 @@ class _HeadersWidgetState extends State<HeadersWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Mbanza-Ngungu',
                         style:

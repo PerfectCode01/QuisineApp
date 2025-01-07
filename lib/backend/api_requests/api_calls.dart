@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
@@ -99,7 +98,7 @@ class GetProductsCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'getProducts',
-      apiUrl: 'https://test.systematik.tech/api/products/${cityId}',
+      apiUrl: 'https://test.systematik.tech/api/products/$cityId',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -152,7 +151,7 @@ class ZonesCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'zones',
-      apiUrl: 'https://test.systematik.tech/api/zones/${cityId}',
+      apiUrl: 'https://test.systematik.tech/api/zones/$cityId',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -185,7 +184,7 @@ class GetcatalogsCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'getcatalogs',
-      apiUrl: 'https://test.systematik.tech/api/catalogs/${menuId}',
+      apiUrl: 'https://test.systematik.tech/api/catalogs/$menuId',
       callType: ApiCallType.POST,
       headers: {},
       params: {},

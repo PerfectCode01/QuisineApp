@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 import '/auth/custom_auth/custom_auth_user_provider.dart';
@@ -10,10 +8,7 @@ import '/auth/custom_auth/custom_auth_user_provider.dart';
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -81,13 +76,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : SpScreenWidget(),
+          appStateNotifier.loggedIn ? const NavBarPage() : const SpScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : SpScreenWidget(),
+              appStateNotifier.loggedIn ? const NavBarPage() : const SpScreenWidget(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -102,27 +97,27 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'login',
           path: '/login',
-          builder: (context, params) => LoginWidget(),
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'signUp',
           path: '/signUp',
-          builder: (context, params) => SignUpWidget(),
+          builder: (context, params) => const SignUpWidget(),
         ),
         FFRoute(
           name: 'ForgotPassword',
           path: '/forgotPassword',
-          builder: (context, params) => ForgotPasswordWidget(),
+          builder: (context, params) => const ForgotPasswordWidget(),
         ),
         FFRoute(
           name: 'OtpCode',
           path: '/otpCode',
-          builder: (context, params) => OtpCodeWidget(),
+          builder: (context, params) => const OtpCodeWidget(),
         ),
         FFRoute(
           name: 'spScreen',
           path: '/spScreen',
-          builder: (context, params) => SpScreenWidget(),
+          builder: (context, params) => const SpScreenWidget(),
         ),
         FFRoute(
           name: 'DetailProduit',
@@ -153,27 +148,27 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Detailcommande',
           path: '/detailcommande',
-          builder: (context, params) => DetailcommandeWidget(),
+          builder: (context, params) => const DetailcommandeWidget(),
         ),
         FFRoute(
           name: 'OrderHistory',
           path: '/orderHistory',
-          builder: (context, params) => OrderHistoryWidget(),
+          builder: (context, params) => const OrderHistoryWidget(),
         ),
         FFRoute(
           name: 'Panier',
           path: '/panier',
-          builder: (context, params) => PanierWidget(),
+          builder: (context, params) => const PanierWidget(),
         ),
         FFRoute(
           name: 'commandeReussi',
           path: '/commandeReussi',
-          builder: (context, params) => CommandeReussiWidget(),
+          builder: (context, params) => const CommandeReussiWidget(),
         ),
         FFRoute(
           name: 'MenuList',
           path: '/menuList',
-          builder: (context, params) => MenuListWidget(),
+          builder: (context, params) => const MenuListWidget(),
         ),
         FFRoute(
           name: 'ProdMenuP',
@@ -192,45 +187,45 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'PageStart',
           path: '/pageStart',
-          builder: (context, params) => PageStartWidget(),
+          builder: (context, params) => const PageStartWidget(),
         ),
         FFRoute(
           name: 'PanierVide',
           path: '/panierVide',
-          builder: (context, params) => PanierVideWidget(),
+          builder: (context, params) => const PanierVideWidget(),
         ),
         FFRoute(
           name: 'StartP',
           path: '/startP',
-          builder: (context, params) => StartPWidget(),
+          builder: (context, params) => const StartPWidget(),
         ),
         FFRoute(
           name: 'Home',
           path: '/home',
           builder: (context, params) =>
-              params.isEmpty ? NavBarPage(initialPage: 'Home') : HomeWidget(),
+              params.isEmpty ? const NavBarPage(initialPage: 'Home') : const HomeWidget(),
         ),
         FFRoute(
           name: 'searchP',
           path: '/searchP',
-          builder: (context, params) => SearchPWidget(),
+          builder: (context, params) => const SearchPWidget(),
         ),
         FFRoute(
           name: 'Compte',
           path: '/compte',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Compte')
-              : CompteWidget(),
+              ? const NavBarPage(initialPage: 'Compte')
+              : const CompteWidget(),
         ),
         FFRoute(
           name: 'Commande',
           path: '/commande',
-          builder: (context, params) => CommandeWidget(),
+          builder: (context, params) => const CommandeWidget(),
         ),
         FFRoute(
           name: 'Catalogs',
           path: '/catalogs',
-          builder: (context, params) => CatalogsWidget(),
+          builder: (context, params) => const CatalogsWidget(),
         ),
         FFRoute(
           name: 'Facturation',
@@ -245,36 +240,36 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'adresse2',
           path: '/adresse2',
-          builder: (context, params) => Adresse2Widget(),
+          builder: (context, params) => const Adresse2Widget(),
         ),
         FFRoute(
           name: 'commandeReussie',
           path: '/commandeReussie',
-          builder: (context, params) => CommandeReussieWidget(),
+          builder: (context, params) => const CommandeReussieWidget(),
         ),
         FFRoute(
           name: 'SuiviedesCommandes',
           path: '/suiviedesCommandes',
-          builder: (context, params) => SuiviedesCommandesWidget(),
+          builder: (context, params) => const SuiviedesCommandesWidget(),
         ),
         FFRoute(
           name: 'ChoixVille',
           path: '/choixVille',
-          builder: (context, params) => ChoixVilleWidget(),
+          builder: (context, params) => const ChoixVilleWidget(),
         ),
         FFRoute(
           name: 'cataloguess',
           path: '/cataloguess',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'cataloguess')
-              : CataloguessWidget(),
+              ? const NavBarPage(initialPage: 'cataloguess')
+              : const CataloguessWidget(),
         ),
         FFRoute(
           name: 'notifications',
           path: '/notifications',
           builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'notifications')
-              : NotificationsWidget(),
+              ? const NavBarPage(initialPage: 'notifications')
+              : const NotificationsWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -510,7 +505,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

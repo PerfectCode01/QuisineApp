@@ -2,12 +2,8 @@ import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pagessss/components/headers/headers_widget.dart';
-import 'dart:ui';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
@@ -61,10 +57,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             wrapWithModel(
               model: _model.headersModel,
               updateCallback: () => safeSetState(() {}),
-              child: HeadersWidget(),
+              child: const HeadersWidget(),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
               child: FutureBuilder<ApiCallResponse>(
                 future: MenusCall.call(),
                 builder: (context, snapshot) {
@@ -107,7 +103,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 ClipRRect(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     bottomLeft: Radius.circular(80.0),
                                     bottomRight: Radius.circular(80.0),
                                     topLeft: Radius.circular(70.0),
@@ -124,7 +120,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Text(
                                     getJsonField(
@@ -151,12 +147,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
-                    child: Container(
+                    child: SizedBox(
                       width: 200.0,
                       child: TextFormField(
                         controller: _model.textController,
@@ -179,7 +175,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                     FlutterFlowTheme.of(context).secondaryText,
                                 letterSpacing: 0.0,
                               ),
-                          enabledBorder: OutlineInputBorder(
+                          enabledBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
                               width: 1.0,
@@ -191,7 +187,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               topRight: Radius.circular(0.0),
                             ),
                           ),
-                          focusedBorder: OutlineInputBorder(
+                          focusedBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0x00000000),
                               width: 1.0,
@@ -208,7 +204,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(15.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(15.0),
@@ -220,7 +216,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(15.0),
                               bottomRight: Radius.circular(0.0),
                               topLeft: Radius.circular(15.0),
@@ -257,7 +253,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.5, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.5, 0.0, 0.0),
               child: Text(
                 'Une variété pour tous les goûts',
                 textAlign: TextAlign.center,
@@ -277,7 +273,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                 child: FutureBuilder<ApiCallResponse>(
                   future: GetProductsCall.call(
                     cityId: FFAppState().selectedCityId,
@@ -308,7 +304,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         return GridView.builder(
                           padding: EdgeInsets.zero,
                           gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
+                              const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             crossAxisSpacing: 10.0,
                             mainAxisSpacing: 10.0,
@@ -324,7 +320,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x33000000),
@@ -412,7 +408,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -440,7 +436,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                               FontWeight.bold,
                                                         ),
                                               ),
-                                              TextSpan(
+                                              const TextSpan(
                                                 text: 'FC',
                                                 style: TextStyle(),
                                               )
@@ -531,7 +527,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,

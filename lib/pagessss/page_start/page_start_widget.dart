@@ -5,12 +5,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'page_start_model.dart';
 export 'page_start_model.dart';
@@ -56,7 +53,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -141,7 +138,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
               textAlign: TextAlign.center,
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -176,14 +173,14 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                           true,
                         ) as List)
                             .map<String>((s) => s.toString())
-                            .toList()!),
+                            .toList()),
                         optionLabels: (getJsonField(
                           dropDownCitiesResponse.jsonBody,
                           r'''$[:].name''',
                           true,
                         ) as List)
                             .map<String>((s) => s.toString())
-                            .toList()!,
+                            .toList(),
                         onChanged: (val) async {
                           safeSetState(() => _model.dropDownValue = val);
                           FFAppState().selectedCityId = _model.dropDownValue!;
@@ -207,7 +204,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                         borderColor: Colors.transparent,
                         borderWidth: 0.0,
                         borderRadius: 8.0,
-                        margin: EdgeInsetsDirectional.fromSTEB(
+                        margin: const EdgeInsetsDirectional.fromSTEB(
                             12.0, 0.0, 12.0, 0.0),
                         hidesUnderline: true,
                         isOverButton: false,
@@ -232,9 +229,9 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -243,7 +240,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                 letterSpacing: 0.0,
                               ),
                       elevation: 0.0,
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(0.0),
                         bottomRight: Radius.circular(8.0),
                         topLeft: Radius.circular(0.0),
@@ -255,7 +252,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Text(
                 'Une variété pour tous les goûts',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -267,7 +264,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
               child: FutureBuilder<ApiCallResponse>(
                 future: MenusCall.call(),
                 builder: (context, snapshot) {
@@ -322,7 +319,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Text(
                                     getJsonField(
@@ -349,7 +346,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
               child: RichText(
                 textScaler: MediaQuery.of(context).textScaler,
                 text: TextSpan(
@@ -384,21 +381,21 @@ class _PageStartWidgetState extends State<PageStartWidget> {
               ),
             ),
             Expanded(
-              child: Container(
+              child: SizedBox(
                 width: double.infinity,
                 height: 200.0,
                 child: Stack(
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 40.0),
                       child: PageView(
                         controller: _model.pageViewController ??=
                             PageController(initialPage: 0),
                         scrollDirection: Axis.horizontal,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 13.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -423,7 +420,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                       ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 10.0, 0.0),
                                   child: Text(
                                     'Nous vous indiquerons les partenaires à proximite chez qui vous pouvez commander',
@@ -440,7 +437,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 6.0, 0.0, 8.0),
                                   child: Container(
                                     width: 28.0,
@@ -451,7 +448,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         '1',
                                         textAlign: TextAlign.center,
@@ -473,7 +470,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 13.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -498,7 +495,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                       ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 10.0, 0.0),
                                   child: Text(
                                     'Chercher par article ou repas, par partenaire ou type de cuisine',
@@ -515,7 +512,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 6.0, 0.0, 8.0),
                                   child: Container(
                                     width: 28.0,
@@ -526,7 +523,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         '2',
                                         textAlign: TextAlign.center,
@@ -548,7 +545,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 13.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -573,7 +570,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                       ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 10.0, 0.0),
                                   child: Text(
                                     'Commandez pour une livraison. ou choisissez l\'option à emporter',
@@ -590,7 +587,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 6.0, 0.0, 8.0),
                                   child: Container(
                                     width: 28.0,
@@ -601,7 +598,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         '3',
                                         textAlign: TextAlign.center,
@@ -626,10 +623,10 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                         child: smooth_page_indicator.SmoothPageIndicator(
                           controller: _model.pageViewController ??=
                               PageController(initialPage: 0),
@@ -638,7 +635,7 @@ class _PageStartWidgetState extends State<PageStartWidget> {
                           onDotClicked: (i) async {
                             await _model.pageViewController!.animateToPage(
                               i,
-                              duration: Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 500),
                               curve: Curves.ease,
                             );
                             safeSetState(() {});

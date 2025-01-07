@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'commande_reussie_model.dart';
 export 'commande_reussie_model.dart';
 
@@ -44,13 +41,13 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +66,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                           color: FlutterFlowTheme.of(context).success,
                           borderRadius: BorderRadius.circular(100.0),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.check_circle,
                           color: Colors.white,
                           size: 100.0,
@@ -103,7 +100,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                 letterSpacing: 0.0,
                               ),
                         ),
-                      ].divide(SizedBox(height: 16.0)),
+                      ].divide(const SizedBox(height: 16.0)),
                     ),
                     Material(
                       color: Colors.transparent,
@@ -119,7 +116,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 24.0, 24.0, 24.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -171,11 +168,11 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: Color(0xFFE8F5E9),
+                                      color: const Color(0xFFE8F5E9),
                                       borderRadius: BorderRadius.circular(20.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           8.0, 16.0, 8.0, 16.0),
                                       child: Text(
                                         'En préparation',
@@ -222,12 +219,12 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                   ),
                                 ],
                               ),
-                            ].divide(SizedBox(height: 16.0)),
+                            ].divide(const SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
                     ),
-                  ].divide(SizedBox(height: 32.0)),
+                  ].divide(const SizedBox(height: 32.0)),
                 ),
               ),
               Column(
@@ -238,7 +235,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                       context.pushNamed(
                         'SuiviedesCommandes',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: TransitionInfo(
+                          kTransitionInfoKey: const TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 300),
@@ -251,9 +248,9 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 56.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
@@ -274,10 +271,10 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 56.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0x00FFFFFF),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: const Color(0x00FFFFFF),
                       textStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
                                 fontFamily: 'Inter Tight',
@@ -292,7 +289,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                       borderRadius: BorderRadius.circular(28.0),
                     ),
                   ),
-                ].divide(SizedBox(height: 16.0)),
+                ].divide(const SizedBox(height: 16.0)),
               ),
             ],
           ),
