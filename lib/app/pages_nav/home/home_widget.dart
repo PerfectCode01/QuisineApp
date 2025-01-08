@@ -65,6 +65,81 @@ class _HomeWidgetState extends State<HomeWidget> {
                       fit: BoxFit.cover,
                     ),
                   ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            24.0, 0.0, 16.0, 0.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.location_on,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 20.0,
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      2.0, 0.0, 0.0, 0.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        enableDrag: false,
+                                        context: context,
+                                        builder: (context) {
+                                          return GestureDetector(
+                                            onTap: () {
+                                              FocusScope.of(context).unfocus();
+                                              FocusManager.instance.primaryFocus
+                                                  ?.unfocus();
+                                            },
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: const ChangeCityWidget(),
+                                            ),
+                                          );
+                                        },
+                                      ).then((value) => safeSetState(() {}));
+                                    },
+                                    child: Text(
+                                      'Mbanza-Ngungu',
+                                      style: FlutterFlowTheme.of(context)
+                                          .displaySmall
+                                          .override(
+                                            fontFamily: 'Inter Tight',
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            fontSize: 20.0,
+                                            letterSpacing: 0.0,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.arrow_drop_down_sharp,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 24.0,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                   InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -106,73 +181,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 16.0, 0.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.location_on,
-                      color: FlutterFlowTheme.of(context).primaryText,
-                      size: 20.0,
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              2.0, 0.0, 0.0, 0.0),
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              await showModalBottomSheet(
-                                isScrollControlled: true,
-                                backgroundColor: Colors.transparent,
-                                enableDrag: false,
-                                context: context,
-                                builder: (context) {
-                                  return GestureDetector(
-                                    onTap: () {
-                                      FocusScope.of(context).unfocus();
-                                      FocusManager.instance.primaryFocus
-                                          ?.unfocus();
-                                    },
-                                    child: Padding(
-                                      padding: MediaQuery.viewInsetsOf(context),
-                                      child: const ChangeCityWidget(),
-                                    ),
-                                  );
-                                },
-                              ).then((value) => safeSetState(() {}));
-                            },
-                            child: Text(
-                              'Mbanza-Ngungu',
-                              style: FlutterFlowTheme.of(context)
-                                  .displaySmall
-                                  .override(
-                                    fontFamily: 'Inter Tight',
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                        ),
-                        Icon(
-                          Icons.arrow_drop_down_sharp,
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          size: 24.0,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                 child: Container(
                   width: double.infinity,
                   height: 120.0,
@@ -311,50 +320,78 @@ class _HomeWidgetState extends State<HomeWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: List.generate(menus.length, (menusIndex) {
                             final menusItem = menus[menusIndex];
-                            return Container(
-                              width: 100.0,
-                              height: 100.0,
-                              decoration: const BoxDecoration(
-                                color: Color(0xFFF6F1F1),
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: const BorderRadius.only(
-                                      bottomLeft: Radius.circular(80.0),
-                                      bottomRight: Radius.circular(80.0),
-                                      topLeft: Radius.circular(70.0),
-                                      topRight: Radius.circular(90.0),
-                                    ),
-                                    child: Image.network(
-                                      getJsonField(
-                                        menusItem,
-                                        r'''$.image''',
-                                      ).toString(),
-                                      width: 70.0,
-                                      height: 70.0,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 0.0),
-                                    child: Text(
+                            return InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed(
+                                  'ProdMenuP',
+                                  queryParameters: {
+                                    'menuName': serializeParam(
                                       getJsonField(
                                         menusItem,
                                         r'''$.name''',
                                       ).toString(),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Inter',
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                      ParamType.String,
                                     ),
-                                  ),
-                                ],
+                                    'menuId': serializeParam(
+                                      getJsonField(
+                                        menusItem,
+                                        r'''$.id''',
+                                      ),
+                                      ParamType.int,
+                                    ),
+                                  }.withoutNulls,
+                                );
+                              },
+                              child: Container(
+                                width: 100.0,
+                                height: 100.0,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(24.0),
+                                ),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: const BorderRadius.only(
+                                        bottomLeft: Radius.circular(80.0),
+                                        bottomRight: Radius.circular(80.0),
+                                        topLeft: Radius.circular(70.0),
+                                        topRight: Radius.circular(90.0),
+                                      ),
+                                      child: Image.network(
+                                        getJsonField(
+                                          menusItem,
+                                          r'''$.image''',
+                                        ).toString(),
+                                        width: 70.0,
+                                        height: 70.0,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 0.0),
+                                      child: Text(
+                                        getJsonField(
+                                          menusItem,
+                                          r'''$.name''',
+                                        ).toString(),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Inter',
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           }),
@@ -432,7 +469,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Nos Nouveaux Produit',
+                      'Nouveaux Produits',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Inter',
                             color: const Color(0xFF52555C),
@@ -440,33 +477,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.bold,
                           ),
-                    ),
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        context.pushNamed(
-                          'cataloguess',
-                          extra: <String, dynamic>{
-                            kTransitionInfoKey: const TransitionInfo(
-                              hasTransition: true,
-                              transitionType: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 0),
-                            ),
-                          },
-                        );
-                      },
-                      child: Text(
-                        'Voir Plus >>',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
-                              color: FlutterFlowTheme.of(context).primary,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
                     ),
                   ],
                 ),
@@ -520,8 +530,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                               itemBuilder: (context, produitIndex) {
                                 final produitItem = produit[produitIndex];
                                 return Container(
-                                  width: 2000.0,
-                                  height: 223.0,
                                   decoration: BoxDecoration(
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
@@ -549,7 +557,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             r'''$.image''',
                                           ).toString(),
                                           width: 200.0,
-                                          height: 151.0,
+                                          height: 140.0,
                                           fit: BoxFit.cover,
                                         ),
                                       ),

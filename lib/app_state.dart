@@ -125,4 +125,33 @@ class FFAppState extends ChangeNotifier {
   set referenceLiv(String value) {
     _referenceLiv = value;
   }
+
+  List<dynamic> _propa = [];
+  List<dynamic> get propa => _propa;
+  set propa(List<dynamic> value) {
+    _propa = value;
+  }
+
+  void addToPropa(dynamic value) {
+    propa.add(value);
+  }
+
+  void removeFromPropa(dynamic value) {
+    propa.remove(value);
+  }
+
+  void removeAtIndexFromPropa(int index) {
+    propa.removeAt(index);
+  }
+
+  void updatePropaAtIndex(
+    int index,
+    dynamic Function(dynamic) updateFn,
+  ) {
+    propa[index] = updateFn(_propa[index]);
+  }
+
+  void insertAtIndexInPropa(int index, dynamic value) {
+    propa.insert(index, value);
+  }
 }

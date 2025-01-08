@@ -266,7 +266,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                     onPressed: () {
                       print('Button pressed ...');
                     },
-                    text: 'Retour à l\'accueil',
+                    text: 'Fermer',
                     options: FFButtonOptions(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 56.0,

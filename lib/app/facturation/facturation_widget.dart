@@ -476,46 +476,55 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                   fontWeight: FontWeight.w600,
                                 ),
                           ),
-                          Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.location_on,
-                                color: FlutterFlowTheme.of(context).primary,
-                                size: 24.0,
-                              ),
-                              RichText(
-                                textScaler: MediaQuery.of(context).textScaler,
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: FFAppState().numero.toString(),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .override(
-                                            fontFamily: 'Inter',
-                                            letterSpacing: 0.0,
-                                          ),
-                                    ),
-                                    const TextSpan(
-                                      text: '  ',
-                                      style: TextStyle(),
-                                    ),
-                                    TextSpan(
-                                      text: FFAppState().rue,
-                                      style: const TextStyle(),
-                                    )
-                                  ],
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyLarge
-                                      .override(
-                                        fontFamily: 'Inter',
-                                        letterSpacing: 0.0,
-                                      ),
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed('AdresseLiv');
+                            },
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.location_on,
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  size: 24.0,
                                 ),
-                              ),
-                            ].divide(const SizedBox(width: 12.0)),
+                                RichText(
+                                  textScaler: MediaQuery.of(context).textScaler,
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: FFAppState().numero.toString(),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .override(
+                                              fontFamily: 'Inter',
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                      const TextSpan(
+                                        text: '  ',
+                                        style: TextStyle(),
+                                      ),
+                                      TextSpan(
+                                        text: FFAppState().rue,
+                                        style: const TextStyle(),
+                                      )
+                                    ],
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'Inter',
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                ),
+                              ].divide(const SizedBox(width: 12.0)),
+                            ),
                           ),
                         ].divide(const SizedBox(height: 16.0)),
                       ),
@@ -532,14 +541,29 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                       referencei: FFAppState().referenceLiv,
                       comment: widget.zoneId,
                       propaDataJson:
-                          functions.propaData(FFAppState().panier.toList()),
+                          functions.getPropaData(FFAppState().panier.toList()),
                       citieId: FFAppState().selectedCityId,
                     );
 
                     if ((_model.orderResult?.succeeded ?? true)) {
-                      context.pushNamed('commandeReussi');
+                      context.pushNamed('commandeReussie');
+
+                      FFAppState().panier = [];
+                      safeSetState(() {});
                     } else {
-                      context.pushNamed('echecCommande');
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            (_model.orderResult?.jsonBody ?? '').toString(),
+                            style: TextStyle(
+                              color: FlutterFlowTheme.of(context).primaryText,
+                            ),
+                          ),
+                          duration: const Duration(milliseconds: 4000),
+                          backgroundColor:
+                              FlutterFlowTheme.of(context).secondary,
+                        ),
+                      );
                     }
 
                     safeSetState(() {});

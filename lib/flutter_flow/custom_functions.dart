@@ -39,12 +39,12 @@ double sommeTotal(
   return tot1 + liv;
 }
 
-List<dynamic> propaData(List<dynamic> panier) {
+dynamic getPropaData(List<dynamic> panier) {
   return panier.map((item) {
     return {
-      'quantity': item['qte'],
-      'product_id': item['product_id'],
-      'unit_price': item['unit_price'],
+      'qte': item['qte'],
+      'product_id': item['id'],
+      'unit_price': item['prix'],
     };
   }).toList();
 }

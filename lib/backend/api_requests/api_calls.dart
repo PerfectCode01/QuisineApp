@@ -224,7 +224,7 @@ class OrderApiCall {
   "numero": "$numero",
   "reference": "${escapeStringForJson(referencei)}",
   "comment": "${escapeStringForJson(comment)}",
-  "propaData": "$propaData",
+  "propaData": $propaData,
   "citie_id": "${escapeStringForJson(citieId)}"
 }''';
     return ApiManager.instance.makeApiCall(
