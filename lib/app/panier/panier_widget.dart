@@ -1,8 +1,8 @@
+import '/app/components/card_produit/card_produit_widget.dart';
+import '/app/components/panier_vide_c/panier_vide_c_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pagessss/components/card_produit/card_produit_widget.dart';
-import '/pagessss/components/panier_vide_c/panier_vide_c_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

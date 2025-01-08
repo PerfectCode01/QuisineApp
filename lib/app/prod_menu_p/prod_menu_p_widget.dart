@@ -80,9 +80,9 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget> {
               style: FlutterFlowTheme.of(context).bodyMedium.override(
                     fontFamily: 'Inter',
                     color: FlutterFlowTheme.of(context).secondaryText,
-                    fontSize: 20.0,
+                    fontSize: 30.0,
                     letterSpacing: 0.0,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                   ),
             ),
           ),

@@ -1,3 +1,4 @@
+import '/components/produits_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -505,6 +506,14 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                               ].divide(const SizedBox(width: 16.0)),
                             ),
                           ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 200.0,
+                        child: wrapWithModel(
+                          model: _model.produitsModel,
+                          updateCallback: () => safeSetState(() {}),
+                          child: const ProduitsWidget(),
                         ),
                       ),
                     ].divide(const SizedBox(height: 12.0)),

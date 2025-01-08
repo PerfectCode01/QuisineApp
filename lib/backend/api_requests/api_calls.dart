@@ -185,10 +185,9 @@ class GetcatalogsCall {
     return ApiManager.instance.makeApiCall(
       callName: 'getcatalogs',
       apiUrl: 'https://test.systematik.tech/api/catalogs/$menuId',
-      callType: ApiCallType.POST,
+      callType: ApiCallType.GET,
       headers: {},
       params: {},
-      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,

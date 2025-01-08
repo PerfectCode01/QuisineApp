@@ -1,5 +1,7 @@
 import '/app/components/change_city/change_city_widget.dart';
 import '/backend/api_requests/api_calls.dart';
+import '/components/menus_widget.dart';
+import '/components/produits_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -181,6 +183,60 @@ class _HomeWidgetState extends State<HomeWidget> {
                 ],
               ),
               Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 45.0,
+                  decoration: BoxDecoration(
+                    color: const Color(0xF8F1F4F8),
+                    borderRadius: BorderRadius.circular(14.0),
+                    border: Border.all(
+                      width: 1.0,
+                    ),
+                  ),
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () async {
+                      context.pushNamed(
+                        'searchP',
+                        extra: <String, dynamic>{
+                          kTransitionInfoKey: const TransitionInfo(
+                            hasTransition: true,
+                            transitionType: PageTransitionType.bottomToTop,
+                            duration: Duration(milliseconds: 300),
+                          ),
+                        },
+                      );
+                    },
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              15.0, 0.0, 10.0, 0.0),
+                          child: Icon(
+                            Icons.search,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 28.0,
+                          ),
+                        ),
+                        Text(
+                          'Recherhcer votre produit ...',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Inter',
+                                    letterSpacing: 0.0,
+                                  ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                 child: Container(
                   width: double.infinity,
@@ -294,17 +350,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   builder: (context, snapshot) {
                     // Customize what your widget looks like when it's loading.
                     if (!snapshot.hasData) {
-                      return Center(
-                        child: SizedBox(
-                          width: 50.0,
-                          height: 50.0,
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                              FlutterFlowTheme.of(context).primary,
-                            ),
-                          ),
-                        ),
-                      );
+                      return const MenusWidget();
                     }
                     final listeDesMenusMenusResponse = snapshot.data!;
 
@@ -385,6 +431,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Inter',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -399,67 +448,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                       },
                     );
                   },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 45.0,
-                  decoration: BoxDecoration(
-                    color: const Color(0xF8F1F4F8),
-                    boxShadow: const [
-                      BoxShadow(
-                        blurRadius: 4.0,
-                        color: Color(0xFFE3DBDB),
-                        offset: Offset(
-                          0.0,
-                          2.0,
-                        ),
-                      )
-                    ],
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      context.pushNamed(
-                        'searchP',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.bottomToTop,
-                            duration: Duration(milliseconds: 300),
-                          ),
-                        },
-                      );
-                    },
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              15.0, 0.0, 10.0, 0.0),
-                          child: Icon(
-                            Icons.search,
-                            color: FlutterFlowTheme.of(context).primaryText,
-                            size: 28.0,
-                          ),
-                        ),
-                        Text(
-                          'Recherhcer votre produit ...',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
-                                    letterSpacing: 0.0,
-                                  ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ),
               ),
               Padding(
@@ -495,16 +483,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.
                         if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 50.0,
-                              height: 50.0,
-                              child: CircularProgressIndicator(
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                  FlutterFlowTheme.of(context).primary,
-                                ),
-                              ),
-                            ),
+                          return const Center(
+                            child: ProduitsWidget(),
                           );
                         }
                         final listeProduitsGetProductsResponse = snapshot.data!;
@@ -514,7 +494,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             final produit = getJsonField(
                               listeProduitsGetProductsResponse.jsonBody,
                               r'''$''',
-                            ).toList().take(5).toList();
+                            ).toList();
 
                             return GridView.builder(
                               padding: EdgeInsets.zero,
@@ -529,182 +509,233 @@ class _HomeWidgetState extends State<HomeWidget> {
                               itemCount: produit.length,
                               itemBuilder: (context, produitIndex) {
                                 final produitItem = produit[produitIndex];
-                                return Container(
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    boxShadow: const [
-                                      BoxShadow(
-                                        blurRadius: 4.0,
-                                        color: Color(0xFFE3DBDB),
-                                        offset: Offset(
-                                          0.0,
-                                          2.0,
+                                return InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed(
+                                      'DetailProduit',
+                                      queryParameters: {
+                                        'produitId': serializeParam(
+                                          getJsonField(
+                                            produitItem,
+                                            r'''$.id''',
+                                          ).toString(),
+                                          ParamType.String,
                                         ),
-                                      )
-                                    ],
-                                    borderRadius: BorderRadius.circular(16.0),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                        child: Image.network(
+                                        'produitImg': serializeParam(
                                           getJsonField(
                                             produitItem,
                                             r'''$.image''',
                                           ).toString(),
-                                          width: 200.0,
-                                          height: 140.0,
-                                          fit: BoxFit.cover,
+                                          ParamType.String,
                                         ),
-                                      ),
-                                      Text(
-                                        getJsonField(
-                                          produitItem,
-                                          r'''$.nom''',
-                                        ).toString(),
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Inter',
-                                              color: const Color(0xFF52555C),
-                                              fontSize: 16.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 0.0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            RichText(
-                                              textScaler: MediaQuery.of(context)
-                                                  .textScaler,
-                                              text: TextSpan(
-                                                children: [
-                                                  TextSpan(
-                                                    text: getJsonField(
-                                                      produitItem,
-                                                      r'''$.prix''',
-                                                    ).toString(),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFF7A6B6B),
-                                                          fontSize: 16.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                                  ),
-                                                  const TextSpan(
-                                                    text: 'FC',
-                                                    style: TextStyle(),
-                                                  )
-                                                ],
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          color:
-                                                              const Color(0xFF52555C),
-                                                          fontSize: 16.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
+                                        'produitNom': serializeParam(
+                                          getJsonField(
+                                            produitItem,
+                                            r'''$.nom''',
+                                          ).toString(),
+                                          ParamType.String,
+                                        ),
+                                        'produitDesc': serializeParam(
+                                          getJsonField(
+                                            produitItem,
+                                            r'''$.description''',
+                                          ).toString(),
+                                          ParamType.String,
+                                        ),
+                                        'prodPrix': serializeParam(
+                                          getJsonField(
+                                            produitItem,
+                                            r'''$.prix''',
+                                          ),
+                                          ParamType.double,
+                                        ),
+                                      }.withoutNulls,
+                                    );
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryBackground,
+                                      boxShadow: const [
+                                        BoxShadow(
+                                          blurRadius: 4.0,
+                                          color: Color(0xFFE3DBDB),
+                                          offset: Offset(
+                                            0.0,
+                                            2.0,
+                                          ),
+                                        )
+                                      ],
+                                      borderRadius: BorderRadius.circular(16.0),
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image.network(
+                                            getJsonField(
+                                              produitItem,
+                                              r'''$.image''',
+                                            ).toString(),
+                                            width: 200.0,
+                                            height: 140.0,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Text(
+                                          getJsonField(
+                                            produitItem,
+                                            r'''$.nom''',
+                                          ).toString(),
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Inter',
+                                                color: const Color(0xFF52555C),
+                                                fontSize: 16.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.bold,
                                               ),
-                                            ),
-                                            Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                if (FFAppState()
-                                                        .panier
-                                                        .containsMap(
-                                                            produitItem) ==
-                                                    false)
-                                                  FlutterFlowIconButton(
-                                                    borderColor:
-                                                        Colors.transparent,
-                                                    borderRadius: 8.0,
-                                                    buttonSize: 40.0,
-                                                    fillColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .primary,
-                                                    icon: Icon(
-                                                      Icons.add,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      size: 24.0,
-                                                    ),
-                                                    onPressed: () async {
-                                                      FFAppState().addToPanier(
-                                                          produitItem);
-                                                      FFAppState()
-                                                              .cardItemCount =
-                                                          FFAppState()
-                                                              .panier
-                                                              .length;
-                                                      safeSetState(() {});
-                                                    },
-                                                  ),
-                                                if (FFAppState()
-                                                        .panier
-                                                        .containsMap(
-                                                            produitItem) ==
-                                                    true)
-                                                  FlutterFlowIconButton(
-                                                    borderColor:
-                                                        Colors.transparent,
-                                                    borderRadius: 8.0,
-                                                    buttonSize: 40.0,
-                                                    fillColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .primary,
-                                                    icon: Icon(
-                                                      Icons.remove_rounded,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .info,
-                                                      size: 24.0,
-                                                    ),
-                                                    onPressed: () async {
-                                                      FFAppState()
-                                                          .removeAtIndexFromPanier(
-                                                              produitIndex);
-                                                      FFAppState()
-                                                              .cardItemCount =
-                                                          FFAppState()
-                                                              .panier
-                                                              .length;
-                                                      safeSetState(() {});
-                                                    },
-                                                  ),
-                                              ],
-                                            ),
-                                          ],
                                         ),
-                                      ),
-                                    ],
+                                        Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 10.0, 0.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceEvenly,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              RichText(
+                                                textScaler:
+                                                    MediaQuery.of(context)
+                                                        .textScaler,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text: getJsonField(
+                                                        produitItem,
+                                                        r'''$.prix''',
+                                                      ).toString(),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily: 'Inter',
+                                                            color: const Color(
+                                                                0xFF7A6B6B),
+                                                            fontSize: 16.0,
+                                                            letterSpacing: 0.0,
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                          ),
+                                                    ),
+                                                    const TextSpan(
+                                                      text: 'FC',
+                                                      style: TextStyle(),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Inter',
+                                                        color:
+                                                            const Color(0xFF52555C),
+                                                        fontSize: 16.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
+                                                ),
+                                              ),
+                                              Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  if (FFAppState()
+                                                          .panier
+                                                          .containsMap(
+                                                              produitItem) ==
+                                                      false)
+                                                    FlutterFlowIconButton(
+                                                      borderColor:
+                                                          Colors.transparent,
+                                                      borderRadius: 8.0,
+                                                      buttonSize: 40.0,
+                                                      fillColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      icon: Icon(
+                                                        Icons.add,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .info,
+                                                        size: 24.0,
+                                                      ),
+                                                      onPressed: () async {
+                                                        FFAppState()
+                                                            .addToPanier(
+                                                                produitItem);
+                                                        FFAppState()
+                                                                .cardItemCount =
+                                                            FFAppState()
+                                                                .panier
+                                                                .length;
+                                                        safeSetState(() {});
+                                                      },
+                                                    ),
+                                                  if (FFAppState()
+                                                          .panier
+                                                          .containsMap(
+                                                              produitItem) ==
+                                                      true)
+                                                    FlutterFlowIconButton(
+                                                      borderColor:
+                                                          Colors.transparent,
+                                                      borderRadius: 8.0,
+                                                      buttonSize: 40.0,
+                                                      fillColor:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      icon: Icon(
+                                                        Icons.remove_rounded,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .info,
+                                                        size: 24.0,
+                                                      ),
+                                                      onPressed: () async {
+                                                        FFAppState()
+                                                            .removeAtIndexFromPanier(
+                                                                produitIndex);
+                                                        FFAppState()
+                                                                .cardItemCount =
+                                                            FFAppState()
+                                                                .panier
+                                                                .length;
+                                                        safeSetState(() {});
+                                                      },
+                                                    ),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 );
                               },

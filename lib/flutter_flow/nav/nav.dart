@@ -85,16 +85,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               appStateNotifier.loggedIn ? const NavBarPage() : const SpScreenWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => HomePageWidget(
-            cityId: params.getParam(
-              'cityId',
-              ParamType.String,
-            ),
-          ),
-        ),
-        FFRoute(
           name: 'login',
           path: '/login',
           builder: (context, params) => const LoginWidget(),
@@ -161,16 +151,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const PanierWidget(),
         ),
         FFRoute(
-          name: 'commandeReussi',
-          path: '/commandeReussi',
-          builder: (context, params) => const CommandeReussiWidget(),
-        ),
-        FFRoute(
-          name: 'MenuList',
-          path: '/menuList',
-          builder: (context, params) => const MenuListWidget(),
-        ),
-        FFRoute(
           name: 'ProdMenuP',
           path: '/prodMenuP',
           builder: (context, params) => ProdMenuPWidget(
@@ -183,21 +163,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.int,
             ),
           ),
-        ),
-        FFRoute(
-          name: 'PageStart',
-          path: '/pageStart',
-          builder: (context, params) => const PageStartWidget(),
-        ),
-        FFRoute(
-          name: 'PanierVide',
-          path: '/panierVide',
-          builder: (context, params) => const PanierVideWidget(),
-        ),
-        FFRoute(
-          name: 'StartP',
-          path: '/startP',
-          builder: (context, params) => const StartPWidget(),
         ),
         FFRoute(
           name: 'Home',
@@ -238,11 +203,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'adresse2',
-          path: '/adresse2',
-          builder: (context, params) => const Adresse2Widget(),
-        ),
-        FFRoute(
           name: 'commandeReussie',
           path: '/commandeReussie',
           builder: (context, params) => const CommandeReussieWidget(),
@@ -280,6 +240,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'echecCommande',
           path: '/echecCommande',
           builder: (context, params) => const EchecCommandeWidget(),
+        ),
+        FFRoute(
+          name: 'shimmerComponent',
+          path: '/shimmerComponent',
+          builder: (context, params) => const ShimmerComponentWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
