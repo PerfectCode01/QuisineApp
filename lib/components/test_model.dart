@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'produits_widget.dart' show ProduitsWidget;
+import 'test_widget.dart' show TestWidget;
 import 'package:flutter/material.dart';
 
-class ProduitsModel extends FlutterFlowModel<ProduitsWidget> {
+class TestModel extends FlutterFlowModel<TestWidget> {
   @override
   void initState(BuildContext context) {}
 

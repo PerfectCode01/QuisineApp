@@ -1,5 +1,5 @@
 import '/components/menus_widget.dart';
-import '/components/produits_widget.dart';
+import '/components/produit_loader_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -102,9 +102,9 @@ class _SmcWidgetState extends State<SmcWidget> with TickerProviderStateMixin {
           ),
           Expanded(
             child: wrapWithModel(
-              model: _model.produitsModel,
+              model: _model.produitLoaderModel,
               updateCallback: () => safeSetState(() {}),
-              child: const ProduitsWidget(),
+              child: const ProduitLoaderWidget(),
             ),
           ),
         ],

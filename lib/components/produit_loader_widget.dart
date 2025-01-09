@@ -2,19 +2,19 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'produits_model.dart';
-export 'produits_model.dart';
+import 'produit_loader_model.dart';
+export 'produit_loader_model.dart';
 
-class ProduitsWidget extends StatefulWidget {
-  const ProduitsWidget({super.key});
+class ProduitLoaderWidget extends StatefulWidget {
+  const ProduitLoaderWidget({super.key});
 
   @override
-  State<ProduitsWidget> createState() => _ProduitsWidgetState();
+  State<ProduitLoaderWidget> createState() => _ProduitLoaderWidgetState();
 }
 
-class _ProduitsWidgetState extends State<ProduitsWidget>
+class _ProduitLoaderWidgetState extends State<ProduitLoaderWidget>
     with TickerProviderStateMixin {
-  late ProduitsModel _model;
+  late ProduitLoaderModel _model;
 
   final animationsMap = <String, AnimationInfo>{};
 
@@ -27,7 +27,7 @@ class _ProduitsWidgetState extends State<ProduitsWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ProduitsModel());
+    _model = createModel(context, () => ProduitLoaderModel());
 
     animationsMap.addAll({
       'gridViewOnPageLoadAnimation': AnimationInfo(

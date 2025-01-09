@@ -31,3 +31,4 @@ export '/app/echec_commande/echec_commande_widget.dart'
     show EchecCommandeWidget;
 export '/shimmer_component/shimmer_component_widget.dart'
     show ShimmerComponentWidget;
+export '/app/home2/home2_widget.dart' show Home2Widget;

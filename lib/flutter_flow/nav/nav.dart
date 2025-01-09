@@ -245,6 +245,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'shimmerComponent',
           path: '/shimmerComponent',
           builder: (context, params) => const ShimmerComponentWidget(),
+        ),
+        FFRoute(
+          name: 'Home2',
+          path: '/home2',
+          builder: (context, params) => const Home2Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
