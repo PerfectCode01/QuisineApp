@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'sign_up_widget.dart' show SignUpWidget;
 import 'package:flutter/material.dart';
@@ -19,6 +20,8 @@ class SignUpModel extends FlutterFlowModel<SignUpWidget> {
   late bool passwordSignUpVisibility;
   String? Function(BuildContext, String?)?
       passwordSignUpTextControllerValidator;
+  // Stores action output result for [Backend Call - API (sendCode)] action in ButtonInscription widget.
+  ApiCallResponse? apiResult6zx;
 
   @override
   void initState(BuildContext context) {

@@ -102,7 +102,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'OtpCode',
           path: '/otpCode',
-          builder: (context, params) => const OtpCodeWidget(),
+          builder: (context, params) => OtpCodeWidget(
+            telephone: params.getParam(
+              'telephone',
+              ParamType.String,
+            ),
+            nom: params.getParam(
+              'nom',
+              ParamType.String,
+            ),
+            password: params.getParam(
+              'password',
+              ParamType.String,
+            ),
+            code: params.getParam(
+              'code',
+              ParamType.String,
+            ),
+          ),
         ),
         FFRoute(
           name: 'spScreen',
@@ -218,11 +235,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ChoixVilleWidget(),
         ),
         FFRoute(
-          name: 'cataloguess',
-          path: '/cataloguess',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'cataloguess')
-              : const CataloguessWidget(),
+          name: 'Menu',
+          path: '/menu',
+          builder: (context, params) =>
+              params.isEmpty ? const NavBarPage(initialPage: 'Menu') : const MenuWidget(),
         ),
         FFRoute(
           name: 'notifications',
@@ -250,6 +266,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Home2',
           path: '/home2',
           builder: (context, params) => const Home2Widget(),
+        ),
+        FFRoute(
+          name: 'presenteApp',
+          path: '/presenteApp',
+          builder: (context, params) => PresenteAppWidget(
+            tel: params.getParam(
+              'tel',
+              ParamType.String,
+            ),
+            password: params.getParam(
+              'password',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

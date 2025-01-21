@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
 import 'home_model.dart';
 export 'home_model.dart';
@@ -26,6 +27,24 @@ class _HomeWidgetState extends State<HomeWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => HomeModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      _model.apiResult491 = await GetProductsCall.call(
+        cityId: FFAppState().selectedCityId,
+      );
+
+      if ((_model.apiResult491?.succeeded ?? true)) {
+        FFAppState().products = getJsonField(
+          (_model.apiResult491?.jsonBody ?? ''),
+          r'''$''',
+          true,
+        )!
+            .toList()
+            .cast<dynamic>();
+        safeSetState(() {});
+      }
+    });
   }
 
   @override
@@ -522,284 +541,291 @@ class _HomeWidgetState extends State<HomeWidget> {
               Expanded(
                 child: Stack(
                   children: [
-                    FutureBuilder<ApiCallResponse>(
-                      future: GetProductsCall.call(
-                        cityId: FFAppState().selectedCityId,
-                      ),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 40.0,
-                              height: 40.0,
-                              child: CircularProgressIndicator(
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                  FlutterFlowTheme.of(context).secondaryText,
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      child: FutureBuilder<ApiCallResponse>(
+                        future: GetProductsCall.call(
+                          cityId: FFAppState().selectedCityId,
+                        ),
+                        builder: (context, snapshot) {
+                          // Customize what your widget looks like when it's loading.
+                          if (!snapshot.hasData) {
+                            return Center(
+                              child: SizedBox(
+                                width: 40.0,
+                                height: 40.0,
+                                child: CircularProgressIndicator(
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                  ),
                                 ),
                               ),
-                            ),
-                          );
-                        }
-                        final listeProduitsGetProductsResponse = snapshot.data!;
+                            );
+                          }
+                          final listeProduitsGetProductsResponse =
+                              snapshot.data!;
 
-                        return Builder(
-                          builder: (context) {
-                            final produit = getJsonField(
-                              listeProduitsGetProductsResponse.jsonBody,
-                              r'''$''',
-                            ).toList().take(4).toList();
+                          return Builder(
+                            builder: (context) {
+                              final produit = getJsonField(
+                                listeProduitsGetProductsResponse.jsonBody,
+                                r'''$''',
+                              ).toList().take(4).toList();
 
-                            return GridView.builder(
-                              padding: EdgeInsets.zero,
-                              gridDelegate:
-                                  const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2,
-                                crossAxisSpacing: 7.0,
-                                mainAxisSpacing: 7.0,
-                                childAspectRatio: 0.83,
-                              ),
-                              primary: false,
-                              scrollDirection: Axis.vertical,
-                              itemCount: produit.length,
-                              itemBuilder: (context, produitIndex) {
-                                final produitItem = produit[produitIndex];
-                                return InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context.pushNamed(
-                                      'DetailProduit',
-                                      queryParameters: {
-                                        'produitId': serializeParam(
-                                          getJsonField(
-                                            produitItem,
-                                            r'''$.id''',
-                                          ).toString(),
-                                          ParamType.String,
-                                        ),
-                                        'produitImg': serializeParam(
-                                          getJsonField(
-                                            produitItem,
-                                            r'''$.image''',
-                                          ).toString(),
-                                          ParamType.String,
-                                        ),
-                                        'produitNom': serializeParam(
-                                          getJsonField(
-                                            produitItem,
-                                            r'''$.nom''',
-                                          ).toString(),
-                                          ParamType.String,
-                                        ),
-                                        'produitDesc': serializeParam(
-                                          getJsonField(
-                                            produitItem,
-                                            r'''$.description''',
-                                          ).toString(),
-                                          ParamType.String,
-                                        ),
-                                        'prodPrix': serializeParam(
-                                          getJsonField(
-                                            produitItem,
-                                            r'''$.prix''',
+                              return GridView.builder(
+                                padding: EdgeInsets.zero,
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  crossAxisSpacing: 7.0,
+                                  mainAxisSpacing: 7.0,
+                                  childAspectRatio: 0.83,
+                                ),
+                                primary: false,
+                                scrollDirection: Axis.vertical,
+                                itemCount: produit.length,
+                                itemBuilder: (context, produitIndex) {
+                                  final produitItem = produit[produitIndex];
+                                  return InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed(
+                                        'DetailProduit',
+                                        queryParameters: {
+                                          'produitId': serializeParam(
+                                            getJsonField(
+                                              produitItem,
+                                              r'''$.id''',
+                                            ).toString(),
+                                            ParamType.String,
                                           ),
-                                          ParamType.double,
-                                        ),
-                                      }.withoutNulls,
-                                    );
-                                  },
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      boxShadow: const [
-                                        BoxShadow(
-                                          blurRadius: 4.0,
-                                          color: Color(0xFFE3DBDB),
-                                          offset: Offset(
-                                            0.0,
-                                            2.0,
-                                          ),
-                                        )
-                                      ],
-                                      borderRadius: BorderRadius.circular(16.0),
-                                    ),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                          child: Image.network(
+                                          'produitImg': serializeParam(
                                             getJsonField(
                                               produitItem,
                                               r'''$.image''',
                                             ).toString(),
-                                            width: 200.0,
-                                            height: MediaQuery.sizeOf(context)
-                                                    .height *
-                                                0.16,
-                                            fit: BoxFit.cover,
+                                            ParamType.String,
                                           ),
-                                        ),
-                                        Text(
-                                          getJsonField(
-                                            produitItem,
-                                            r'''$.nom''',
-                                          ).toString(),
-                                          textAlign: TextAlign.start,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Inter',
-                                                color: const Color(0xFF52555C),
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 10.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              RichText(
-                                                textScaler:
-                                                    MediaQuery.of(context)
-                                                        .textScaler,
-                                                text: TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text: getJsonField(
-                                                        produitItem,
-                                                        r'''$.prix''',
-                                                      ).toString(),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily: 'Inter',
-                                                            color: const Color(
-                                                                0xFF7A6B6B),
-                                                            fontSize: 16.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                    const TextSpan(
-                                                      text: 'FC',
-                                                      style: TextStyle(),
-                                                    )
-                                                  ],
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Inter',
-                                                        color:
-                                                            const Color(0xFF52555C),
-                                                        fontSize: 16.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
+                                          'produitNom': serializeParam(
+                                            getJsonField(
+                                              produitItem,
+                                              r'''$.nom''',
+                                            ).toString(),
+                                            ParamType.String,
+                                          ),
+                                          'produitDesc': serializeParam(
+                                            getJsonField(
+                                              produitItem,
+                                              r'''$.description''',
+                                            ).toString(),
+                                            ParamType.String,
+                                          ),
+                                          'prodPrix': serializeParam(
+                                            getJsonField(
+                                              produitItem,
+                                              r'''$.prix''',
+                                            ),
+                                            ParamType.double,
+                                          ),
+                                        }.withoutNulls,
+                                      );
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        boxShadow: const [
+                                          BoxShadow(
+                                            blurRadius: 4.0,
+                                            color: Color(0xFFE3DBDB),
+                                            offset: Offset(
+                                              0.0,
+                                              2.0,
+                                            ),
+                                          )
+                                        ],
+                                        borderRadius:
+                                            BorderRadius.circular(16.0),
+                                      ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                            child: Image.network(
+                                              getJsonField(
+                                                produitItem,
+                                                r'''$.image''',
+                                              ).toString(),
+                                              width: 200.0,
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  0.16,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                          Text(
+                                            getJsonField(
+                                              produitItem,
+                                              r'''$.nom''',
+                                            ).toString(),
+                                            textAlign: TextAlign.start,
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Inter',
+                                                  color: const Color(0xFF52555C),
+                                                  fontSize: 16.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.bold,
                                                 ),
-                                              ),
-                                              Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  if (FFAppState()
-                                                          .panier
-                                                          .containsMap(
-                                                              produitItem) ==
-                                                      false)
-                                                    FlutterFlowIconButton(
-                                                      borderColor:
-                                                          Colors.transparent,
-                                                      borderRadius: 8.0,
-                                                      buttonSize: 40.0,
-                                                      fillColor:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primary,
-                                                      icon: Icon(
-                                                        Icons.add,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .info,
-                                                        size: 24.0,
-                                                      ),
-                                                      onPressed: () async {
-                                                        FFAppState()
-                                                            .addToPanier(
-                                                                produitItem);
-                                                        FFAppState()
-                                                                .cardItemCount =
-                                                            FFAppState()
-                                                                .panier
-                                                                .length;
-                                                        safeSetState(() {});
-                                                      },
-                                                    ),
-                                                  if (FFAppState()
-                                                          .panier
-                                                          .containsMap(
-                                                              produitItem) ==
-                                                      true)
-                                                    FlutterFlowIconButton(
-                                                      borderColor:
-                                                          Colors.transparent,
-                                                      borderRadius: 8.0,
-                                                      buttonSize: 40.0,
-                                                      fillColor:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primary,
-                                                      icon: Icon(
-                                                        Icons.remove_rounded,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .info,
-                                                        size: 24.0,
-                                                      ),
-                                                      onPressed: () async {
-                                                        FFAppState()
-                                                            .removeAtIndexFromPanier(
-                                                                produitIndex);
-                                                        FFAppState()
-                                                                .cardItemCount =
-                                                            FFAppState()
-                                                                .panier
-                                                                .length;
-                                                        safeSetState(() {});
-                                                      },
-                                                    ),
-                                                ],
-                                              ),
-                                            ],
                                           ),
-                                        ),
-                                      ],
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 10.0, 0.0, 0.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceEvenly,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                RichText(
+                                                  textScaler:
+                                                      MediaQuery.of(context)
+                                                          .textScaler,
+                                                  text: TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text: getJsonField(
+                                                          produitItem,
+                                                          r'''$.prix''',
+                                                        ).toString(),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              color: const Color(
+                                                                  0xFF7A6B6B),
+                                                              fontSize: 16.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ),
+                                                      ),
+                                                      const TextSpan(
+                                                        text: 'FC',
+                                                        style: TextStyle(),
+                                                      )
+                                                    ],
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Inter',
+                                                          color:
+                                                              const Color(0xFF52555C),
+                                                          fontSize: 16.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                  ),
+                                                ),
+                                                Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  children: [
+                                                    if (FFAppState()
+                                                            .panier
+                                                            .containsMap(
+                                                                produitItem) ==
+                                                        false)
+                                                      FlutterFlowIconButton(
+                                                        borderColor:
+                                                            Colors.transparent,
+                                                        borderRadius: 8.0,
+                                                        buttonSize: 40.0,
+                                                        fillColor:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                        icon: Icon(
+                                                          Icons.add,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .info,
+                                                          size: 24.0,
+                                                        ),
+                                                        onPressed: () async {
+                                                          FFAppState()
+                                                              .addToPanier(
+                                                                  produitItem);
+                                                          FFAppState()
+                                                                  .cardItemCount =
+                                                              FFAppState()
+                                                                  .panier
+                                                                  .length;
+                                                          safeSetState(() {});
+                                                        },
+                                                      ),
+                                                    if (FFAppState()
+                                                            .panier
+                                                            .containsMap(
+                                                                produitItem) ==
+                                                        true)
+                                                      FlutterFlowIconButton(
+                                                        borderColor:
+                                                            Colors.transparent,
+                                                        borderRadius: 8.0,
+                                                        buttonSize: 40.0,
+                                                        fillColor:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                        icon: Icon(
+                                                          Icons.remove_rounded,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .info,
+                                                          size: 24.0,
+                                                        ),
+                                                        onPressed: () async {
+                                                          FFAppState()
+                                                              .removeAtIndexFromPanier(
+                                                                  produitIndex);
+                                                          FFAppState()
+                                                                  .cardItemCount =
+                                                              FFAppState()
+                                                                  .panier
+                                                                  .length;
+                                                          safeSetState(() {});
+                                                        },
+                                                      ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                );
-                              },
-                            );
-                          },
-                        );
-                      },
+                                  );
+                                },
+                              );
+                            },
+                          );
+                        },
+                      ),
                     ),
                   ],
                 ),

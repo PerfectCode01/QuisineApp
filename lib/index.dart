@@ -22,8 +22,7 @@ export '/app/commande_reussie/commande_reussie_widget.dart'
 export '/app/suiviedes_commandes/suiviedes_commandes_widget.dart'
     show SuiviedesCommandesWidget;
 export '/app/choix_ville/choix_ville_widget.dart' show ChoixVilleWidget;
-export '/app/pages_nav/cataloguess/cataloguess_widget.dart'
-    show CataloguessWidget;
+export '/app/pages_nav/menu/menu_widget.dart' show MenuWidget;
 export '/app/pages_nav/notifications/notifications_widget.dart'
     show NotificationsWidget;
 export '/app/sp_screen2/sp_screen2_widget.dart' show SpScreen2Widget;
@@ -32,3 +31,5 @@ export '/app/echec_commande/echec_commande_widget.dart'
 export '/shimmer_component/shimmer_component_widget.dart'
     show ShimmerComponentWidget;
 export '/app/home2/home2_widget.dart' show Home2Widget;
+export '/authentification/presente_app/presente_app_widget.dart'
+    show PresenteAppWidget;

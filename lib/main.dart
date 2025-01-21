@@ -113,7 +113,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'Home': const HomeWidget(),
-      'cataloguess': const CataloguessWidget(),
+      'Menu': const MenuWidget(),
       'notifications': const NotificationsWidget(),
       'Compte': const CompteWidget(),
     };

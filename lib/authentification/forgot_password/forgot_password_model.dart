@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'forgot_password_widget.dart' show ForgotPasswordWidget;
 import 'package:flutter/material.dart';
@@ -14,6 +15,8 @@ class ForgotPasswordModel extends FlutterFlowModel<ForgotPasswordWidget> {
   TextEditingController? motDePasseResetPTextController;
   String? Function(BuildContext, String?)?
       motDePasseResetPTextControllerValidator;
+  // Stores action output result for [Backend Call - API (sendCode)] action in Button-Login widget.
+  ApiCallResponse? apiResult53q;
 
   @override
   void initState(BuildContext context) {}

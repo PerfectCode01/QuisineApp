@@ -48,3 +48,23 @@ dynamic getPropaData(List<dynamic> panier) {
     };
   }).toList();
 }
+
+List<dynamic> getProductCatalog(
+  int catalogId,
+  List<dynamic> products,
+) {
+  var results =
+      products.where((product) => product['catalogs_id'] == catalogId).toList();
+  return results;
+}
+
+List<dynamic> searchProduct(
+  String textSearch,
+  List<dynamic> products,
+) {
+  return products.where((product) {
+    // Assurez-vous que chaque produit possède une propriété 'name'
+    final String productName = product['nom'].toString().toLowerCase();
+    return productName.contains(textSearch.toLowerCase());
+  }).toList();
+}

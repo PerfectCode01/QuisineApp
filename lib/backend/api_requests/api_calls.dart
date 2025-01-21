@@ -197,10 +197,15 @@ class GetcatalogsCall {
     );
   }
 
-  static dynamic catalogs(dynamic response) => getJsonField(
+  static List? catalogs(dynamic response) => getJsonField(
         response,
         r'''$''',
-      );
+        true,
+      ) as List?;
+  static int? firstCatalogId(dynamic response) => castToType<int>(getJsonField(
+        response,
+        r'''$[0].id''',
+      ));
 }
 
 class OrderApiCall {
@@ -247,6 +252,57 @@ class OrderApiCall {
         response,
         r'''$''',
       );
+}
+
+class SendCodeCall {
+  static Future<ApiCallResponse> call({
+    String? telephone = '',
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'sendCode',
+      apiUrl: 'https://test.systematik.tech/api/sendCode/$telephone',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class RegisterApiCall {
+  static Future<ApiCallResponse> call({
+    String? name = '',
+    String? password = '',
+    String? tel = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "name": "${escapeStringForJson(name)}",
+  "password": "${escapeStringForJson(password)}",
+  "tel": "${escapeStringForJson(tel)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'registerApi',
+      apiUrl: 'https://test.systematik.tech/api/register',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
 }
 
 class ApiPagingParams {

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:csv/csv.dart';
+import 'package:synchronized/synchronized.dart';
 
 class FFAppState extends ChangeNotifier {
   static FFAppState _instance = FFAppState._internal();
@@ -13,17 +16,33 @@ class FFAppState extends ChangeNotifier {
     _instance = FFAppState._internal();
   }
 
-  Future initializePersistedState() async {}
+  Future initializePersistedState() async {
+    secureStorage = const FlutterSecureStorage();
+    await _safeInitAsync(() async {
+      _selectedCityId =
+          await secureStorage.getString('ff_selectedCityId') ?? _selectedCityId;
+    });
+    await _safeInitAsync(() async {
+      _userId = await secureStorage.getInt('ff_userId') ?? _userId;
+    });
+  }
 
   void update(VoidCallback callback) {
     callback();
     notifyListeners();
   }
 
+  late FlutterSecureStorage secureStorage;
+
   String _selectedCityId = '';
   String get selectedCityId => _selectedCityId;
   set selectedCityId(String value) {
     _selectedCityId = value;
+    secureStorage.setString('ff_selectedCityId', value);
+  }
+
+  void deleteSelectedCityId() {
+    secureStorage.delete(key: 'ff_selectedCityId');
   }
 
   List<dynamic> _panier = [];
@@ -106,6 +125,11 @@ class FFAppState extends ChangeNotifier {
   int get userId => _userId;
   set userId(int value) {
     _userId = value;
+    secureStorage.setInt('ff_userId', value);
+  }
+
+  void deleteUserId() {
+    secureStorage.delete(key: 'ff_userId');
   }
 
   String _rue = '';
@@ -154,4 +178,88 @@ class FFAppState extends ChangeNotifier {
   void insertAtIndexInPropa(int index, dynamic value) {
     propa.insert(index, value);
   }
+
+  List<dynamic> _products = [];
+  List<dynamic> get products => _products;
+  set products(List<dynamic> value) {
+    _products = value;
+  }
+
+  void addToProducts(dynamic value) {
+    products.add(value);
+  }
+
+  void removeFromProducts(dynamic value) {
+    products.remove(value);
+  }
+
+  void removeAtIndexFromProducts(int index) {
+    products.removeAt(index);
+  }
+
+  void updateProductsAtIndex(
+    int index,
+    dynamic Function(dynamic) updateFn,
+  ) {
+    products[index] = updateFn(_products[index]);
+  }
+
+  void insertAtIndexInProducts(int index, dynamic value) {
+    products.insert(index, value);
+  }
+}
+
+void _safeInit(Function() initializeField) {
+  try {
+    initializeField();
+  } catch (_) {}
+}
+
+Future _safeInitAsync(Function() initializeField) async {
+  try {
+    await initializeField();
+  } catch (_) {}
+}
+
+extension FlutterSecureStorageExtensions on FlutterSecureStorage {
+  static final _lock = Lock();
+
+  Future<void> writeSync({required String key, String? value}) async =>
+      await _lock.synchronized(() async {
+        await write(key: key, value: value);
+      });
+
+  void remove(String key) => delete(key: key);
+
+  Future<String?> getString(String key) async => await read(key: key);
+  Future<void> setString(String key, String value) async =>
+      await writeSync(key: key, value: value);
+
+  Future<bool?> getBool(String key) async => (await read(key: key)) == 'true';
+  Future<void> setBool(String key, bool value) async =>
+      await writeSync(key: key, value: value.toString());
+
+  Future<int?> getInt(String key) async =>
+      int.tryParse(await read(key: key) ?? '');
+  Future<void> setInt(String key, int value) async =>
+      await writeSync(key: key, value: value.toString());
+
+  Future<double?> getDouble(String key) async =>
+      double.tryParse(await read(key: key) ?? '');
+  Future<void> setDouble(String key, double value) async =>
+      await writeSync(key: key, value: value.toString());
+
+  Future<List<String>?> getStringList(String key) async =>
+      await read(key: key).then((result) {
+        if (result == null || result.isEmpty) {
+          return null;
+        }
+        return const CsvToListConverter()
+            .convert(result)
+            .first
+            .map((e) => e.toString())
+            .toList();
+      });
+  Future<void> setStringList(String key, List<String> value) async =>
+      await writeSync(key: key, value: const ListToCsvConverter().convert([value]));
 }

@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -431,9 +432,52 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 16.0),
                                           child: FFButtonWidget(
-                                            onPressed: () {
-                                              print(
-                                                  'ButtonInscription pressed ...');
+                                            onPressed: () async {
+                                              _model.apiResult6zx =
+                                                  await SendCodeCall.call(
+                                                telephone: _model
+                                                    .numerosignUpTextController
+                                                    .text,
+                                              );
+
+                                              if ((_model.apiResult6zx
+                                                      ?.succeeded ??
+                                                  true)) {
+                                                context.pushNamed(
+                                                  'OtpCode',
+                                                  queryParameters: {
+                                                    'telephone': serializeParam(
+                                                      _model
+                                                          .numerosignUpTextController
+                                                          .text,
+                                                      ParamType.String,
+                                                    ),
+                                                    'nom': serializeParam(
+                                                      _model
+                                                          .nameSignUpTextController
+                                                          .text,
+                                                      ParamType.String,
+                                                    ),
+                                                    'password': serializeParam(
+                                                      _model
+                                                          .passwordSignUpTextController
+                                                          .text,
+                                                      ParamType.String,
+                                                    ),
+                                                    'code': serializeParam(
+                                                      getJsonField(
+                                                        (_model.apiResult6zx
+                                                                ?.jsonBody ??
+                                                            ''),
+                                                        r'''$.code''',
+                                                      ).toString(),
+                                                      ParamType.String,
+                                                    ),
+                                                  }.withoutNulls,
+                                                );
+                                              }
+
+                                              safeSetState(() {});
                                             },
                                             text: 'S\'inscrire',
                                             options: FFButtonOptions(

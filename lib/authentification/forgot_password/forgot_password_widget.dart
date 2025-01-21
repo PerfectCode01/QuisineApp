@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -308,8 +309,39 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button-Login pressed ...');
+                      onPressed: () async {
+                        _model.apiResult53q = await SendCodeCall.call(
+                          telephone: _model.numeroResetPTextController.text,
+                        );
+
+                        if ((_model.apiResult53q?.succeeded ?? true)) {
+                          context.pushNamed(
+                            'OtpCode',
+                            queryParameters: {
+                              'telephone': serializeParam(
+                                _model.numeroResetPTextController.text,
+                                ParamType.String,
+                              ),
+                              'nom': serializeParam(
+                                'null',
+                                ParamType.String,
+                              ),
+                              'password': serializeParam(
+                                _model.motDePasseResetPTextController.text,
+                                ParamType.String,
+                              ),
+                              'code': serializeParam(
+                                getJsonField(
+                                  (_model.apiResult53q?.jsonBody ?? ''),
+                                  r'''$.code''',
+                                ).toString(),
+                                ParamType.String,
+                              ),
+                            }.withoutNulls,
+                          );
+                        }
+
+                        safeSetState(() {});
                       },
                       text: 'Confirmer',
                       options: FFButtonOptions(

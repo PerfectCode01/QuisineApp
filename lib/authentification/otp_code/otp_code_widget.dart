@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -8,7 +9,18 @@ import 'otp_code_model.dart';
 export 'otp_code_model.dart';
 
 class OtpCodeWidget extends StatefulWidget {
-  const OtpCodeWidget({super.key});
+  const OtpCodeWidget({
+    super.key,
+    required this.telephone,
+    required this.nom,
+    required this.password,
+    required this.code,
+  });
+
+  final String? telephone;
+  final String? nom;
+  final String? password;
+  final String? code;
 
   @override
   State<OtpCodeWidget> createState() => _OtpCodeWidgetState();
@@ -35,23 +47,23 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
       });
     }
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.otp1TextController ??= TextEditingController();
+    _model.otp1FocusNode ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.otp2TextController ??= TextEditingController();
+    _model.otp2FocusNode ??= FocusNode();
 
-    _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.otp3TextController ??= TextEditingController();
+    _model.otp3FocusNode ??= FocusNode();
 
-    _model.textController4 ??= TextEditingController();
-    _model.textFieldFocusNode4 ??= FocusNode();
+    _model.otp4TextController ??= TextEditingController();
+    _model.otp4FocusNode ??= FocusNode();
 
-    _model.textController5 ??= TextEditingController();
-    _model.textFieldFocusNode5 ??= FocusNode();
+    _model.otp5TextController ??= TextEditingController();
+    _model.otp5FocusNode ??= FocusNode();
 
-    _model.textController6 ??= TextEditingController();
-    _model.textFieldFocusNode6 ??= FocusNode();
+    _model.otp6TextController ??= TextEditingController();
+    _model.otp6FocusNode ??= FocusNode();
   }
 
   @override
@@ -156,9 +168,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                         child: SizedBox(
                                           width: 10.0,
                                           child: TextFormField(
-                                            controller: _model.textController1,
-                                            focusNode:
-                                                _model.textFieldFocusNode1,
+                                            controller:
+                                                _model.otp1TextController,
+                                            focusNode: _model.otp1FocusNode,
                                             autofocus: false,
                                             obscureText: false,
                                             decoration: InputDecoration(
@@ -229,7 +241,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .primaryText,
                                             validator: _model
-                                                .textController1Validator
+                                                .otp1TextControllerValidator
                                                 .asValidator(context),
                                           ),
                                         ),
@@ -242,9 +254,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                         child: SizedBox(
                                           width: 20.0,
                                           child: TextFormField(
-                                            controller: _model.textController2,
-                                            focusNode:
-                                                _model.textFieldFocusNode2,
+                                            controller:
+                                                _model.otp2TextController,
+                                            focusNode: _model.otp2FocusNode,
                                             autofocus: false,
                                             obscureText: false,
                                             decoration: InputDecoration(
@@ -315,7 +327,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .primaryText,
                                             validator: _model
-                                                .textController2Validator
+                                                .otp2TextControllerValidator
                                                 .asValidator(context),
                                           ),
                                         ),
@@ -328,9 +340,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                         child: SizedBox(
                                           width: 20.0,
                                           child: TextFormField(
-                                            controller: _model.textController3,
-                                            focusNode:
-                                                _model.textFieldFocusNode3,
+                                            controller:
+                                                _model.otp3TextController,
+                                            focusNode: _model.otp3FocusNode,
                                             autofocus: false,
                                             obscureText: false,
                                             decoration: InputDecoration(
@@ -401,7 +413,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .primaryText,
                                             validator: _model
-                                                .textController3Validator
+                                                .otp3TextControllerValidator
                                                 .asValidator(context),
                                           ),
                                         ),
@@ -414,9 +426,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                         child: SizedBox(
                                           width: 20.0,
                                           child: TextFormField(
-                                            controller: _model.textController4,
-                                            focusNode:
-                                                _model.textFieldFocusNode4,
+                                            controller:
+                                                _model.otp4TextController,
+                                            focusNode: _model.otp4FocusNode,
                                             autofocus: false,
                                             obscureText: false,
                                             decoration: InputDecoration(
@@ -487,7 +499,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .primaryText,
                                             validator: _model
-                                                .textController4Validator
+                                                .otp4TextControllerValidator
                                                 .asValidator(context),
                                           ),
                                         ),
@@ -500,9 +512,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                         child: SizedBox(
                                           width: 20.0,
                                           child: TextFormField(
-                                            controller: _model.textController5,
-                                            focusNode:
-                                                _model.textFieldFocusNode5,
+                                            controller:
+                                                _model.otp5TextController,
+                                            focusNode: _model.otp5FocusNode,
                                             autofocus: false,
                                             obscureText: false,
                                             decoration: InputDecoration(
@@ -573,7 +585,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .primaryText,
                                             validator: _model
-                                                .textController5Validator
+                                                .otp5TextControllerValidator
                                                 .asValidator(context),
                                           ),
                                         ),
@@ -583,8 +595,8 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                       child: SizedBox(
                                         width: 20.0,
                                         child: TextFormField(
-                                          controller: _model.textController6,
-                                          focusNode: _model.textFieldFocusNode6,
+                                          controller: _model.otp6TextController,
+                                          focusNode: _model.otp6FocusNode,
                                           autofocus: false,
                                           obscureText: false,
                                           decoration: InputDecoration(
@@ -655,7 +667,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .primaryText,
                                           validator: _model
-                                              .textController6Validator
+                                              .otp6TextControllerValidator
                                               .asValidator(context),
                                         ),
                                       ),
@@ -675,8 +687,44 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 24.0),
                         child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
+                          onPressed: () async {
+                            if (widget.code ==
+                                '${_model.otp1TextController.text}${_model.otp2TextController.text}${_model.otp3TextController.text}${_model.otp4TextController.text}${_model.otp5TextController.text}${_model.otp6TextController.text}') {
+                              await RegisterApiCall.call(
+                                name: widget.nom,
+                                password: widget.password,
+                                tel: widget.telephone,
+                              );
+
+                              context.pushNamed(
+                                'presenteApp',
+                                queryParameters: {
+                                  'tel': serializeParam(
+                                    widget.telephone,
+                                    ParamType.String,
+                                  ),
+                                  'password': serializeParam(
+                                    widget.password,
+                                    ParamType.String,
+                                  ),
+                                }.withoutNulls,
+                              );
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(
+                                    'Code ne correspond pas réessayez',
+                                    style: TextStyle(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                    ),
+                                  ),
+                                  duration: const Duration(milliseconds: 4000),
+                                  backgroundColor:
+                                      FlutterFlowTheme.of(context).secondary,
+                                ),
+                              );
+                            }
                           },
                           text: 'Verifier le code ',
                           options: FFButtonOptions(
