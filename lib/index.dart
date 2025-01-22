@@ -33,3 +33,6 @@ export '/shimmer_component/shimmer_component_widget.dart'
 export '/app/home2/home2_widget.dart' show Home2Widget;
 export '/authentification/presente_app/presente_app_widget.dart'
     show PresenteAppWidget;
+export '/authentification/otp_code_forgot/otp_code_forgot_widget.dart'
+    show OtpCodeForgotWidget;
+export '/app/pages_nav/home_copy/home_copy_widget.dart' show HomeCopyWidget;

@@ -116,6 +116,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'Menu': const MenuWidget(),
       'notifications': const NotificationsWidget(),
       'Compte': const CompteWidget(),
+      'HomeCopy': const HomeCopyWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -168,6 +169,14 @@ class _NavBarPageState extends State<NavBarPage> {
                 size: 24.0,
               ),
               label: 'compte',
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_rounded,
+                size: 24.0,
+              ),
+              label: 'Home',
               tooltip: '',
             )
           ],

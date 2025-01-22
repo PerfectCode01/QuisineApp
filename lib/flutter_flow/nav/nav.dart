@@ -280,6 +280,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'OtpCodeForgot',
+          path: '/otpCodeForgot',
+          builder: (context, params) => OtpCodeForgotWidget(
+            telephone: params.getParam(
+              'telephone',
+              ParamType.String,
+            ),
+            password: params.getParam(
+              'password',
+              ParamType.String,
+            ),
+            code: params.getParam(
+              'code',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'HomeCopy',
+          path: '/homeCopy',
+          builder: (context, params) => params.isEmpty
+              ? const NavBarPage(initialPage: 'HomeCopy')
+              : const HomeCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

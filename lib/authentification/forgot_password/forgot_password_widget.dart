@@ -316,25 +316,18 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
 
                         if ((_model.apiResult53q?.succeeded ?? true)) {
                           context.pushNamed(
-                            'OtpCode',
+                            'OtpCodeForgot',
                             queryParameters: {
                               'telephone': serializeParam(
-                                _model.numeroResetPTextController.text,
-                                ParamType.String,
-                              ),
-                              'nom': serializeParam(
-                                'null',
+                                '',
                                 ParamType.String,
                               ),
                               'password': serializeParam(
-                                _model.motDePasseResetPTextController.text,
+                                '',
                                 ParamType.String,
                               ),
                               'code': serializeParam(
-                                getJsonField(
-                                  (_model.apiResult53q?.jsonBody ?? ''),
-                                  r'''$.code''',
-                                ).toString(),
+                                '',
                                 ParamType.String,
                               ),
                             }.withoutNulls,

@@ -305,6 +305,34 @@ class RegisterApiCall {
   }
 }
 
+class ResetPasswordCall {
+  static Future<ApiCallResponse> call({
+    String? tel = '',
+    String? password = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "tel": "${escapeStringForJson(tel)}",
+  "new_password": "${escapeStringForJson(password)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'resetPassword',
+      apiUrl: 'https://test.systematik.tech/api/reset_password',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
 class ApiPagingParams {
   int nextPageNumber = 0;
   int numItems = 0;
