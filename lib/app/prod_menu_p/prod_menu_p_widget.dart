@@ -9,6 +9,7 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'prod_menu_p_model.dart';
 export 'prod_menu_p_model.dart';
@@ -150,7 +151,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                   badgeContent: Text(
                     FFAppState().panier.length.toString(),
                     style: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Inter Tight',
+                          font: GoogleFonts.interTight(),
                           color: Colors.white,
                           fontSize: 16.0,
                           letterSpacing: 0.0,
@@ -200,7 +201,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                     'menu',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        font: GoogleFonts.inter(),
                         fontSize: 25.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.bold,
@@ -208,161 +209,130 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Container(
                   width: double.infinity,
-                  height: 147.0,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
+                  height: 122.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(0.0),
+                      bottomRight: Radius.circular(0.0),
+                      topLeft: Radius.circular(0.0),
+                      topRight: Radius.circular(0.0),
+                    ),
                   ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            20.0, 0.0, 20.0, 0.0),
-                        child: Container(
-                          width: double.infinity,
-                          height: 141.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            borderRadius: const BorderRadius.only(
-                              bottomLeft: Radius.circular(0.0),
-                              bottomRight: Radius.circular(0.0),
-                              topLeft: Radius.circular(0.0),
-                              topRight: Radius.circular(0.0),
+                  child: FutureBuilder<ApiCallResponse>(
+                    future: GetcatalogsCall.call(
+                      menuId: widget.menuId,
+                    ),
+                    builder: (context, snapshot) {
+                      // Customize what your widget looks like when it's loading.
+                      if (!snapshot.hasData) {
+                        return Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                FlutterFlowTheme.of(context).primary,
+                              ),
                             ),
                           ),
-                          child: FutureBuilder<ApiCallResponse>(
-                            future: GetcatalogsCall.call(
-                              menuId: widget.menuId,
-                            ),
-                            builder: (context, snapshot) {
-                              // Customize what your widget looks like when it's loading.
-                              if (!snapshot.hasData) {
-                                return Center(
-                                  child: SizedBox(
-                                    width: 50.0,
-                                    height: 50.0,
-                                    child: CircularProgressIndicator(
-                                      valueColor: AlwaysStoppedAnimation<Color>(
-                                        FlutterFlowTheme.of(context).primary,
-                                      ),
+                        );
+                      }
+                      final listViewGetcatalogsResponse = snapshot.data!;
+
+                      return Builder(
+                        builder: (context) {
+                          final catalogs = getJsonField(
+                            listViewGetcatalogsResponse.jsonBody,
+                            r'''$''',
+                          ).toList();
+
+                          return ListView.separated(
+                            padding: EdgeInsets.zero,
+                            scrollDirection: Axis.horizontal,
+                            itemCount: catalogs.length,
+                            separatorBuilder: (_, __) => const SizedBox(width: 15.0),
+                            itemBuilder: (context, catalogsIndex) {
+                              final catalogsItem = catalogs[catalogsIndex];
+                              return InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  _model.currentCatalogs = catalogsIndex;
+                                  safeSetState(() {});
+                                  _model.catalogId = getJsonField(
+                                    catalogsItem,
+                                    r'''$.id''',
+                                  );
+                                  safeSetState(() {});
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    borderRadius: const BorderRadius.only(
+                                      bottomLeft: Radius.circular(20.0),
+                                      bottomRight: Radius.circular(20.0),
+                                      topLeft: Radius.circular(20.0),
+                                      topRight: Radius.circular(20.0),
+                                    ),
+                                    border: Border.all(
+                                      color: _model.currentCatalogs ==
+                                              catalogsIndex
+                                          ? FlutterFlowTheme.of(context).primary
+                                          : Colors.white,
                                     ),
                                   ),
-                                );
-                              }
-                              final listViewGetcatalogsResponse =
-                                  snapshot.data!;
-
-                              return Builder(
-                                builder: (context) {
-                                  final catalogs = getJsonField(
-                                    listViewGetcatalogsResponse.jsonBody,
-                                    r'''$''',
-                                  ).toList();
-
-                                  return ListView.separated(
-                                    padding: EdgeInsets.zero,
-                                    shrinkWrap: true,
-                                    scrollDirection: Axis.horizontal,
-                                    itemCount: catalogs.length,
-                                    separatorBuilder: (_, __) =>
-                                        const SizedBox(width: 15.0),
-                                    itemBuilder: (context, catalogsIndex) {
-                                      final catalogsItem =
-                                          catalogs[catalogsIndex];
-                                      return InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          _model.currentCatalogs =
-                                              catalogsIndex;
-                                          safeSetState(() {});
-                                          _model.catalogId = getJsonField(
-                                            catalogsItem,
-                                            r'''$.id''',
-                                          );
-                                          safeSetState(() {});
-                                        },
-                                        child: Container(
-                                          width: 120.0,
-                                          height: 77.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
-                                            borderRadius: const BorderRadius.only(
-                                              bottomLeft: Radius.circular(20.0),
-                                              bottomRight:
-                                                  Radius.circular(20.0),
-                                              topLeft: Radius.circular(20.0),
-                                              topRight: Radius.circular(20.0),
-                                            ),
-                                            border: Border.all(
-                                              color: _model.currentCatalogs ==
-                                                      catalogsIndex
-                                                  ? FlutterFlowTheme.of(context)
-                                                      .primary
-                                                  : Colors.white,
-                                            ),
-                                          ),
-                                          child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    5.0, 0.0, 5.0, 0.0),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
-                                              children: [
-                                                ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          8.0),
-                                                  child: Image.network(
-                                                    getJsonField(
-                                                      catalogsItem,
-                                                      r'''$.image''',
-                                                    ).toString(),
-                                                    width: 70.0,
-                                                    height: 70.0,
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  getJsonField(
-                                                    catalogsItem,
-                                                    r'''$.name''',
-                                                  ).toString(),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Poppins',
-                                                        fontSize: 14.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
-                                                ),
-                                              ],
-                                            ),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        5.0, 0.0, 5.0, 0.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image.network(
+                                            getJsonField(
+                                              catalogsItem,
+                                              r'''$.image''',
+                                            ).toString(),
+                                            width: 70.0,
+                                            height: 70.0,
+                                            fit: BoxFit.cover,
                                           ),
                                         ),
-                                      );
-                                    },
-                                  );
-                                },
+                                        Text(
+                                          getJsonField(
+                                            catalogsItem,
+                                            r'''$.name''',
+                                          ).toString(),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                font: GoogleFonts.poppins(),
+                                                fontSize: 14.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               );
                             },
-                          ),
-                        ),
-                      ),
-                    ],
+                          );
+                        },
+                      );
+                    },
                   ),
                 ),
               ),
@@ -371,7 +341,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                 child: Text(
                   'Vos plats préférés',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Inter',
+                        font: GoogleFonts.inter(),
                         fontSize: 20.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.bold,
@@ -491,7 +461,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                             crossAxisCount: 2,
                             crossAxisSpacing: 10.0,
                             mainAxisSpacing: 10.0,
-                            childAspectRatio: 0.73,
+                            childAspectRatio: 0.72,
                           ),
                           scrollDirection: Axis.vertical,
                           itemCount: product.length,
@@ -509,8 +479,6 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                         r'''$.catalogs_id''',
                                       )),
                               child: Container(
-                                width: 2000.0,
-                                height: 223.0,
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -575,17 +543,24 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                           }.withoutNulls,
                                         );
                                       },
-                                      child: ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                        child: Image.network(
-                                          getJsonField(
-                                            productItem,
-                                            r'''$.image''',
-                                          ).toString(),
-                                          width: 200.0,
-                                          height: 151.0,
-                                          fit: BoxFit.cover,
+                                      child: Hero(
+                                        tag: getJsonField(
+                                          productItem,
+                                          r'''$.image''',
+                                        ).toString(),
+                                        transitionOnUserGestures: true,
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image.network(
+                                            getJsonField(
+                                              productItem,
+                                              r'''$.image''',
+                                            ).toString(),
+                                            width: 200.0,
+                                            height: 151.0,
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -597,7 +572,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            font: GoogleFonts.inter(),
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -624,7 +599,8 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        font:
+                                                            GoogleFonts.inter(),
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -636,16 +612,15 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                                   style: TextStyle(),
                                                 )
                                               ],
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Inter',
-                                                        fontSize: 16.0,
-                                                        letterSpacing: 0.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                      ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    font: GoogleFonts.inter(),
+                                                    fontSize: 16.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
                                             ),
                                           ),
                                           Row(

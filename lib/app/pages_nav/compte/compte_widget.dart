@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'compte_model.dart';
 export 'compte_model.dart';
 
@@ -41,18 +42,13 @@ class _CompteWidgetState extends State<CompteWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30.0,
-          buttonSize: 46.0,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: FlutterFlowTheme.of(context).primaryText,
-            size: 25.0,
-          ),
-          onPressed: () async {
-            context.pop();
-          },
+        title: Text(
+          'Paramètre',
+          style: FlutterFlowTheme.of(context).headlineSmall.override(
+                font: GoogleFonts.interTight(),
+                fontSize: 28.0,
+                letterSpacing: 0.0,
+              ),
         ),
         actions: const [],
         centerTitle: false,
@@ -62,16 +58,6 @@ class _CompteWidgetState extends State<CompteWidget> {
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
-            child: Text(
-              'Paramètre',
-              style: FlutterFlowTheme.of(context).headlineSmall.override(
-                    fontFamily: 'Inter Tight',
-                    letterSpacing: 0.0,
-                  ),
-            ),
-          ),
           Padding(
             padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
             child: InkWell(
@@ -103,7 +89,7 @@ class _CompteWidgetState extends State<CompteWidget> {
                       Text(
                         'Commandes',
                         style: FlutterFlowTheme.of(context).titleLarge.override(
-                              fontFamily: 'Inter Tight',
+                              font: GoogleFonts.interTight(),
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -125,58 +111,78 @@ class _CompteWidgetState extends State<CompteWidget> {
             children: [
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
-                child: Container(
-                  width: double.infinity,
-                  decoration: const BoxDecoration(),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Compte',
-                          style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Inter Tight',
-                                    letterSpacing: 0.0,
-                                  ),
-                        ),
-                        Icon(
-                          Icons.chevron_right_rounded,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 24.0,
-                        ),
-                      ],
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed('CompteDetail');
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    decoration: const BoxDecoration(),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Compte',
+                            style: FlutterFlowTheme.of(context)
+                                .titleLarge
+                                .override(
+                                  font: GoogleFonts.interTight(),
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                          Icon(
+                            Icons.chevron_right_rounded,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 24.0,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 1.0),
-                child: Container(
-                  width: double.infinity,
-                  decoration: const BoxDecoration(),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'FAQ',
-                          style:
-                              FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Inter Tight',
-                                    letterSpacing: 0.0,
-                                  ),
-                        ),
-                        Icon(
-                          Icons.chevron_right_rounded,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 24.0,
-                        ),
-                      ],
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    context.pushNamed('Faq');
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    decoration: const BoxDecoration(),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'FAQ',
+                            style: FlutterFlowTheme.of(context)
+                                .titleLarge
+                                .override(
+                                  font: GoogleFonts.interTight(),
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                          Icon(
+                            Icons.chevron_right_rounded,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 24.0,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -196,7 +202,7 @@ class _CompteWidgetState extends State<CompteWidget> {
                           'A Propos',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(),
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -225,7 +231,7 @@ class _CompteWidgetState extends State<CompteWidget> {
                           'Terms & Conditions',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(),
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -254,7 +260,7 @@ class _CompteWidgetState extends State<CompteWidget> {
                           'Service client',
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(),
                                     letterSpacing: 0.0,
                                   ),
                         ),
@@ -276,7 +282,7 @@ class _CompteWidgetState extends State<CompteWidget> {
               'Suivez nous sur',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).labelMedium.override(
-                    fontFamily: 'Inter',
+                    font: GoogleFonts.inter(),
                     letterSpacing: 0.0,
                   ),
             ),
@@ -356,7 +362,7 @@ class _CompteWidgetState extends State<CompteWidget> {
             child: Text(
               'App Versions',
               style: FlutterFlowTheme.of(context).titleLarge.override(
-                    fontFamily: 'Inter Tight',
+                    font: GoogleFonts.interTight(),
                     letterSpacing: 0.0,
                   ),
             ),
@@ -366,7 +372,7 @@ class _CompteWidgetState extends State<CompteWidget> {
             child: Text(
               'v0.0.1',
               style: FlutterFlowTheme.of(context).labelMedium.override(
-                    fontFamily: 'Inter',
+                    font: GoogleFonts.inter(),
                     letterSpacing: 0.0,
                   ),
             ),
@@ -389,7 +395,7 @@ class _CompteWidgetState extends State<CompteWidget> {
                 iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                 color: FlutterFlowTheme.of(context).primary,
                 textStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                      fontFamily: 'Inter',
+                      font: GoogleFonts.inter(),
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                       letterSpacing: 0.0,
                     ),

@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'choix_ville_model.dart';
 export 'choix_ville_model.dart';
@@ -112,7 +113,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .displaySmall
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  font: GoogleFonts.interTight(),
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -123,7 +124,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                             textAlign: TextAlign.center,
                             style:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
-                                      fontFamily: 'Inter',
+                                      font: GoogleFonts.inter(),
                                       color: Colors.white,
                                       letterSpacing: 0.0,
                                     ),
@@ -154,7 +155,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .headlineSmall
                                       .override(
-                                        fontFamily: 'Inter Tight',
+                                        font: GoogleFonts.interTight(),
                                         color: Colors.white,
                                         letterSpacing: 0.0,
                                       ),
@@ -222,7 +223,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                                         textStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               letterSpacing: 0.0,
                                             ),
                                         hintText: 'Select...',
@@ -285,7 +286,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
                               FlutterFlowTheme.of(context).titleMedium.override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(),
                                     color: Colors.white,
                                     letterSpacing: 0.0,
                                   ),

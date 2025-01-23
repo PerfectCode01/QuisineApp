@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'forgot_password_model.dart';
 export 'forgot_password_model.dart';
 
@@ -78,7 +79,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                     'Mot de passe oublié',
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).displaySmall.override(
-                          fontFamily: 'Inter Tight',
+                          font: GoogleFonts.interTight(),
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
                           fontSize: 25.0,
@@ -125,7 +126,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    font: GoogleFonts.plusJakartaSans(),
                                     color: const Color(0xFF15161E),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
@@ -143,7 +144,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                   child: Text(
                     'Entrez votre nouveau numéro et le nouveau mot de passe , en suite vous recevrez un code de validation',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          fontFamily: 'Plus Jakarta Sans',
+                          font: GoogleFonts.plusJakartaSans(),
                           color: FlutterFlowTheme.of(context).alternate,
                           fontSize: 14.0,
                           letterSpacing: 0.0,
@@ -164,7 +165,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                       decoration: InputDecoration(
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  font: GoogleFonts.plusJakartaSans(),
                                   color: const Color(0xFF606A85),
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
@@ -173,7 +174,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                         hintText: 'Entrez votre numéro ...',
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  font: GoogleFonts.plusJakartaSans(),
                                   color: const Color(0xFF606A85),
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
@@ -213,7 +214,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                             24.0, 0.0, 20.0, 0.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            font: GoogleFonts.plusJakartaSans(),
                             color: const Color(0xFF15161E),
                             fontSize: 10.0,
                             letterSpacing: 0.0,
@@ -240,7 +241,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                       decoration: InputDecoration(
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  font: GoogleFonts.plusJakartaSans(),
                                   color: const Color(0xFF606A85),
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
@@ -249,7 +250,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                         hintText: 'Nouveau Mot de passe',
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  font: GoogleFonts.plusJakartaSans(),
                                   color: const Color(0xFF606A85),
                                   fontSize: 14.0,
                                   letterSpacing: 0.0,
@@ -289,7 +290,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                             24.0, 24.0, 20.0, 2.0),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            font: GoogleFonts.plusJakartaSans(),
                             color: const Color(0xFF15161E),
                             fontSize: 10.0,
                             letterSpacing: 0.0,
@@ -347,7 +348,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                         color: const Color(0xFFBF0E00),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  font: GoogleFonts.plusJakartaSans(),
                                   color: Colors.white,
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
@@ -392,7 +393,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
-                                    fontFamily: 'Inter',
+                                    font: GoogleFonts.inter(),
                                     color:
                                         FlutterFlowTheme.of(context).alternate,
                                     letterSpacing: 0.0,
@@ -418,7 +419,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: 'Inter Tight',
+                                      font: GoogleFonts.interTight(),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
                                       letterSpacing: 0.0,

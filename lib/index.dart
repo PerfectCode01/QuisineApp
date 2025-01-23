@@ -8,7 +8,8 @@ export '/app/sp_screen/sp_screen_widget.dart' show SpScreenWidget;
 export '/app/detail_produit/detail_produit_widget.dart'
     show DetailProduitWidget;
 export '/app/adresse_liv/adresse_liv_widget.dart' show AdresseLivWidget;
-export '/order_history/order_history_widget.dart' show OrderHistoryWidget;
+export '/app/comptes/order_history/order_history_widget.dart'
+    show OrderHistoryWidget;
 export '/app/panier/panier_widget.dart' show PanierWidget;
 export '/app/prod_menu_p/prod_menu_p_widget.dart' show ProdMenuPWidget;
 export '/app/pages_nav/home/home_widget.dart' show HomeWidget;
@@ -19,7 +20,7 @@ export '/app/pages_nav/catalogs/catalogs_widget.dart' show CatalogsWidget;
 export '/app/facturation/facturation_widget.dart' show FacturationWidget;
 export '/app/commande_reussie/commande_reussie_widget.dart'
     show CommandeReussieWidget;
-export '/app/suiviedes_commandes/suiviedes_commandes_widget.dart'
+export '/app/comptes/suiviedes_commandes/suiviedes_commandes_widget.dart'
     show SuiviedesCommandesWidget;
 export '/app/choix_ville/choix_ville_widget.dart' show ChoixVilleWidget;
 export '/app/pages_nav/menu/menu_widget.dart' show MenuWidget;
@@ -30,9 +31,11 @@ export '/app/echec_commande/echec_commande_widget.dart'
     show EchecCommandeWidget;
 export '/shimmer_component/shimmer_component_widget.dart'
     show ShimmerComponentWidget;
-export '/app/home2/home2_widget.dart' show Home2Widget;
 export '/authentification/presente_app/presente_app_widget.dart'
     show PresenteAppWidget;
 export '/authentification/otp_code_forgot/otp_code_forgot_widget.dart'
     show OtpCodeForgotWidget;
-export '/app/pages_nav/home_copy/home_copy_widget.dart' show HomeCopyWidget;
+export '/app/comptes/compte_detail/compte_detail_widget.dart'
+    show CompteDetailWidget;
+export '/faq/faq_widget.dart' show FaqWidget;
+export '/appropos_model2/appropos_model2_widget.dart' show ApproposModel2Widget;

@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'card_produit_model.dart';
 export 'card_produit_model.dart';
@@ -140,7 +141,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                           ).toString(),
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    font: GoogleFonts.plusJakartaSans(),
                                     color: const Color(0xFF0F1113),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
@@ -166,7 +167,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                           ],
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    font: GoogleFonts.plusJakartaSans(),
                                     color: const Color(0xFF57636C),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
@@ -180,7 +181,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                           r'''$.qte''',
                         ).toString(),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              font: GoogleFonts.inter(),
                               letterSpacing: 0.0,
                             ),
                       ),
@@ -225,7 +226,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
@@ -242,7 +243,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                           '1',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Inter',
+                              font: GoogleFonts.inter(),
                               color: FlutterFlowTheme.of(context).secondaryText,
                               fontSize: 19.0,
                               letterSpacing: 0.0,
@@ -274,7 +275,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  font: GoogleFonts.inter(),
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 20.0,

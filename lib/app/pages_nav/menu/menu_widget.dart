@@ -1,8 +1,8 @@
 import '/backend/api_requests/api_calls.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'menu_model.dart';
 export 'menu_model.dart';
 
@@ -44,22 +44,10 @@ class _MenuWidgetState extends State<MenuWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderRadius: 8.0,
-            buttonSize: 40.0,
-            icon: Icon(
-              Icons.arrow_back,
-              color: FlutterFlowTheme.of(context).primaryText,
-              size: 24.0,
-            ),
-            onPressed: () {
-              print('IconButton pressed ...');
-            },
-          ),
           title: Text(
             'Menus',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(),
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -198,8 +186,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Inter Tight',
+                                                        font: GoogleFonts
+                                                            .interTight(),
                                                         color: Colors.white,
                                                         letterSpacing: 0.0,
                                                       ),

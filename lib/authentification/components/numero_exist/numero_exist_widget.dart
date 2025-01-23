@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'numero_exist_model.dart';
 export 'numero_exist_model.dart';
 
@@ -55,7 +56,7 @@ class _NumeroExistWidgetState extends State<NumeroExistWidget> {
             Text(
               'Numero de telephone déjà existant',
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Poppins',
+                    font: GoogleFonts.poppins(),
                     color: FlutterFlowTheme.of(context).primaryBackground,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,

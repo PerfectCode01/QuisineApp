@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'home2_widget.dart' show Home2Widget;
+import 'compte_detail_widget.dart' show CompteDetailWidget;
 import 'package:flutter/material.dart';
 
-class Home2Model extends FlutterFlowModel<Home2Widget> {
+class CompteDetailModel extends FlutterFlowModel<CompteDetailWidget> {
   @override
   void initState(BuildContext context) {}
 

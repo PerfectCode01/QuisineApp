@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'pas_de_produit_model.dart';
 export 'pas_de_produit_model.dart';
 
@@ -59,7 +60,7 @@ class _PasDeProduitWidgetState extends State<PasDeProduitWidget> {
                 'Pas de produits disponible',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).headlineSmall.override(
-                      fontFamily: 'Inter Tight',
+                      font: GoogleFonts.interTight(),
                       letterSpacing: 0.0,
                     ),
               ),

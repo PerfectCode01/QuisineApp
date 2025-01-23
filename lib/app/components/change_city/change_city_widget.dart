@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'change_city_model.dart';
 export 'change_city_model.dart';
 
@@ -69,7 +70,7 @@ class _ChangeCityWidgetState extends State<ChangeCityWidget> {
                 Text(
                   'Change City',
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
-                        fontFamily: 'Inter Tight',
+                        font: GoogleFonts.interTight(),
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -80,7 +81,7 @@ class _ChangeCityWidgetState extends State<ChangeCityWidget> {
                     Text(
                       'Select your city',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(),
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -107,7 +108,7 @@ class _ChangeCityWidgetState extends State<ChangeCityWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
-                                    fontFamily: 'Inter',
+                                    font: GoogleFonts.inter(),
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -135,7 +136,7 @@ class _ChangeCityWidgetState extends State<ChangeCityWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Inter Tight',
+                          font: GoogleFonts.interTight(),
                           color: FlutterFlowTheme.of(context).info,
                           letterSpacing: 0.0,
                         ),

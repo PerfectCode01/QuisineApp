@@ -1,8 +1,8 @@
 import '/components/produit_loader_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'notifications_model.dart';
 export 'notifications_model.dart';
 
@@ -44,22 +44,10 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
         appBar: AppBar(
           backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
           automaticallyImplyLeading: false,
-          leading: FlutterFlowIconButton(
-            borderRadius: 8.0,
-            buttonSize: 40.0,
-            icon: Icon(
-              Icons.arrow_back,
-              color: FlutterFlowTheme.of(context).primaryText,
-              size: 24.0,
-            ),
-            onPressed: () {
-              print('IconButton pressed ...');
-            },
-          ),
           title: Text(
             'Notifications',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  font: GoogleFonts.interTight(),
                   letterSpacing: 0.0,
                 ),
           ),
@@ -78,7 +66,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                   Text(
                     'Aujourd\'hui',
                     style: FlutterFlowTheme.of(context).titleMedium.override(
-                          fontFamily: 'Inter Tight',
+                          font: GoogleFonts.interTight(),
                           color: FlutterFlowTheme.of(context).secondaryText,
                           letterSpacing: 0.0,
                         ),
@@ -132,7 +120,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -142,7 +130,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -154,7 +142,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -213,7 +201,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -223,7 +211,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -235,7 +223,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -255,7 +243,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                   Text(
                     'Cette semaine',
                     style: FlutterFlowTheme.of(context).titleMedium.override(
-                          fontFamily: 'Inter Tight',
+                          font: GoogleFonts.interTight(),
                           color: FlutterFlowTheme.of(context).secondaryText,
                           letterSpacing: 0.0,
                         ),
@@ -310,7 +298,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -320,7 +308,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -332,7 +320,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -390,7 +378,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -400,7 +388,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -412,7 +400,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -471,7 +459,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -481,7 +469,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -493,7 +481,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              fontFamily: 'Inter',
+                                              font: GoogleFonts.inter(),
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,

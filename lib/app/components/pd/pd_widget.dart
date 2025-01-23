@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'pd_model.dart';
 export 'pd_model.dart';
 
@@ -79,7 +80,7 @@ class _PdWidgetState extends State<PdWidget> {
                     Text(
                       'Premium Wireless Headphones',
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(),
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -87,7 +88,7 @@ class _PdWidgetState extends State<PdWidget> {
                     Text(
                       'High-quality sound with noise cancellation',
                       style: FlutterFlowTheme.of(context).bodySmall.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(),
                             color: FlutterFlowTheme.of(context).secondaryText,
                             letterSpacing: 0.0,
                           ),
@@ -100,7 +101,7 @@ class _PdWidgetState extends State<PdWidget> {
                           '\$199.99',
                           style:
                               FlutterFlowTheme.of(context).titleMedium.override(
-                                    fontFamily: 'Inter Tight',
+                                    font: GoogleFonts.interTight(),
                                     color: FlutterFlowTheme.of(context).primary,
                                     letterSpacing: 0.0,
                                   ),

@@ -5,6 +5,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'presente_app_model.dart';
 export 'presente_app_model.dart';
 
@@ -83,16 +85,14 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    child: Image.asset(
-                                      'assets/images/3697355.jpg',
-                                      width: double.infinity,
-                                      height:
-                                          MediaQuery.sizeOf(context).height *
-                                              0.5,
-                                      fit: BoxFit.cover,
-                                    ),
+                                  Lottie.asset(
+                                    'assets/jsons/Animation_-_1737574276232.json',
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    height:
+                                        MediaQuery.sizeOf(context).height * 0.5,
+                                    fit: BoxFit.contain,
+                                    animate: true,
                                   ),
                                   Text(
                                     'Gagnez du temps avec Quisine',
@@ -100,7 +100,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Poppins',
+                                          font: GoogleFonts.poppins(),
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
                                           fontSize: 23.0,
@@ -114,7 +114,47 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Poppins',
+                                          font: GoogleFonts.poppins(),
+                                          fontSize: 17.0,
+                                          letterSpacing: 0.0,
+                                        ),
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Lottie.asset(
+                                    'assets/jsons/Animation_-_1737557737600.json',
+                                    width:
+                                        MediaQuery.sizeOf(context).width * 1.0,
+                                    height:
+                                        MediaQuery.sizeOf(context).height * 0.5,
+                                    fit: BoxFit.contain,
+                                    animate: true,
+                                  ),
+                                  Text(
+                                    'Moins d’efforts, plus de résultats',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.poppins(),
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          fontSize: 23.0,
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                  Text(
+                                    'Explorez une large gamme de produits alimentaires, sélectionnez ce dont vous avez besoin et recevez vos commandes en un temps record.',
+                                    textAlign: TextAlign.center,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          font: GoogleFonts.poppins(),
                                           fontSize: 17.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -137,53 +177,11 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     ),
                                   ),
                                   Text(
-                                    'Moins d’efforts, plus de résultats',
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Poppins',
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          fontSize: 23.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                  ),
-                                  Text(
-                                    'Explorez une large gamme de produits alimentaires, sélectionnez ce dont vous avez besoin et recevez vos commandes en un temps record.',
-                                    textAlign: TextAlign.center,
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 17.0,
-                                          letterSpacing: 0.0,
-                                        ),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    child: Image.asset(
-                                      'assets/images/2011.i003.010..shopping_bag_basket_set-03.jpg',
-                                      width: double.infinity,
-                                      height:
-                                          MediaQuery.sizeOf(context).height *
-                                              0.5,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  Text(
                                     'Nous nous occupons de tout',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Poppins',
+                                          font: GoogleFonts.poppins(),
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
                                           fontSize: 23.0,
@@ -197,7 +195,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Inter',
+                                          font: GoogleFonts.inter(),
                                           fontSize: 17.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -257,7 +255,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                     Text(
                       'Skip',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
+                            font: GoogleFonts.inter(),
                             color: FlutterFlowTheme.of(context).primary,
                             fontSize: 18.0,
                             letterSpacing: 0.0,

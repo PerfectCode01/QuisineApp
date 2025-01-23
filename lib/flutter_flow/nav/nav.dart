@@ -263,11 +263,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const ShimmerComponentWidget(),
         ),
         FFRoute(
-          name: 'Home2',
-          path: '/home2',
-          builder: (context, params) => const Home2Widget(),
-        ),
-        FFRoute(
           name: 'presenteApp',
           path: '/presenteApp',
           builder: (context, params) => PresenteAppWidget(
@@ -300,11 +295,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'HomeCopy',
-          path: '/homeCopy',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'HomeCopy')
-              : const HomeCopyWidget(),
+          name: 'CompteDetail',
+          path: '/compteDetail',
+          builder: (context, params) => const CompteDetailWidget(),
+        ),
+        FFRoute(
+          name: 'Faq',
+          path: '/faq',
+          builder: (context, params) => const FaqWidget(),
+        ),
+        FFRoute(
+          name: 'ApproposModel2',
+          path: '/approposModel2',
+          builder: (context, params) => const ApproposModel2Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
