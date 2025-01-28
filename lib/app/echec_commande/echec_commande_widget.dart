@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'echec_commande_model.dart';
 export 'echec_commande_model.dart';
 
+/// echec de la commande
 class EchecCommandeWidget extends StatefulWidget {
-  /// echec de la commande
   const EchecCommandeWidget({super.key});
 
   @override
