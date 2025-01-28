@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'commande_reussie_model.dart';
 export 'commande_reussie_model.dart';
 
@@ -84,7 +83,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                           style: FlutterFlowTheme.of(context)
                               .displaySmall
                               .override(
-                                font: GoogleFonts.interTight(),
+                                fontFamily: 'Inter Tight',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 letterSpacing: 0.0,
                               ),
@@ -95,7 +94,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyLarge
                               .override(
-                                font: GoogleFonts.inter(),
+                                fontFamily: 'Inter',
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
                                 letterSpacing: 0.0,
@@ -132,7 +131,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           letterSpacing: 0.0,
@@ -143,7 +142,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
                                           letterSpacing: 0.0,
@@ -161,7 +160,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           letterSpacing: 0.0,
@@ -180,7 +179,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .success,
@@ -201,7 +200,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           color: FlutterFlowTheme.of(context)
                                               .secondaryText,
                                           letterSpacing: 0.0,
@@ -212,7 +211,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
                                           letterSpacing: 0.0,
@@ -255,7 +254,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
-                                font: GoogleFonts.interTight(),
+                                fontFamily: 'Inter Tight',
                                 color: FlutterFlowTheme.of(context).info,
                                 letterSpacing: 0.0,
                               ),
@@ -278,7 +277,7 @@ class _CommandeReussieWidgetState extends State<CommandeReussieWidget> {
                       color: const Color(0x00FFFFFF),
                       textStyle:
                           FlutterFlowTheme.of(context).titleMedium.override(
-                                font: GoogleFonts.interTight(),
+                                fontFamily: 'Inter Tight',
                                 color: FlutterFlowTheme.of(context).primary,
                                 letterSpacing: 0.0,
                               ),

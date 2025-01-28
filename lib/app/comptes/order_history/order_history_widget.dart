@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'order_history_model.dart';
 export 'order_history_model.dart';
 
@@ -72,7 +71,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                 child: Text(
                   'Recent Orders',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
-                        font: GoogleFonts.interTight(),
+                        fontFamily: 'Inter Tight',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -83,7 +82,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                   'Below are your most recent orders',
                   textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).labelMedium.override(
-                        font: GoogleFonts.inter(),
+                        fontFamily: 'Inter',
                         letterSpacing: 0.0,
                       ),
                 ),
@@ -147,7 +146,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -160,7 +159,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -194,8 +193,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium
                                                       .override(
-                                                        font:
-                                                            GoogleFonts.inter(),
+                                                        fontFamily: 'Inter',
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -219,7 +217,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
-                                            font: GoogleFonts.interTight(),
+                                            fontFamily: 'Inter Tight',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -252,7 +250,7 @@ class _OrderHistoryWidgetState extends State<OrderHistoryWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .alternate,

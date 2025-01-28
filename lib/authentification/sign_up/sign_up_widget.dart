@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'sign_up_model.dart';
 export 'sign_up_model.dart';
 
@@ -106,7 +105,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .displaySmall
                                               .override(
-                                                font: GoogleFonts.roboto(),
+                                                fontFamily: 'Roboto',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .alternate,
@@ -124,8 +123,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .labelMedium
                                                 .override(
-                                                  font: GoogleFonts
-                                                      .plusJakartaSans(),
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .alternate,
@@ -157,8 +156,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 14.0,
@@ -212,8 +211,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                       context)
                                                   .bodyMedium
                                                   .override(
-                                                    font: GoogleFonts
-                                                        .plusJakartaSans(),
+                                                    fontFamily:
+                                                        'Plus Jakarta Sans',
                                                     color: const Color(0xFF101213),
                                                     fontSize: 14.0,
                                                     letterSpacing: 0.0,
@@ -249,8 +248,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 14.0,
@@ -304,8 +303,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                       context)
                                                   .bodyMedium
                                                   .override(
-                                                    font: GoogleFonts
-                                                        .plusJakartaSans(),
+                                                    fontFamily:
+                                                        'Plus Jakarta Sans',
                                                     color: const Color(0xFF101213),
                                                     fontSize: 14.0,
                                                     letterSpacing: 0.0,
@@ -340,8 +339,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .plusJakartaSans(),
+                                                          fontFamily:
+                                                              'Plus Jakarta Sans',
                                                           color:
                                                               const Color(0xFF57636C),
                                                           fontSize: 14.0,
@@ -414,8 +413,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                       context)
                                                   .bodyMedium
                                                   .override(
-                                                    font: GoogleFonts
-                                                        .plusJakartaSans(),
+                                                    fontFamily:
+                                                        'Plus Jakarta Sans',
                                                     color: const Color(0xFF101213),
                                                     fontSize: 14.0,
                                                     letterSpacing: 0.0,
@@ -493,8 +492,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .plusJakartaSans(),
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
                                                         color: Colors.white,
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
@@ -539,7 +538,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
-                                                font: GoogleFonts.inter(),
+                                                fontFamily: 'Inter',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .alternate,
@@ -578,17 +577,17 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .alternate,
-                                            textStyle: FlutterFlowTheme.of(
-                                                    context)
-                                                .titleSmall
-                                                .override(
-                                                  font:
-                                                      GoogleFonts.interTight(),
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  letterSpacing: 0.0,
-                                                ),
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily: 'Inter Tight',
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                      letterSpacing: 0.0,
+                                                    ),
                                             elevation: 0.0,
                                             borderRadius:
                                                 BorderRadius.circular(8.0),

@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'commande_model.dart';
 export 'commande_model.dart';
 
@@ -90,7 +89,7 @@ class _CommandeWidgetState extends State<CommandeWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
@@ -107,7 +106,7 @@ class _CommandeWidgetState extends State<CommandeWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .headlineMedium
                                   .override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -121,7 +120,7 @@ class _CommandeWidgetState extends State<CommandeWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -220,8 +219,7 @@ class _CommandeWidgetState extends State<CommandeWidget> {
                                                             context)
                                                         .bodyLarge
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .inter(),
+                                                          fontFamily: 'Inter',
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
@@ -236,8 +234,7 @@ class _CommandeWidgetState extends State<CommandeWidget> {
                                                             context)
                                                         .labelMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .inter(),
+                                                          fontFamily: 'Inter',
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
@@ -260,8 +257,8 @@ class _CommandeWidgetState extends State<CommandeWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .headlineSmall
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .interTight(),
+                                                          fontFamily:
+                                                              'Inter Tight',
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
@@ -311,8 +308,8 @@ class _CommandeWidgetState extends State<CommandeWidget> {
                                                                   .of(context)
                                                               .bodyMedium
                                                               .override(
-                                                                font: GoogleFonts
-                                                                    .inter(),
+                                                                fontFamily:
+                                                                    'Inter',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .tertiary,

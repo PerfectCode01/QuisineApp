@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'presente_app_model.dart';
 export 'presente_app_model.dart';
@@ -100,7 +99,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
                                           fontSize: 23.0,
@@ -114,7 +113,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           fontSize: 17.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -140,7 +139,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
                                           fontSize: 23.0,
@@ -154,7 +153,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           fontSize: 17.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -181,7 +180,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.poppins(),
+                                          fontFamily: 'Poppins',
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
                                           fontSize: 23.0,
@@ -195,7 +194,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           fontSize: 17.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -255,7 +254,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                     Text(
                       'Skip',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            font: GoogleFonts.inter(),
+                            fontFamily: 'Inter',
                             color: FlutterFlowTheme.of(context).primary,
                             fontSize: 18.0,
                             letterSpacing: 0.0,

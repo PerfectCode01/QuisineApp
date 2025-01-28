@@ -7,7 +7,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'detail_produit_model.dart';
 export 'detail_produit_model.dart';
 
@@ -147,7 +146,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
               badgeContent: Text(
                 '0',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(),
+                      fontFamily: 'Inter',
                       color: Colors.white,
                       letterSpacing: 0.0,
                     ),
@@ -217,7 +216,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                         ),
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   letterSpacing: 0.0,
                                 ),
                       ),
@@ -235,7 +234,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                           textAlign: TextAlign.justify,
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
                         ).animateOnPageLoad(
@@ -261,7 +260,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .headlineSmall
                                       .override(
-                                        font: GoogleFonts.interTight(),
+                                        fontFamily: 'Inter Tight',
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -273,7 +272,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -314,7 +313,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
-                                      font: GoogleFonts.interTight(),
+                                      fontFamily: 'Inter Tight',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -372,7 +371,7 @@ class _DetailProduitWidgetState extends State<DetailProduitWidget>
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                font: GoogleFonts.interTight(),
+                                fontFamily: 'Inter Tight',
                                 color: Colors.white,
                                 letterSpacing: 0.0,
                               ),

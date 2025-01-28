@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'compte_detail_model.dart';
 export 'compte_detail_model.dart';
 
@@ -59,7 +58,7 @@ class _CompteDetailWidgetState extends State<CompteDetailWidget> {
           title: Text(
             'Mon Compte',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -102,7 +101,7 @@ class _CompteDetailWidgetState extends State<CompteDetailWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
-                                      font: GoogleFonts.interTight(),
+                                      fontFamily: 'Inter Tight',
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -151,7 +150,7 @@ class _CompteDetailWidgetState extends State<CompteDetailWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
@@ -163,7 +162,7 @@ class _CompteDetailWidgetState extends State<CompteDetailWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
@@ -196,7 +195,7 @@ class _CompteDetailWidgetState extends State<CompteDetailWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
@@ -208,7 +207,7 @@ class _CompteDetailWidgetState extends State<CompteDetailWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),

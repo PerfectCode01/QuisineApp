@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'suiviedes_commandes_model.dart';
 export 'suiviedes_commandes_model.dart';
 
@@ -53,7 +52,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
           title: Text(
             'Suivi Commandes',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   color: FlutterFlowTheme.of(context).primaryText,
                   letterSpacing: 0.0,
                 ),
@@ -96,7 +95,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
-                                        font: GoogleFonts.interTight(),
+                                        fontFamily: 'Inter Tight',
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
                                         letterSpacing: 0.0,
@@ -117,7 +116,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               color: const Color(0xFF2E7D32),
                                               letterSpacing: 0.0,
                                             ),
@@ -152,7 +151,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -162,7 +161,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodySmall
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
@@ -207,7 +206,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -228,7 +227,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -249,7 +248,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -270,7 +269,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -305,7 +304,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleMedium
                                   .override(
-                                    font: GoogleFonts.interTight(),
+                                    fontFamily: 'Inter Tight',
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -326,7 +325,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -335,7 +334,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -351,7 +350,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -360,7 +359,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -376,7 +375,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -385,7 +384,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                     ),
@@ -417,7 +416,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        font: GoogleFonts.interTight(),
+                                        fontFamily: 'Inter Tight',
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -426,7 +425,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
-                                        font: GoogleFonts.interTight(),
+                                        fontFamily: 'Inter Tight',
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
                                         letterSpacing: 0.0,
@@ -458,7 +457,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -475,7 +474,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodySmall
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
                                             letterSpacing: 0.0,
@@ -500,7 +499,7 @@ class _SuiviedesCommandesWidgetState extends State<SuiviedesCommandesWidget> {
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         color:
                                             FlutterFlowTheme.of(context).info,
                                         letterSpacing: 0.0,

@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'panier_vide_c_model.dart';
 export 'panier_vide_c_model.dart';
@@ -57,7 +56,7 @@ class _PanierVideCWidgetState extends State<PanierVideCWidget> {
                 'Votre Panier est vide ajoutez \ndes articles pour commencer à \ncommander',
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).titleLarge.override(
-                      font: GoogleFonts.interTight(),
+                      fontFamily: 'Inter Tight',
                       color: FlutterFlowTheme.of(context).secondaryText,
                       letterSpacing: 0.0,
                     ),

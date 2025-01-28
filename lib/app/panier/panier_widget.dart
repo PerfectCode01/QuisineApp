@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'panier_model.dart';
 export 'panier_model.dart';
@@ -67,7 +66,7 @@ class _PanierWidgetState extends State<PanierWidget> {
           title: Text(
             'Mon Panier',
             style: FlutterFlowTheme.of(context).displaySmall.override(
-                  font: GoogleFonts.outfit(),
+                  fontFamily: 'Outfit',
                   color: const Color(0xFF0F1113),
                   fontSize: 32.0,
                   letterSpacing: 0.0,
@@ -90,7 +89,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                   child: Text(
                     'Vous trouverez ci-dessous les articles contenus dans votre panier.',
                     style: FlutterFlowTheme.of(context).labelMedium.override(
-                          font: GoogleFonts.plusJakartaSans(),
+                          fontFamily: 'Plus Jakarta Sans',
                           color: const Color(0xFF57636C),
                           fontSize: 14.0,
                           letterSpacing: 0.0,
@@ -160,7 +159,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.plusJakartaSans(),
+                                          fontFamily: 'Plus Jakarta Sans',
                                           color: const Color(0xFF57636C),
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
@@ -187,7 +186,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
                                       .override(
-                                        font: GoogleFonts.outfit(),
+                                        fontFamily: 'Outfit',
                                         color: const Color(0xFF0F1113),
                                         fontSize: 32.0,
                                         letterSpacing: 0.0,
@@ -218,7 +217,7 @@ class _PanierWidgetState extends State<PanierWidget> {
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      font: GoogleFonts.interTight(),
+                                      fontFamily: 'Inter Tight',
                                       color: Colors.white,
                                       letterSpacing: 0.0,
                                     ),

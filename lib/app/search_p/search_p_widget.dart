@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'search_p_model.dart';
 export 'search_p_model.dart';
@@ -70,7 +69,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
           title: Text(
             'Rechercher Produit',
             style: FlutterFlowTheme.of(context).headlineSmall.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   letterSpacing: 0.0,
                 ),
           ),
@@ -107,7 +106,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                     labelText: 'Rechercher votre produit...',
                     labelStyle:
                         FlutterFlowTheme.of(context).labelMedium.override(
-                              font: GoogleFonts.inter(),
+                              fontFamily: 'Inter',
                               letterSpacing: 0.0,
                             ),
                     enabledBorder: OutlineInputBorder(
@@ -146,7 +145,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                     ),
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.inter(),
+                        fontFamily: 'Inter',
                         letterSpacing: 0.0,
                       ),
                   maxLines: null,
@@ -164,7 +163,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                     child: Text(
                       'Resultat de recherche',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
-                            font: GoogleFonts.inter(),
+                            fontFamily: 'Inter',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -175,7 +174,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                     child: Text(
                       '24',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            font: GoogleFonts.inter(),
+                            fontFamily: 'Inter',
                             letterSpacing: 0.0,
                           ),
                     ),
@@ -307,27 +306,29 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                                                 prodSearchItem,
                                                 r'''$.nom''',
                                               ).toString(),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyLarge
-                                                  .override(
-                                                    font: GoogleFonts.inter(),
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .override(
+                                                        fontFamily: 'Inter',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
                                             ),
                                             Text(
                                               'High-quality sound with noise cancellation',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodySmall
-                                                  .override(
-                                                    font: GoogleFonts.inter(),
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryText,
-                                                    letterSpacing: 0.0,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily: 'Inter',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondaryText,
+                                                        letterSpacing: 0.0,
+                                                      ),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -351,8 +352,8 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                                                                     context)
                                                                 .titleMedium
                                                                 .override(
-                                                                  font: GoogleFonts
-                                                                      .interTight(),
+                                                                  fontFamily:
+                                                                      'Inter Tight',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary,
@@ -369,8 +370,8 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                                                             context)
                                                         .titleMedium
                                                         .override(
-                                                          font: GoogleFonts
-                                                              .interTight(),
+                                                          fontFamily:
+                                                              'Inter Tight',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primary,

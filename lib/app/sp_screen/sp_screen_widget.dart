@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'sp_screen_model.dart';
 export 'sp_screen_model.dart';
 
@@ -66,7 +65,7 @@ class _SpScreenWidgetState extends State<SpScreenWidget> {
               Text(
                 'QUISINE',
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.poppins(),
+                      fontFamily: 'Poppins',
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       fontSize: 45.0,
                       letterSpacing: 0.0,

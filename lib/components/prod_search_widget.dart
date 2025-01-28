@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'prod_search_model.dart';
 export 'prod_search_model.dart';
 
@@ -116,7 +115,7 @@ class _ProdSearchWidgetState extends State<ProdSearchWidget>
                         'Facility Name Here',
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   letterSpacing: 0.0,
                                 ),
                       ),
@@ -134,7 +133,7 @@ class _ProdSearchWidgetState extends State<ProdSearchWidget>
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      font: GoogleFonts.inter(),
+                                      fontFamily: 'Inter',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -148,7 +147,7 @@ class _ProdSearchWidgetState extends State<ProdSearchWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                       ),
                                 ),

@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'catalogs_model.dart';
 export 'catalogs_model.dart';
 
@@ -46,7 +45,7 @@ class _CatalogsWidgetState extends State<CatalogsWidget> {
           title: Text(
             'Page Title',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,

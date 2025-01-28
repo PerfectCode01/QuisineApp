@@ -6,7 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'adresse_liv_model.dart';
 export 'adresse_liv_model.dart';
@@ -80,7 +79,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
               'Adresse de livraison',
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(),
+                    fontFamily: 'Inter',
                     fontSize: 15.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,
@@ -129,14 +128,14 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Avenue',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -176,7 +175,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                       ),
                                   cursorColor:
@@ -209,14 +208,14 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Numéro',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -256,7 +255,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                       ),
                                   keyboardType: TextInputType.streetAddress,
@@ -299,14 +298,14 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                     hintText: 'Référence',
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -346,7 +345,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                       ),
                                   cursorColor:
@@ -418,19 +417,19 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                       FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                           ),
                                   searchTextStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                       ),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                       ),
                                   hintText: 'Zone livraison',
@@ -529,7 +528,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.interTight(),
+                          fontFamily: 'Inter Tight',
                           color: Colors.white,
                           letterSpacing: 0.0,
                         ),

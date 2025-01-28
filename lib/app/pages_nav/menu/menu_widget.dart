@@ -2,7 +2,6 @@ import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'menu_model.dart';
 export 'menu_model.dart';
 
@@ -47,7 +46,7 @@ class _MenuWidgetState extends State<MenuWidget> {
           title: Text(
             'Menus',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -186,8 +185,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .headlineMedium
                                                       .override(
-                                                        font: GoogleFonts
-                                                            .interTight(),
+                                                        fontFamily:
+                                                            'Inter Tight',
                                                         color: Colors.white,
                                                         letterSpacing: 0.0,
                                                       ),

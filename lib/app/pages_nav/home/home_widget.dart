@@ -8,7 +8,6 @@ import 'package:badges/badges.dart' as badges;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'home_model.dart';
 export 'home_model.dart';
@@ -128,7 +127,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .displaySmall
                                 .override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   color: FlutterFlowTheme.of(context).primary,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
@@ -160,7 +159,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                 badgeContent: Text(
                   FFAppState().panier.length.toString(),
                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                        font: GoogleFonts.interTight(),
+                        fontFamily: 'Inter Tight',
                         color: Colors.white,
                         fontSize: 16.0,
                         letterSpacing: 0.0,
@@ -242,7 +241,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  font: GoogleFonts.inter(),
+                                  fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -284,7 +283,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         fontSize: 20.0,
                                         letterSpacing: 0.0,
                                       ),
@@ -298,7 +297,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -315,7 +314,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           fontSize: 15.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -336,7 +335,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
-                                          font: GoogleFonts.interTight(),
+                                          fontFamily: 'Inter Tight',
                                           color: Colors.white,
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
@@ -463,7 +462,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                font: GoogleFonts.inter(),
+                                                fontFamily: 'Inter',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primary,
@@ -496,7 +495,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           'Produits populaire',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     color: const Color(0xFF52555C),
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
@@ -621,7 +620,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           color: const Color(0xFF52555C),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
@@ -648,17 +647,18 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                   productItem,
                                                   r'''$.prix''',
                                                 ).toString(),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      font: GoogleFonts.inter(),
-                                                      color: const Color(0xFF7A6B6B),
-                                                      fontSize: 16.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Inter',
+                                                          color:
+                                                              const Color(0xFF7A6B6B),
+                                                          fontSize: 16.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
                                               ),
                                               const TextSpan(
                                                 text: 'FC',
@@ -668,7 +668,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   color: const Color(0xFF52555C),
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
@@ -790,7 +790,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                           'Decouvrez nos produits',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(),
+                                    fontFamily: 'Inter',
                                     color: const Color(0xFF52555C),
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
@@ -917,7 +917,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         color: const Color(0xFF52555C),
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
@@ -948,7 +948,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                       context)
                                                   .bodyMedium
                                                   .override(
-                                                    font: GoogleFonts.inter(),
+                                                    fontFamily: 'Inter',
                                                     color: const Color(0xFF7A6B6B),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
@@ -963,7 +963,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                font: GoogleFonts.inter(),
+                                                fontFamily: 'Inter',
                                                 color: const Color(0xFF52555C),
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,

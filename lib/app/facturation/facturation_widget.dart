@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'facturation_model.dart';
 export 'facturation_model.dart';
@@ -71,7 +70,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
           title: Text(
             'Facturation',
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  font: GoogleFonts.inter(),
+                  fontFamily: 'Inter',
                   fontSize: 20.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
@@ -111,7 +110,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -125,7 +124,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      font: GoogleFonts.inter(),
+                                      fontFamily: 'Inter',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -140,7 +139,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -153,7 +152,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -170,7 +169,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      font: GoogleFonts.inter(),
+                                      fontFamily: 'Inter',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -187,7 +186,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -200,7 +199,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
                                       .override(
-                                        font: GoogleFonts.inter(),
+                                        fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -224,7 +223,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
-                                      font: GoogleFonts.interTight(),
+                                      fontFamily: 'Inter Tight',
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -244,7 +243,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
-                                            font: GoogleFonts.interTight(),
+                                            fontFamily: 'Inter Tight',
                                             color: FlutterFlowTheme.of(context)
                                                 .primary,
                                             letterSpacing: 0.0,
@@ -259,7 +258,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .headlineSmall
                                       .override(
-                                        font: GoogleFonts.interTight(),
+                                        fontFamily: 'Inter Tight',
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
                                         letterSpacing: 0.0,
@@ -297,7 +296,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -346,7 +345,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
@@ -356,7 +355,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
@@ -419,7 +418,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
@@ -429,7 +428,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
-                                                  font: GoogleFonts.inter(),
+                                                  fontFamily: 'Inter',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
@@ -472,7 +471,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -503,7 +502,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              font: GoogleFonts.inter(),
+                                              fontFamily: 'Inter',
                                               letterSpacing: 0.0,
                                             ),
                                       ),
@@ -519,7 +518,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
-                                          font: GoogleFonts.inter(),
+                                          fontFamily: 'Inter',
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -579,7 +578,7 @@ class _FacturationWidgetState extends State<FacturationWidget> {
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle:
                         FlutterFlowTheme.of(context).titleMedium.override(
-                              font: GoogleFonts.interTight(),
+                              fontFamily: 'Inter Tight',
                               color: FlutterFlowTheme.of(context).info,
                               letterSpacing: 0.0,
                             ),

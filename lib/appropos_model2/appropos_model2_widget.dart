@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'appropos_model2_model.dart';
 export 'appropos_model2_model.dart';
 
@@ -59,7 +58,7 @@ class _ApproposModel2WidgetState extends State<ApproposModel2Widget> {
           title: Text(
             'À propos',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -99,7 +98,7 @@ class _ApproposModel2WidgetState extends State<ApproposModel2Widget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  font: GoogleFonts.interTight(),
+                                  fontFamily: 'Inter Tight',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
@@ -110,7 +109,7 @@ class _ApproposModel2WidgetState extends State<ApproposModel2Widget> {
                             'Quisine est née d\'une passion pour la cuisine congolaise et d\'un désir de rendre la commande de repas plus simple et accessible. Fondée en 2023, notre plateforme connecte les amateurs de cuisine authentique avec les meilleurs restaurants locaux.\n\nNotre mission est de préserver et promouvoir la riche tradition culinaire congolaise tout en offrant une expérience de commande moderne et pratique. Nous travaillons en étroite collaboration avec des restaurants soigneusement sélectionnés pour garantir la qualité et l\'authenticité de chaque plat.\n\nChaque jour, nous nous efforçons d\'améliorer notre service pour vous offrir une expérience gastronomique exceptionnelle, directement chez vous.',
                             style:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
-                                      font: GoogleFonts.inter(),
+                                      fontFamily: 'Inter',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
                                       letterSpacing: 0.0,

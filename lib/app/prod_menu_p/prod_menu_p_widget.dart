@@ -9,7 +9,6 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'prod_menu_p_model.dart';
 export 'prod_menu_p_model.dart';
@@ -151,7 +150,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                   badgeContent: Text(
                     FFAppState().panier.length.toString(),
                     style: FlutterFlowTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.interTight(),
+                          fontFamily: 'Inter Tight',
                           color: Colors.white,
                           fontSize: 16.0,
                           letterSpacing: 0.0,
@@ -201,7 +200,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                     'menu',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.inter(),
+                        fontFamily: 'Inter',
                         fontSize: 25.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.bold,
@@ -317,7 +316,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                font: GoogleFonts.poppins(),
+                                                fontFamily: 'Poppins',
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
@@ -341,7 +340,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                 child: Text(
                   'Vos plats préférés',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.inter(),
+                        fontFamily: 'Inter',
                         fontSize: 20.0,
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.bold,
@@ -572,7 +571,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -599,8 +598,7 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        font:
-                                                            GoogleFonts.inter(),
+                                                        fontFamily: 'Inter',
                                                         fontSize: 16.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -612,15 +610,16 @@ class _ProdMenuPWidgetState extends State<ProdMenuPWidget>
                                                   style: TextStyle(),
                                                 )
                                               ],
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    font: GoogleFonts.inter(),
-                                                    fontSize: 16.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Inter',
+                                                        fontSize: 16.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                      ),
                                             ),
                                           ),
                                           Row(

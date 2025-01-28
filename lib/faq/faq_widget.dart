@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'faq_model.dart';
 export 'faq_model.dart';
 
@@ -59,7 +58,7 @@ class _FaqWidgetState extends State<FaqWidget> {
           title: Text(
             'FAQ',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(),
+                  fontFamily: 'Inter Tight',
                   letterSpacing: 0.0,
                 ),
           ),
@@ -80,7 +79,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                   Text(
                     'Frequently Asked Questions',
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
-                          font: GoogleFonts.interTight(),
+                          fontFamily: 'Inter Tight',
                           color: FlutterFlowTheme.of(context).primaryText,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
@@ -89,7 +88,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                   Text(
                     'Find answers to common questions about our service',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          font: GoogleFonts.inter(),
+                          fontFamily: 'Inter',
                           color: FlutterFlowTheme.of(context).secondaryText,
                           letterSpacing: 0.0,
                         ),
@@ -132,7 +131,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -167,7 +166,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -202,7 +201,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -237,7 +236,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -272,7 +271,7 @@ class _FaqWidgetState extends State<FaqWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            font: GoogleFonts.inter(),
+                                            fontFamily: 'Inter',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
