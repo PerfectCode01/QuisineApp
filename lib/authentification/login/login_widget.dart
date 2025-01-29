@@ -1,9 +1,9 @@
+import '/auth/custom_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -40,8 +40,6 @@ class _LoginWidgetState extends State<LoginWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -310,6 +308,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           0.0, 0.0, 0.0, 20.0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
+                                          Function() navigate = () {};
                                           _model.apiResultd39 =
                                               await LoginAPICall.call(
                                             tel: _model
@@ -327,18 +326,36 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               r'''$.user.id''',
                                             );
                                             safeSetState(() {});
-                                            if (FFAppState().selectedCityId ==
-                                                    '') {
-                                              context.pushNamed('ChoixVille');
-                                            } else {
-                                              context.pushNamed('Home');
-                                            }
+                                            GoRouter.of(context)
+                                                .prepareAuthEvent();
+                                            await authManager.signIn(
+                                              authenticationToken:
+                                                  LoginAPICall.token(
+                                                (_model.apiResultd39
+                                                        ?.jsonBody ??
+                                                    ''),
+                                              ),
+                                              authUid: getJsonField(
+                                                (_model.apiResultd39
+                                                        ?.jsonBody ??
+                                                    ''),
+                                                r'''$.user.id''',
+                                              ).toString(),
+                                            );
+                                            navigate = () =>
+                                                context.goNamedAuth(
+                                                    'Home', context.mounted);
                                           } else {
                                             ScaffoldMessenger.of(context)
                                                 .showSnackBar(
                                               SnackBar(
                                                 content: Text(
-                                                  '',
+                                                  getJsonField(
+                                                    (_model.apiResultd39
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                    r'''$.message''',
+                                                  ).toString(),
                                                   style: TextStyle(
                                                     color: FlutterFlowTheme.of(
                                                             context)
@@ -353,6 +370,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               ),
                                             );
                                           }
+
+                                          navigate();
 
                                           safeSetState(() {});
                                         },

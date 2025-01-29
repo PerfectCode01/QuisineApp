@@ -384,6 +384,11 @@ class _CompteWidgetState extends State<CompteWidget> {
                 await authManager.signOut();
                 GoRouter.of(context).clearRedirectLocation();
 
+                FFAppState().deleteSelectedCityId();
+                FFAppState().selectedCityId = '';
+
+                safeSetState(() {});
+
                 context.goNamedAuth('spScreen', context.mounted);
               },
               text: 'Déconnexion',

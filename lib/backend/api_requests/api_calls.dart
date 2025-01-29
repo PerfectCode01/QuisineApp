@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
@@ -143,6 +144,11 @@ class LoginAPICall {
       alwaysAllowBody: false,
     );
   }
+
+  static String? token(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.access_token''',
+      ));
 }
 
 class ZonesCall {
@@ -318,6 +324,34 @@ class ResetPasswordCall {
     return ApiManager.instance.makeApiCall(
       callName: 'resetPassword',
       apiUrl: 'https://test.systematik.tech/api/reset_password',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class UpdateFcmTokenCall {
+  static Future<ApiCallResponse> call({
+    int? userId,
+    String? fcmToken = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "user_id": $userId,
+  "fcm_token": "${escapeStringForJson(fcmToken)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'updateFcmToken',
+      apiUrl: 'https://test.systematik.tech/update-fcm-token',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
