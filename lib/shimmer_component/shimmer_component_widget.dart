@@ -7,6 +7,9 @@ export 'shimmer_component_model.dart';
 class ShimmerComponentWidget extends StatefulWidget {
   const ShimmerComponentWidget({super.key});
 
+  static String routeName = 'shimmerComponent';
+  static String routePath = '/shimmerComponent';
+
   @override
   State<ShimmerComponentWidget> createState() => _ShimmerComponentWidgetState();
 }
@@ -44,7 +47,7 @@ class _ShimmerComponentWidgetState extends State<ShimmerComponentWidget> {
           child: wrapWithModel(
             model: _model.smcModel,
             updateCallback: () => safeSetState(() {}),
-            child: const SmcWidget(),
+            child: SmcWidget(),
           ),
         ),
       ),

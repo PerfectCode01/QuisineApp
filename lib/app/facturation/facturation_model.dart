@@ -1,9 +1,14 @@
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'facturation_widget.dart' show FacturationWidget;
 import 'package:flutter/material.dart';
 
 class FacturationModel extends FlutterFlowModel<FacturationWidget> {
+  ///  Local state fields for this page.
+
+  String payement = 'livraison';
+
   ///  State fields for stateful widgets in this page.
 
   // Stores action output result for [Backend Call - API (orderApi)] action in Button widget.

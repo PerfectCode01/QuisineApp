@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'otp_code_model.dart';
@@ -21,6 +22,9 @@ class OtpCodeWidget extends StatefulWidget {
   final String? nom;
   final String? password;
   final String? code;
+
+  static String routeName = 'OtpCode';
+  static String routePath = '/otpCode';
 
   @override
   State<OtpCodeWidget> createState() => _OtpCodeWidgetState();
@@ -96,7 +100,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
             ),
           ),
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0x710B0B0B), Color(0xACBF0E00)],
                 stops: [0.0, 1.0],
@@ -105,13 +109,13 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
               child: Container(
                 width: double.infinity,
-                constraints: const BoxConstraints(
+                constraints: BoxConstraints(
                   maxWidth: 670.0,
                 ),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Color(0x00FFFFFF),
                 ),
                 child: Column(
@@ -130,9 +134,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 12.0, 0.0),
                           child: SingleChildScrollView(
                             child: Column(
@@ -141,7 +145,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 12.0),
                                   child: Text(
                                     'Nous avons envoyé un message contenant un code à votre numéro',
@@ -163,9 +167,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 10.0,
                                           child: TextFormField(
                                             controller:
@@ -190,7 +194,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -198,7 +202,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -250,9 +254,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -277,7 +281,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -285,7 +289,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -337,9 +341,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -364,7 +368,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -372,7 +376,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -424,9 +428,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -451,7 +455,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -459,7 +463,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -511,9 +515,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -538,7 +542,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -546,7 +550,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -597,7 +601,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                       ),
                                     ),
                                     Expanded(
-                                      child: SizedBox(
+                                      child: Container(
                                         width: 20.0,
                                         child: TextFormField(
                                           controller: _model.otp6TextController,
@@ -621,7 +625,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -629,7 +633,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                                   BorderRadius.circular(6.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -690,7 +694,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                         ? MediaQuery.viewInsetsOf(context).bottom > 0
                         : _isKeyboardVisible))
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 24.0),
                         child: FFButtonWidget(
                           onPressed: () async {
@@ -703,7 +707,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                               );
 
                               context.pushNamed(
-                                'presenteApp',
+                                PresenteAppWidget.routeName,
                                 queryParameters: {
                                   'tel': serializeParam(
                                     widget.telephone,
@@ -725,7 +729,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                           .primaryText,
                                     ),
                                   ),
-                                  duration: const Duration(milliseconds: 4000),
+                                  duration: Duration(milliseconds: 4000),
                                   backgroundColor:
                                       FlutterFlowTheme.of(context).secondary,
                                 ),
@@ -736,9 +740,9 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                           options: FFButtonOptions(
                             width: double.infinity,
                             height: 60.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -750,7 +754,7 @@ class _OtpCodeWidgetState extends State<OtpCodeWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 4.0,
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

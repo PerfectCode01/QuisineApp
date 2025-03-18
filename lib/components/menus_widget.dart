@@ -38,7 +38,7 @@ class _MenusWidgetState extends State<MenusWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 1200.0.ms,
-            color: const Color(0xFFF5F5F5),
+            color: Color(0xFFF5F5F5),
             angle: 1.571,
           ),
         ],
@@ -56,7 +56,7 @@ class _MenusWidgetState extends State<MenusWidget>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,7 +65,7 @@ class _MenusWidgetState extends State<MenusWidget>
             width: 100.0,
             height: 100.0,
             decoration: BoxDecoration(
-              color: const Color(0xFFE0E0E0),
+              color: Color(0xFFE0E0E0),
               borderRadius: BorderRadius.circular(24.0),
             ),
           ),
@@ -73,7 +73,7 @@ class _MenusWidgetState extends State<MenusWidget>
             width: 100.0,
             height: 100.0,
             decoration: BoxDecoration(
-              color: const Color(0xFFE0E0E0),
+              color: Color(0xFFE0E0E0),
               borderRadius: BorderRadius.circular(24.0),
             ),
           ),
@@ -81,11 +81,11 @@ class _MenusWidgetState extends State<MenusWidget>
             width: 100.0,
             height: 100.0,
             decoration: BoxDecoration(
-              color: const Color(0xFFE0E0E0),
+              color: Color(0xFFE0E0E0),
               borderRadius: BorderRadius.circular(24.0),
             ),
           ),
-        ].divide(const SizedBox(width: 5.0)),
+        ].divide(SizedBox(width: 5.0)),
       ).animateOnPageLoad(animationsMap['rowOnPageLoadAnimation']!),
     );
   }

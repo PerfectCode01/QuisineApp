@@ -99,7 +99,7 @@ class GetProductsCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'getProducts',
-      apiUrl: 'https://test.systematik.tech/api/products/$cityId',
+      apiUrl: 'https://test.systematik.tech/api/products/${cityId}',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -130,7 +130,7 @@ class LoginAPICall {
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'loginAPI',
-      apiUrl: 'https://quisine.store/api/login',
+      apiUrl: 'https://test.systematik.tech/api/login',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
@@ -157,7 +157,7 @@ class ZonesCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'zones',
-      apiUrl: 'https://test.systematik.tech/api/zones/$cityId',
+      apiUrl: 'https://test.systematik.tech/api/zones/${cityId}',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -190,7 +190,7 @@ class GetcatalogsCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'getcatalogs',
-      apiUrl: 'https://test.systematik.tech/api/catalogs/$menuId',
+      apiUrl: 'https://test.systematik.tech/api/catalogs/${menuId}',
       callType: ApiCallType.GET,
       headers: {},
       params: {},
@@ -229,12 +229,12 @@ class OrderApiCall {
     final ffApiRequestBody = '''
 {
   "zone_id": "${escapeStringForJson(zoneId)}",
-  "users_id": "$usersId",
+  "users_id": "${usersId}",
   "rue": "${escapeStringForJson(rue)}",
-  "numero": "$numero",
+  "numero": "${numero}",
   "reference": "${escapeStringForJson(referencei)}",
   "comment": "${escapeStringForJson(comment)}",
-  "propaData": $propaData,
+  "propaData": ${propaData},
   "citie_id": "${escapeStringForJson(citieId)}"
 }''';
     return ApiManager.instance.makeApiCall(
@@ -266,7 +266,7 @@ class SendCodeCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'sendCode',
-      apiUrl: 'https://test.systematik.tech/api/sendCode/$telephone',
+      apiUrl: 'https://test.systematik.tech/api/sendCode/${telephone}',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
@@ -341,22 +341,165 @@ class ResetPasswordCall {
 
 class UpdateFcmTokenCall {
   static Future<ApiCallResponse> call({
-    int? userId,
+    String? userId = '',
     String? fcmToken = '',
   }) async {
     final ffApiRequestBody = '''
 {
-  "user_id": $userId,
+  "user_id": ${escapeStringForJson(userId)},
   "fcm_token": "${escapeStringForJson(fcmToken)}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'updateFcmToken',
-      apiUrl: 'https://test.systematik.tech/update-fcm-token',
+      apiUrl: 'https://test.systematik.tech/api/update-fcm-token',
       callType: ApiCallType.POST,
       headers: {},
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class CommandesCall {
+  static Future<ApiCallResponse> call({
+    int? userId,
+  }) async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'commandes',
+      apiUrl: 'https://test.systematik.tech/api/mes_commandes/${userId}',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class FaqCall {
+  static Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'faq',
+      apiUrl: 'https://quisine.store/api/faq',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class NotificationsCall {
+  static Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'notifications',
+      apiUrl:
+          'https://firestore.googleapis.com/v1/projects/qusine-61a5f/databases/(default)/documents/notifications',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class PayementMobileCall {
+  static Future<ApiCallResponse> call({
+    double? amount,
+    int? userId,
+    String? telephone = '',
+    String? currency = '',
+    String? callbackUrl = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "user_id": ${userId},
+  "amount": ${amount},
+  "telephone": "${escapeStringForJson(telephone)}",
+  "currency": "${escapeStringForJson(currency)}",
+  "callbackUrl": "${escapeStringForJson(callbackUrl)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'payementMobile',
+      apiUrl: 'https://test.systematik.tech/api/sendPaiement',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class PayementMobileCopyCall {
+  static Future<ApiCallResponse> call({
+    double? amount,
+    int? userId,
+    String? telephone = '',
+    String? currency = '',
+    String? callbackUrl = '',
+  }) async {
+    final ffApiRequestBody = '''
+{
+  "user_id": ${userId},
+  "amount": ${amount},
+  "telephone": "${escapeStringForJson(telephone)}",
+  "currency": "${escapeStringForJson(currency)}",
+  "callbackUrl": "${escapeStringForJson(callbackUrl)}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'payementMobile Copy',
+      apiUrl: 'https://test.systematik.tech/api/sendPaiement',
+      callType: ApiCallType.POST,
+      headers: {},
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      isStreamingApi: true,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class GetCurrencyCall {
+  static Future<ApiCallResponse> call() async {
+    return ApiManager.instance.makeApiCall(
+      callName: 'getCurrency',
+      apiUrl: 'https://test.systematik.tech/api/currency',
+      callType: ApiCallType.GET,
+      headers: {},
+      params: {},
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,

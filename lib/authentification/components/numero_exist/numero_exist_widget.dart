@@ -42,7 +42,7 @@ class _NumeroExistWidgetState extends State<NumeroExistWidget> {
         color: FlutterFlowTheme.of(context).error,
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

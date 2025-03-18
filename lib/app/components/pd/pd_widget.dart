@@ -37,7 +37,7 @@ class _PdWidgetState extends State<PdWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 12.0),
+      padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 12.0),
       child: Container(
         width: double.infinity,
         height: 120.0,
@@ -50,7 +50,7 @@ class _PdWidgetState extends State<PdWidget> {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(12.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -120,10 +120,10 @@ class _PdWidgetState extends State<PdWidget> {
                         ),
                       ],
                     ),
-                  ].divide(const SizedBox(height: 8.0)),
+                  ].divide(SizedBox(height: 8.0)),
                 ),
               ),
-            ].divide(const SizedBox(width: 16.0)),
+            ].divide(SizedBox(width: 16.0)),
           ),
         ),
       ),

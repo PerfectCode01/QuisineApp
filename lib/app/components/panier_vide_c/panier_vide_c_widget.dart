@@ -39,15 +39,15 @@ class _PanierVideCWidgetState extends State<PanierVideCWidget> {
     context.watch<FFAppState>();
 
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 50.0, 0.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(10.0, 50.0, 0.0, 0.0),
       child: Container(
         width: 315.0,
         height: 293.0,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: Color(0xFFF1F5F8),
         ),
         child: Visibility(
-          visible: FFAppState().panier.isEmpty,
+          visible: FFAppState().panier.length == 0,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,

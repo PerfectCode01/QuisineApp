@@ -1,3 +1,4 @@
+import '';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -12,9 +13,11 @@ class CardProduitWidget extends StatefulWidget {
   const CardProduitWidget({
     super.key,
     required this.prod,
+    required this.qteprod,
   });
 
   final dynamic prod;
+  final int? qteprod;
 
   @override
   State<CardProduitWidget> createState() => _CardProduitWidgetState();
@@ -46,8 +49,8 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(73.0, 0.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(73.0, 0.0),
           ),
         ],
       ),
@@ -72,7 +75,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
     context.watch<FFAppState>();
 
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 0.0),
       child: GestureDetector(
         onHorizontalDragUpdate: (details) async {
           if (animationsMap['containerOnActionTriggerAnimation'] != null) {
@@ -88,7 +91,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
           height: 100.0,
           decoration: BoxDecoration(
             color: Colors.white,
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
                 blurRadius: 4.0,
                 color: Color(0x320E151B),
@@ -124,7 +127,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -132,7 +135,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Text(
                           getJsonField(
                             widget.prod,
@@ -141,7 +144,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                           style:
                               FlutterFlowTheme.of(context).titleLarge.override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF0F1113),
+                                    color: Color(0xFF0F1113),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
@@ -154,12 +157,21 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                           children: [
                             TextSpan(
                               text: getJsonField(
-                                widget.prod,
-                                r'''$.prix''',
-                              ).toString(),
-                              style: const TextStyle(),
+                                        widget.prod,
+                                        r'''$.prix_promo''',
+                                      ) !=
+                                      null
+                                  ? getJsonField(
+                                      widget.prod,
+                                      r'''$.prix_promo''',
+                                    ).toString()
+                                  : getJsonField(
+                                      widget.prod,
+                                      r'''$.prix''',
+                                    ).toString(),
+                              style: TextStyle(),
                             ),
-                            const TextSpan(
+                            TextSpan(
                               text: 'FC',
                               style: TextStyle(),
                             )
@@ -167,7 +179,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    color: const Color(0xFF57636C),
+                                    color: Color(0xFF57636C),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
@@ -189,50 +201,76 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                 ),
               ),
               Container(
-                width: 100.0,
+                width: 120.0,
                 height: 49.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          await actions.decrementQte(
-                            FFAppState().panier.toList(),
-                            widget.prod!,
-                          );
-                        },
-                        child: Container(
-                          width: 30.0,
-                          height: 30.0,
-                          decoration: BoxDecoration(
-                            color: FlutterFlowTheme.of(context).alternate,
-                            borderRadius: BorderRadius.circular(24.0),
-                          ),
-                          alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Text(
-                            '-',
-                            textAlign: TextAlign.center,
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Inter',
-                                  fontSize: 20.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                      if (widget.qteprod! > 1)
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            await actions.decrementQte(
+                              FFAppState().panier.toList(),
+                              widget.prod!,
+                            );
+                          },
+                          child: Container(
+                            width: 30.0,
+                            height: 30.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context).alternate,
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Text(
+                              '-',
+                              textAlign: TextAlign.center,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Inter',
+                                    fontSize: 20.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
                           ),
                         ),
-                      ),
+                      if (widget.qteprod == 1)
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            FFAppState().removeFromPanier(widget.prod!);
+                            FFAppState().update(() {});
+                          },
+                          child: Container(
+                            width: 30.0,
+                            height: 30.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context).alternate,
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                            child: Icon(
+                              Icons.delete,
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              size: 24.0,
+                            ),
+                          ),
+                        ),
                       Text(
                         valueOrDefault<String>(
                           getJsonField(
@@ -267,7 +305,7 @@ class _CardProduitWidgetState extends State<CardProduitWidget>
                             color: FlutterFlowTheme.of(context).primary,
                             borderRadius: BorderRadius.circular(24.0),
                           ),
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             '+',
                             textAlign: TextAlign.start,

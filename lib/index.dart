@@ -39,3 +39,10 @@ export '/app/comptes/compte_detail/compte_detail_widget.dart'
     show CompteDetailWidget;
 export '/faq/faq_widget.dart' show FaqWidget;
 export '/appropos_model2/appropos_model2_widget.dart' show ApproposModel2Widget;
+export '/home_officiel/home_officiel_widget.dart' show HomeOfficielWidget;
+export '/custom_produit_panier/custom_produit_panier_widget.dart'
+    show CustomProduitPanierWidget;
+export '/produit_menu/produit_menu_widget.dart' show ProduitMenuWidget;
+export '/page_entree/page_entree_widget.dart' show PageEntreeWidget;
+export '/page_entree_copy/page_entree_copy_widget.dart'
+    show PageEntreeCopyWidget;

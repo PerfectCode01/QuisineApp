@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,6 +13,9 @@ export 'adresse_liv_model.dart';
 
 class AdresseLivWidget extends StatefulWidget {
   const AdresseLivWidget({super.key});
+
+  static String routeName = 'AdresseLiv';
+  static String routePath = '/adresseLiv';
 
   @override
   State<AdresseLivWidget> createState() => _AdresseLivWidgetState();
@@ -27,13 +31,23 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
     super.initState();
     _model = createModel(context, () => AdresseLivModel());
 
-    _model.avenueTextController ??= TextEditingController();
+    _model.avenueTextController ??= TextEditingController(
+        text: FFAppState().rue != ''
+            ? FFAppState().rue
+            : '');
     _model.avenueFocusNode ??= FocusNode();
 
-    _model.numeroTextController ??= TextEditingController();
+    _model.numeroTextController ??= TextEditingController(
+        text: FFAppState().numeroAd != ''
+            ? FFAppState().numeroAd
+            : '');
     _model.numeroFocusNode ??= FocusNode();
 
-    _model.referenceLivTextController ??= TextEditingController();
+    _model.referenceLivTextController ??= TextEditingController(
+        text:
+            FFAppState().referenceLiv != ''
+                ? FFAppState().referenceLiv
+                : '');
     _model.referenceLivFocusNode ??= FocusNode();
   }
 
@@ -74,7 +88,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
             ),
           ),
           title: Align(
-            alignment: const AlignmentDirectional(0.0, 1.0),
+            alignment: AlignmentDirectional(0.0, 1.0),
             child: Text(
               'Adresse de livraison',
               textAlign: TextAlign.center,
@@ -86,39 +100,39 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                   ),
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
         body: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 5.0, 0.0),
-                              child: SizedBox(
+                              child: Container(
                                 width: 200.0,
                                 child: TextFormField(
                                   controller: _model.avenueTextController,
                                   focusNode: _model.avenueFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
                                     '_model.avenueTextController',
-                                    const Duration(milliseconds: 100),
+                                    Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
                                   autofocus: false,
@@ -139,14 +153,14 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -189,16 +203,16 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                           ),
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 5.0, 0.0),
-                              child: SizedBox(
+                              child: Container(
                                 width: 200.0,
                                 child: TextFormField(
                                   controller: _model.numeroTextController,
                                   focusNode: _model.numeroFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
                                     '_model.numeroTextController',
-                                    const Duration(milliseconds: 100),
+                                    Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
                                   autofocus: false,
@@ -219,14 +233,14 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -258,7 +272,6 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                         fontFamily: 'Inter',
                                         letterSpacing: 0.0,
                                       ),
-                                  keyboardType: TextInputType.streetAddress,
                                   cursorColor:
                                       FlutterFlowTheme.of(context).primaryText,
                                   validator: _model
@@ -273,22 +286,22 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 5.0, 0.0),
-                              child: SizedBox(
+                              child: Container(
                                 width: 200.0,
                                 child: TextFormField(
                                   controller: _model.referenceLivTextController,
                                   focusNode: _model.referenceLivFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
                                     '_model.referenceLivTextController',
-                                    const Duration(milliseconds: 100),
+                                    Duration(milliseconds: 100),
                                     () => safeSetState(() {}),
                                   ),
                                   autofocus: false,
@@ -309,14 +322,14 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -358,7 +371,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 0.0, 5.0, 0.0),
                             child: FutureBuilder<ApiCallResponse>(
                               future: ZonesCall.call(
@@ -409,6 +422,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                     )!
                                         .toList()
                                         .cast<dynamic>();
+                                    FFAppState().zoneId = _model.dropDownValue!;
                                     safeSetState(() {});
                                   },
                                   width: 200.0,
@@ -446,7 +460,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                   borderColor: Colors.transparent,
                                   borderWidth: 0.0,
                                   borderRadius: 8.0,
-                                  margin: const EdgeInsetsDirectional.fromSTEB(
+                                  margin: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   hidesUnderline: true,
                                   isOverButton: false,
@@ -463,7 +477,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(5.0, 55.0, 5.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(5.0, 55.0, 5.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: ((_model.avenueTextController.text == '') ||
                           (_model.numeroTextController.text == '') ||
@@ -487,7 +501,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: const Duration(milliseconds: 4000),
+                                duration: Duration(milliseconds: 4000),
                                 backgroundColor:
                                     FlutterFlowTheme.of(context).secondary,
                               ),
@@ -501,7 +515,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                             safeSetState(() {});
 
                             context.pushNamed(
-                              'Facturation',
+                              FacturationWidget.routeName,
                               queryParameters: {
                                 'zoneId': serializeParam(
                                   _model.dropDownValue,
@@ -509,7 +523,7 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                                 ),
                               }.withoutNulls,
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: const TransitionInfo(
+                                kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
                                   duration: Duration(milliseconds: 0),
@@ -523,9 +537,9 @@ class _AdresseLivWidgetState extends State<AdresseLivWidget> {
                     width: double.infinity,
                     height: 40.0,
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Inter Tight',

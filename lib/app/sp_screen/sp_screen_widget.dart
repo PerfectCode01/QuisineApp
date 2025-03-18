@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'sp_screen_model.dart';
@@ -7,6 +8,9 @@ export 'sp_screen_model.dart';
 
 class SpScreenWidget extends StatefulWidget {
   const SpScreenWidget({super.key});
+
+  static String routeName = 'spScreen';
+  static String routePath = '/spScreen';
 
   @override
   State<SpScreenWidget> createState() => _SpScreenWidgetState();
@@ -27,9 +31,9 @@ class _SpScreenWidgetState extends State<SpScreenWidget> {
       await Future.delayed(const Duration(milliseconds: 3000));
 
       context.pushNamed(
-        'spScreen2',
+        SpScreen2Widget.routeName,
         extra: <String, dynamic>{
-          kTransitionInfoKey: const TransitionInfo(
+          kTransitionInfoKey: TransitionInfo(
             hasTransition: true,
             transitionType: PageTransitionType.rightToLeft,
           ),
@@ -57,7 +61,7 @@ class _SpScreenWidgetState extends State<SpScreenWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primary,
         body: Container(
           width: double.infinity,
-          decoration: const BoxDecoration(),
+          decoration: BoxDecoration(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,

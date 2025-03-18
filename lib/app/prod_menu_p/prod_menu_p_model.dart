@@ -12,6 +12,8 @@ class ProdMenuPModel extends FlutterFlowModel<ProdMenuPWidget> {
 
   bool onLoad = true;
 
+  String voirheader = 'non';
+
   ///  State fields for stateful widgets in this page.
 
   // Stores action output result for [Backend Call - API (getcatalogs)] action in ProdMenuP widget.

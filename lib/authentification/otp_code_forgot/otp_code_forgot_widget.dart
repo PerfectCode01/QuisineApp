@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'otp_code_forgot_model.dart';
@@ -19,6 +20,9 @@ class OtpCodeForgotWidget extends StatefulWidget {
   final String? telephone;
   final String? password;
   final String? code;
+
+  static String routeName = 'OtpCodeForgot';
+  static String routePath = '/otpCodeForgot';
 
   @override
   State<OtpCodeForgotWidget> createState() => _OtpCodeForgotWidgetState();
@@ -94,7 +98,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
             ),
           ),
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0x710B0B0B), Color(0xACBF0E00)],
                 stops: [0.0, 1.0],
@@ -103,13 +107,13 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
               ),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
               child: Container(
                 width: double.infinity,
-                constraints: const BoxConstraints(
+                constraints: BoxConstraints(
                   maxWidth: 670.0,
                 ),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Color(0x00FFFFFF),
                 ),
                 child: Column(
@@ -128,9 +132,9 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 12.0, 0.0),
                           child: SingleChildScrollView(
                             child: Column(
@@ -139,7 +143,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 0.0, 12.0),
                                   child: Text(
                                     'Nous avons envoyé un message contenant un code à votre numéro',
@@ -161,9 +165,9 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                   children: [
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 10.0,
                                           child: TextFormField(
                                             controller:
@@ -188,7 +192,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -196,7 +200,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -247,9 +251,9 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -274,7 +278,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -282,7 +286,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -333,9 +337,9 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -360,7 +364,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -368,7 +372,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -419,9 +423,9 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -446,7 +450,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -454,7 +458,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -505,9 +509,9 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
-                                        child: SizedBox(
+                                        child: Container(
                                           width: 20.0,
                                           child: TextFormField(
                                             controller:
@@ -532,7 +536,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -540,7 +544,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                     BorderRadius.circular(6.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -590,7 +594,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                       ),
                                     ),
                                     Expanded(
-                                      child: SizedBox(
+                                      child: Container(
                                         width: 20.0,
                                         child: TextFormField(
                                           controller: _model.otp6TextController,
@@ -614,7 +618,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -622,7 +626,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                                   BorderRadius.circular(6.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -682,7 +686,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                         ? MediaQuery.viewInsetsOf(context).bottom > 0
                         : _isKeyboardVisible))
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 24.0),
                         child: FFButtonWidget(
                           onPressed: () async {
@@ -697,14 +701,14 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                 context: context,
                                 builder: (alertDialogContext) {
                                   return AlertDialog(
-                                    title: const Text('Modification Mot de Passe'),
-                                    content: const Text(
+                                    title: Text('Modification Mot de Passe'),
+                                    content: Text(
                                         'Mot de passe modifer avec succès'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: const Text('Ok'),
+                                        child: Text('Ok'),
                                       ),
                                     ],
                                   );
@@ -716,7 +720,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                               );
 
                               if ((_model.apiResult3ky?.succeeded ?? true)) {
-                                context.pushNamed('ChoixVille');
+                                context.pushNamed(ChoixVilleWidget.routeName);
                               }
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -728,7 +732,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                           .primaryText,
                                     ),
                                   ),
-                                  duration: const Duration(milliseconds: 4000),
+                                  duration: Duration(milliseconds: 4000),
                                   backgroundColor:
                                       FlutterFlowTheme.of(context).secondary,
                                 ),
@@ -741,9 +745,9 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                           options: FFButtonOptions(
                             width: double.infinity,
                             height: 60.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: FlutterFlowTheme.of(context).primary,
                             textStyle: FlutterFlowTheme.of(context)
@@ -755,7 +759,7 @@ class _OtpCodeForgotWidgetState extends State<OtpCodeForgotWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 4.0,
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),

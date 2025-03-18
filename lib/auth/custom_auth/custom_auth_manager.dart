@@ -75,7 +75,7 @@ class CustomAuthManager {
     this.authenticationToken = authenticationToken;
     this.refreshToken = refreshToken;
     this.tokenExpiration = tokenExpiration;
-    uid = authUid;
+    this.uid = authUid;
 
     // Update the current user stream.
     final updatedUser = QuisineAuthUser(

@@ -4,13 +4,16 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'choix_ville_model.dart';
 export 'choix_ville_model.dart';
 
 class ChoixVilleWidget extends StatefulWidget {
   const ChoixVilleWidget({super.key});
+
+  static String routeName = 'ChoixVille';
+  static String routePath = '/choixVille';
 
   @override
   State<ChoixVilleWidget> createState() => _ChoixVilleWidgetState();
@@ -36,8 +39,6 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -46,7 +47,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: SizedBox(
+        body: Container(
           width: MediaQuery.sizeOf(context).width * 1.0,
           height: MediaQuery.sizeOf(context).height * 1.0,
           child: Stack(
@@ -60,14 +61,14 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
               Container(
                 width: double.infinity,
                 height: double.infinity,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Color(0x30383737),
                 ),
               ),
               Container(
                 width: MediaQuery.sizeOf(context).width * 1.0,
                 height: MediaQuery.sizeOf(context).height * 1.0,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [Color(0x99000000), Colors.transparent],
                     stops: [0.0, 1.0],
@@ -77,7 +78,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                 ),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+                      EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -87,7 +88,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                         width: 120.0,
                         height: 120.0,
                         decoration: BoxDecoration(
-                          color: const Color(0x33FFFFFF),
+                          color: Color(0x33FFFFFF),
                           borderRadius: BorderRadius.circular(60.0),
                           border: Border.all(
                             color: Colors.white,
@@ -128,7 +129,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                                       letterSpacing: 0.0,
                                     ),
                           ),
-                        ].divide(const SizedBox(height: 12.0)),
+                        ].divide(SizedBox(height: 12.0)),
                       ),
                       Material(
                         color: Colors.transparent,
@@ -139,11 +140,11 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 0.9,
                           decoration: BoxDecoration(
-                            color: const Color(0x33FFFFFF),
+                            color: Color(0x33FFFFFF),
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -215,6 +216,13 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                                               () => _model.dropDownValue = val);
                                           FFAppState().selectedCityId =
                                               _model.dropDownValue!;
+                                          FFAppState().cities = getJsonField(
+                                            dropDownCitiesResponse.jsonBody,
+                                            r'''$''',
+                                            true,
+                                          )!
+                                              .toList()
+                                              .cast<dynamic>();
                                           safeSetState(() {});
                                         },
                                         width: 200.0,
@@ -238,7 +246,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                                         borderColor: Colors.transparent,
                                         borderWidth: 0.0,
                                         borderRadius: 50.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         hidesUnderline: true,
                                         isOverButton: false,
@@ -248,39 +256,22 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                                     },
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 24.0)),
+                              ].divide(SizedBox(height: 24.0)),
                             ),
                           ),
                         ),
                       ),
                       FFButtonWidget(
                         onPressed: () async {
-                          if (FFAppState().selectedCityId != '') {
-                            context.pushNamed('Home');
-                          } else {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(
-                                  'C\'est juste pour tester',
-                                  style: TextStyle(
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryText,
-                                  ),
-                                ),
-                                duration: const Duration(milliseconds: 4000),
-                                backgroundColor:
-                                    FlutterFlowTheme.of(context).secondary,
-                              ),
-                            );
-                          }
+                          context.pushNamed(HomeWidget.routeName);
                         },
                         text: 'Continuer',
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.9,
-                          height: 56.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          height: 50.0,
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -293,7 +284,7 @@ class _ChoixVilleWidgetState extends State<ChoixVilleWidget> {
                           borderRadius: BorderRadius.circular(28.0),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 32.0)),
+                    ].divide(SizedBox(height: 32.0)),
                   ),
                 ),
               ),

@@ -35,14 +35,14 @@ class _TestWidgetState extends State<TestWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.transparent,
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
         child: GridView(
           padding: EdgeInsets.zero,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 12.0,
             mainAxisSpacing: 12.0,
@@ -53,42 +53,42 @@ class _TestWidgetState extends State<TestWidget> {
             Container(
               height: 180.0,
               decoration: BoxDecoration(
-                color: const Color(0xFFE0E3E7),
+                color: Color(0xFFE0E3E7),
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),
             Container(
               height: 180.0,
               decoration: BoxDecoration(
-                color: const Color(0xFFE0E3E7),
+                color: Color(0xFFE0E3E7),
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),
             Container(
               height: 180.0,
               decoration: BoxDecoration(
-                color: const Color(0xFFE0E3E7),
+                color: Color(0xFFE0E3E7),
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),
             Container(
               height: 180.0,
               decoration: BoxDecoration(
-                color: const Color(0xFFE0E3E7),
+                color: Color(0xFFE0E3E7),
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),
             Container(
               height: 180.0,
               decoration: BoxDecoration(
-                color: const Color(0xFFE0E3E7),
+                color: Color(0xFFE0E3E7),
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),
             Container(
               height: 180.0,
               decoration: BoxDecoration(
-                color: const Color(0xFFE0E3E7),
+                color: Color(0xFFE0E3E7),
                 borderRadius: BorderRadius.circular(12.0),
               ),
             ),

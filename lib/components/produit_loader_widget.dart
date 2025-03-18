@@ -38,7 +38,7 @@ class _ProduitLoaderWidgetState extends State<ProduitLoaderWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 1200.0.ms,
-            color: const Color(0xFFF5F5F5),
+            color: Color(0xFFF5F5F5),
             angle: 0.524,
           ),
         ],
@@ -56,10 +56,10 @@ class _ProduitLoaderWidgetState extends State<ProduitLoaderWidget>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
       child: GridView(
         padding: EdgeInsets.zero,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 15.0,
           mainAxisSpacing: 10.0,
@@ -69,8 +69,8 @@ class _ProduitLoaderWidgetState extends State<ProduitLoaderWidget>
         children: [
           Container(
             decoration: BoxDecoration(
-              color: const Color(0xFFE0E0E0),
-              boxShadow: const [
+              color: Color(0xFFE0E0E0),
+              boxShadow: [
                 BoxShadow(
                   blurRadius: 4.0,
                   color: Color(0xFFE3DBDB),
@@ -85,8 +85,8 @@ class _ProduitLoaderWidgetState extends State<ProduitLoaderWidget>
           ),
           Container(
             decoration: BoxDecoration(
-              color: const Color(0xFFE0E0E0),
-              boxShadow: const [
+              color: Color(0xFFE0E0E0),
+              boxShadow: [
                 BoxShadow(
                   blurRadius: 4.0,
                   color: Color(0xFFE3DBDB),
@@ -101,8 +101,8 @@ class _ProduitLoaderWidgetState extends State<ProduitLoaderWidget>
           ),
           Container(
             decoration: BoxDecoration(
-              color: const Color(0xFFE0E0E0),
-              boxShadow: const [
+              color: Color(0xFFE0E0E0),
+              boxShadow: [
                 BoxShadow(
                   blurRadius: 4.0,
                   color: Color(0xFFE3DBDB),
@@ -117,8 +117,8 @@ class _ProduitLoaderWidgetState extends State<ProduitLoaderWidget>
           ),
           Container(
             decoration: BoxDecoration(
-              color: const Color(0xFFE0E0E0),
-              boxShadow: const [
+              color: Color(0xFFE0E0E0),
+              boxShadow: [
                 BoxShadow(
                   blurRadius: 4.0,
                   color: Color(0xFFE3DBDB),

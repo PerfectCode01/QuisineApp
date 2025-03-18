@@ -1,7 +1,9 @@
+import '';
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -18,6 +20,9 @@ class PresenteAppWidget extends StatefulWidget {
 
   final String? tel;
   final String? password;
+
+  static String routeName = 'presenteApp';
+  static String routePath = '/presenteApp';
 
   @override
   State<PresenteAppWidget> createState() => _PresenteAppWidgetState();
@@ -54,18 +59,18 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Expanded(
-                  child: SizedBox(
+                  child: Container(
                     width: double.infinity,
                     height: 500.0,
                     child: Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 40.0),
                           child: PageView(
                             controller: _model.pageViewController ??=
@@ -95,7 +100,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                                   ),
                                   Text(
                                     'Gagnez du temps avec Quisine',
-                                    textAlign: TextAlign.start,
+                                    textAlign: TextAlign.center,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -205,9 +210,9 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 1.0),
+                          alignment: AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: smooth_page_indicator.SmoothPageIndicator(
                               controller: _model.pageViewController ??=
@@ -225,7 +230,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                               onDotClicked: (i) async {
                                 await _model.pageViewController!.animateToPage(
                                   i,
-                                  duration: const Duration(milliseconds: 500),
+                                  duration: Duration(milliseconds: 500),
                                   curve: Curves.ease,
                                 );
                                 safeSetState(() {});
@@ -281,7 +286,7 @@ class _PresenteAppWidgetState extends State<PresenteAppWidget> {
                           );
 
                           if ((_model.apiResult80i?.succeeded ?? true)) {
-                            context.pushNamed('ChoixVille');
+                            context.pushNamed(ChoixVilleWidget.routeName);
                           }
                         }
 

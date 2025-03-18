@@ -14,7 +14,11 @@ import '/auth/custom_auth/auth_util.dart';
 double total(List<dynamic> panier) {
   double total = 0.0;
   for (var prod in panier) {
-    total += prod['qte'] * double.parse(prod['prix']);
+    if (prod.containsKey('prix_promo')) {
+      total += prod['qte'] * prod['prix_promo'];
+    } else {
+      total += prod['qte'] * double.parse(prod['prix']);
+    }
   }
 
   return total;
@@ -46,6 +50,7 @@ dynamic getPropaData(List<dynamic> panier) {
       'qte': item['qte'],
       'product_id': item['id'],
       'unit_price': item['prix'],
+      'prix_promo': item['prix_promo'] ?? 0
     };
   }).toList();
 }
@@ -68,4 +73,52 @@ List<dynamic> searchProduct(
     final String productName = product['nom'].toString().toLowerCase();
     return productName.contains(textSearch.toLowerCase());
   }).toList();
+}
+
+String getCityName(
+  List<dynamic> cities,
+  String cityId,
+) {
+  for (var city in cities) {
+    if (city['id'] == int.tryParse(cityId)) {
+      return city['name'];
+    }
+  }
+  return '';
+}
+
+dynamic btnText(
+  List<dynamic> panier,
+  dynamic prod,
+) {
+  for (var i in panier) {
+    if (i['id'] == prod['id']) {
+      return "Retirer du panier";
+    }
+  }
+  return "Ajouter au panier";
+}
+
+dynamic addRemove(
+  List<dynamic> panier,
+  dynamic prod,
+) {
+  int index = panier.indexWhere((item) => item['id'] == prod['id']);
+
+  if (index == -1) {
+    panier.add(prod);
+  } else {
+    panier.removeAt(index);
+  }
+  return prod;
+}
+
+double? convertInInteger(String prixpromo) {
+  // convert the value on parameter in integer and return this
+  try {
+    double value = double.parse(prixpromo);
+    return value;
+  } catch (e) {
+    return null;
+  }
 }

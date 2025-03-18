@@ -7,6 +7,9 @@ export 'catalogs_model.dart';
 class CatalogsWidget extends StatefulWidget {
   const CatalogsWidget({super.key});
 
+  static String routeName = 'Catalogs';
+  static String routePath = '/catalogs';
+
   @override
   State<CatalogsWidget> createState() => _CatalogsWidgetState();
 }
@@ -51,11 +54,11 @@ class _CatalogsWidgetState extends State<CatalogsWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
-        body: const SafeArea(
+        body: SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,

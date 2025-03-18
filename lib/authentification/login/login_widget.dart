@@ -3,12 +3,17 @@ import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
+
+  static String routeName = 'login';
+  static String routePath = '/login';
 
   @override
   State<LoginWidget> createState() => _LoginWidgetState();
@@ -40,6 +45,8 @@ class _LoginWidgetState extends State<LoginWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -58,7 +65,7 @@ class _LoginWidgetState extends State<LoginWidget> {
             ),
           ),
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0x71000000), Color(0xAEF80303)],
                 stops: [0.0, 1.0],
@@ -75,11 +82,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                   child: Container(
                     width: 100.0,
                     height: double.infinity,
-                    decoration: const BoxDecoration(),
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    decoration: BoxDecoration(),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -87,9 +94,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 32.0, 0.0, 32.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -110,7 +117,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 12.0, 0.0, 24.0),
                                       child: Text(
                                         'Commençons par remplir le formulaire ci-dessous.',
@@ -126,9 +133,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 16.0),
-                                      child: SizedBox(
+                                      child: Container(
                                         width: 370.0,
                                         child: TextFormField(
                                           controller:
@@ -136,7 +143,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           focusNode:
                                               _model.numeroLoginFocusNode,
                                           autofocus: true,
-                                          autofillHints: const [AutofillHints.email],
+                                          autofillHints: [AutofillHints.email],
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             labelText: 'Numéro de téléphone',
@@ -146,14 +153,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF57636C),
+                                                      color: Color(0xFF57636C),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFF1F4F8),
                                                 width: 2.0,
                                               ),
@@ -161,7 +168,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   BorderRadius.circular(12.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFF4B39EF),
                                                 width: 2.0,
                                               ),
@@ -169,7 +176,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   BorderRadius.circular(12.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 2.0,
                                               ),
@@ -178,7 +185,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 2.0,
                                               ),
@@ -186,13 +193,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   BorderRadius.circular(12.0),
                                             ),
                                             filled: true,
-                                            fillColor: const Color(0xFFF1F4F8),
+                                            fillColor: Color(0xFFF1F4F8),
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF101213),
+                                                color: Color(0xFF101213),
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
@@ -205,9 +212,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 16.0),
-                                      child: SizedBox(
+                                      child: Container(
                                         width: 370.0,
                                         child: TextFormField(
                                           controller: _model
@@ -215,7 +222,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           focusNode:
                                               _model.passwordLoginFocusNode,
                                           autofocus: true,
-                                          autofillHints: const [
+                                          autofillHints: [
                                             AutofillHints.password
                                           ],
                                           obscureText:
@@ -228,14 +235,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                     .override(
                                                       fontFamily:
                                                           'Plus Jakarta Sans',
-                                                      color: const Color(0xFF57636C),
+                                                      color: Color(0xFF57636C),
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFF1F4F8),
                                                 width: 2.0,
                                               ),
@@ -243,7 +250,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   BorderRadius.circular(12.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFF4B39EF),
                                                 width: 2.0,
                                               ),
@@ -251,7 +258,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   BorderRadius.circular(12.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 2.0,
                                               ),
@@ -260,7 +267,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 2.0,
                                               ),
@@ -268,7 +275,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   BorderRadius.circular(12.0),
                                             ),
                                             filled: true,
-                                            fillColor: const Color(0xFFF1F4F8),
+                                            fillColor: Color(0xFFF1F4F8),
                                             suffixIcon: InkWell(
                                               onTap: () => safeSetState(
                                                 () => _model
@@ -283,7 +290,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                     ? Icons.visibility_outlined
                                                     : Icons
                                                         .visibility_off_outlined,
-                                                color: const Color(0xFF57636C),
+                                                color: Color(0xFF57636C),
                                                 size: 24.0,
                                               ),
                                             ),
@@ -292,7 +299,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF101213),
+                                                color: Color(0xFF101213),
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
@@ -304,11 +311,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 20.0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
-                                          Function() navigate = () {};
                                           _model.apiResultd39 =
                                               await LoginAPICall.call(
                                             tel: _model
@@ -325,26 +331,17 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   ''),
                                               r'''$.user.id''',
                                             );
-                                            safeSetState(() {});
-                                            GoRouter.of(context)
-                                                .prepareAuthEvent();
-                                            await authManager.signIn(
-                                              authenticationToken:
-                                                  LoginAPICall.token(
-                                                (_model.apiResultd39
-                                                        ?.jsonBody ??
-                                                    ''),
-                                              ),
-                                              authUid: getJsonField(
-                                                (_model.apiResultd39
-                                                        ?.jsonBody ??
-                                                    ''),
-                                                r'''$.user.id''',
-                                              ).toString(),
+                                            FFAppState().tokenLogin =
+                                                LoginAPICall.token(
+                                              (_model.apiResultd39?.jsonBody ??
+                                                  ''),
+                                            )!;
+                                            FFAppState().user = getJsonField(
+                                              (_model.apiResultd39?.jsonBody ??
+                                                  ''),
+                                              r'''$.user''',
                                             );
-                                            navigate = () =>
-                                                context.goNamedAuth(
-                                                    'Home', context.mounted);
+                                            safeSetState(() {});
                                           } else {
                                             ScaffoldMessenger.of(context)
                                                 .showSnackBar(
@@ -362,7 +359,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                         .primaryText,
                                                   ),
                                                 ),
-                                                duration: const Duration(
+                                                duration: Duration(
                                                     milliseconds: 4000),
                                                 backgroundColor:
                                                     FlutterFlowTheme.of(context)
@@ -371,7 +368,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             );
                                           }
 
-                                          navigate();
+                                          GoRouter.of(context)
+                                              .prepareAuthEvent();
+                                          await authManager.signIn(
+                                            authenticationToken:
+                                                FFAppState().tokenLogin,
+                                            authUid:
+                                                FFAppState().userId.toString(),
+                                          );
+
+                                          context.goNamedAuth(
+                                              PageEntreeCopyWidget.routeName,
+                                              context.mounted);
 
                                           safeSetState(() {});
                                         },
@@ -380,12 +388,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           width: 370.0,
                                           height: 44.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: const Color(0xFFBF0E00),
+                                          color: Color(0xFFBF0E00),
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
@@ -398,7 +406,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                     fontWeight: FontWeight.w500,
                                                   ),
                                           elevation: 3.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -408,7 +416,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 30.0, 0.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -416,7 +424,8 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         hoverColor: Colors.transparent,
                                         highlightColor: Colors.transparent,
                                         onTap: () async {
-                                          context.pushNamed('ForgotPassword');
+                                          context.pushNamed(
+                                              ForgotPasswordWidget.routeName);
                                         },
                                         child: Text(
                                           'Mot de passe oublié ?',
@@ -438,19 +447,19 @@ class _LoginWidgetState extends State<LoginWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 100.0, 0.0, 0.0),
                               child: Container(
                                 width: double.infinity,
                                 height: 100.0,
                                 decoration: BoxDecoration(
-                                  color: const Color(0x7C14181B),
+                                  color: Color(0x7C14181B),
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         10.0, 0.0, 10.0, 0.0),
                                     child: Container(
                                       width: double.infinity,
@@ -460,20 +469,20 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             BorderRadius.circular(12.0),
                                         shape: BoxShape.rectangle,
                                       ),
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           // You will have to add an action on this rich text to go to your login page.
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 12.0, 0.0, 12.0),
                                             child: RichText(
                                               textScaler: MediaQuery.of(context)
                                                   .textScaler,
                                               text: TextSpan(
-                                                children: const [
+                                                children: [
                                                   TextSpan(
                                                     text:
                                                         'Vous n\'avez pas de compte ?',
@@ -497,14 +506,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
                                                 context.pushNamed(
-                                                  'signUp',
+                                                  SignUpWidget.routeName,
                                                   extra: <String, dynamic>{
                                                     kTransitionInfoKey:
-                                                        const TransitionInfo(
+                                                        TransitionInfo(
                                                       hasTransition: true,
                                                       transitionType:
                                                           PageTransitionType
@@ -519,11 +528,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               options: FFButtonOptions(
                                                 width: double.infinity,
                                                 height: 40.0,
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 0.0),
                                                 iconPadding:
-                                                    const EdgeInsetsDirectional
+                                                    EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
                                                 color:

@@ -8,6 +8,9 @@ export 'appropos_model2_model.dart';
 class ApproposModel2Widget extends StatefulWidget {
   const ApproposModel2Widget({super.key});
 
+  static String routeName = 'ApproposModel2';
+  static String routePath = '/approposModel2';
+
   @override
   State<ApproposModel2Widget> createState() => _ApproposModel2WidgetState();
 }
@@ -47,9 +50,9 @@ class _ApproposModel2WidgetState extends State<ApproposModel2Widget> {
             borderRadius: 8.0,
             buttonSize: 40.0,
             icon: Icon(
-              Icons.arrow_back_rounded,
+              Icons.arrow_circle_left,
               color: FlutterFlowTheme.of(context).primaryText,
-              size: 24.0,
+              size: 35.0,
             ),
             onPressed: () {
               print('IconButton pressed ...');
@@ -58,37 +61,30 @@ class _ApproposModel2WidgetState extends State<ApproposModel2Widget> {
           title: Text(
             'À propos',
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter Tight',
+                  fontFamily: 'Roboto',
+                  fontSize: 19.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
-          child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Material(
-                  color: Colors.transparent,
-                  elevation: 2.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16.0),
-                  ),
-                  child: Container(
-                    width: MediaQuery.sizeOf(context).width * 1.0,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                      borderRadius: BorderRadius.circular(16.0),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+          child: Container(
+            decoration: BoxDecoration(),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+              child: SingleChildScrollView(
+                primary: false,
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 24.0, 24.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -98,7 +94,7 @@ class _ApproposModel2WidgetState extends State<ApproposModel2Widget> {
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
-                                  fontFamily: 'Inter Tight',
+                                  fontFamily: 'Roboto',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
@@ -107,20 +103,70 @@ class _ApproposModel2WidgetState extends State<ApproposModel2Widget> {
                           ),
                           Text(
                             'Quisine est née d\'une passion pour la cuisine congolaise et d\'un désir de rendre la commande de repas plus simple et accessible. Fondée en 2023, notre plateforme connecte les amateurs de cuisine authentique avec les meilleurs restaurants locaux.\n\nNotre mission est de préserver et promouvoir la riche tradition culinaire congolaise tout en offrant une expérience de commande moderne et pratique. Nous travaillons en étroite collaboration avec des restaurants soigneusement sélectionnés pour garantir la qualité et l\'authenticité de chaque plat.\n\nChaque jour, nous nous efforçons d\'améliorer notre service pour vous offrir une expérience gastronomique exceptionnelle, directement chez vous.',
+                            textAlign: TextAlign.justify,
                             style:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'Open Sans',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
                                       letterSpacing: 0.0,
                                     ),
                           ),
-                        ].divide(const SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
-                  ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(
+                          24.0, 24.0, 24.0, 24.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Text(
+                            'Ce que Nous Proposons',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineSmall
+                                .override(
+                                  fontFamily: 'Roboto',
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                          ),
+                          RichText(
+                            textScaler: MediaQuery.of(context).textScaler,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text:
+                                      'Chez Quisine, nous vous proposons une vaste gamme de produits alimentaires bio, de fast food, d\'ustensiles de cuisine et de tout ce dont vous avez besoin pour créer des repas délicieux chez vous. Nous sommes fiers de vous les offrir . ',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .override(
+                                        fontFamily: 'Inter',
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        letterSpacing: 0.0,
+                                      ),
+                                )
+                              ],
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'Open Sans',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    letterSpacing: 0.0,
+                                  ),
+                            ),
+                            textAlign: TextAlign.justify,
+                          ),
+                        ].divide(SizedBox(height: 16.0)),
+                      ),
+                    ),
+                  ].divide(SizedBox(height: 24.0)),
                 ),
-              ].divide(const SizedBox(height: 24.0)),
+              ),
             ),
           ),
         ),

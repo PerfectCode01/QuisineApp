@@ -1,8 +1,10 @@
+import '';
 import '/components/pas_de_produit_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import '/index.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,6 +13,9 @@ export 'search_p_model.dart';
 
 class SearchPWidget extends StatefulWidget {
   const SearchPWidget({super.key});
+
+  static String routeName = 'searchP';
+  static String routePath = '/searchP';
 
   @override
   State<SearchPWidget> createState() => _SearchPWidgetState();
@@ -73,7 +78,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -84,13 +89,13 @@ class _SearchPWidgetState extends State<SearchPWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 0.0),
                 child: TextFormField(
                   controller: _model.textController,
                   focusNode: _model.textFieldFocusNode,
                   onChanged: (_) => EasyDebounce.debounce(
                     '_model.textController',
-                    const Duration(milliseconds: 2000),
+                    Duration(milliseconds: 2000),
                     () async {
                       _model.searchResult = functions
                           .searchProduct(_model.textController.text,
@@ -159,7 +164,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                     child: Text(
                       'Resultat de recherche',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -170,7 +175,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(4.0, 12.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(4.0, 12.0, 16.0, 0.0),
                     child: Text(
                       '24',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -183,12 +188,12 @@ class _SearchPWidgetState extends State<SearchPWidget> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 0.0),
                   child: Builder(
                     builder: (context) {
                       final prodSearch = _model.searchResult.toList();
                       if (prodSearch.isEmpty) {
-                        return const PasDeProduitWidget();
+                        return PasDeProduitWidget();
                       }
 
                       return ListView.builder(
@@ -198,7 +203,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                         itemBuilder: (context, prodSearchIndex) {
                           final prodSearchItem = prodSearch[prodSearchIndex];
                           return Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 12.0, 12.0, 12.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -207,7 +212,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                  'DetailProduit',
+                                  DetailProduitWidget.routeName,
                                   queryParameters: {
                                     'produitId': serializeParam(
                                       getJsonField(
@@ -244,6 +249,10 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                                       ),
                                       ParamType.double,
                                     ),
+                                    'prod': serializeParam(
+                                      prodSearchItem,
+                                      ParamType.JSON,
+                                    ),
                                   }.withoutNulls,
                                 );
                               },
@@ -261,7 +270,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
+                                  padding: EdgeInsets.all(12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -361,7 +370,7 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                                                                       0.0,
                                                                 ),
                                                       ),
-                                                      const TextSpan(
+                                                      TextSpan(
                                                         text: ' FC',
                                                         style: TextStyle(),
                                                       )
@@ -381,10 +390,10 @@ class _SearchPWidgetState extends State<SearchPWidget> {
                                                 ),
                                               ],
                                             ),
-                                          ].divide(const SizedBox(height: 8.0)),
+                                          ].divide(SizedBox(height: 8.0)),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 16.0)),
+                                    ].divide(SizedBox(width: 16.0)),
                                   ),
                                 ),
                               ),

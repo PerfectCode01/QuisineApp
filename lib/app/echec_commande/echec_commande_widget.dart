@@ -10,6 +10,9 @@ export 'echec_commande_model.dart';
 class EchecCommandeWidget extends StatefulWidget {
   const EchecCommandeWidget({super.key});
 
+  static String routeName = 'echecCommande';
+  static String routePath = '/echecCommande';
+
   @override
   State<EchecCommandeWidget> createState() => _EchecCommandeWidgetState();
 }
@@ -73,15 +76,15 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
             children: [
               Expanded(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 12.0),
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             blurRadius: 3.0,
                             color: Color(0x33000000),
@@ -98,7 +101,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                         ),
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 16.0, 16.0, 16.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -106,7 +109,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              alignment: AlignmentDirectional(0.0, -1.0),
                               child: Container(
                                 width: 120.0,
                                 height: 120.0,
@@ -119,7 +122,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       8.0, 8.0, 8.0, 8.0),
                                   child: Container(
                                     width: 140.0,
@@ -143,7 +146,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              alignment: AlignmentDirectional(0.0, -1.0),
                               child: Text(
                                 'Échec!',
                                 style: FlutterFlowTheme.of(context)
@@ -156,7 +159,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              alignment: AlignmentDirectional(0.0, -1.0),
                               child: Text(
                                 'Votre commande n\'a pas pu être traitée',
                                 style: FlutterFlowTheme.of(context)
@@ -170,7 +173,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              alignment: AlignmentDirectional(0.0, -1.0),
                               child: Text(
                                 'Veuillez vérifier votre connexion internet et réessayer.',
                                 style: FlutterFlowTheme.of(context)
@@ -196,9 +199,9 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                               options: FFButtonOptions(
                                 width: double.infinity,
                                 height: 48.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -209,7 +212,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -224,9 +227,9 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                               options: FFButtonOptions(
                                 width: double.infinity,
                                 height: 48.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -246,7 +249,7 @@ class _EchecCommandeWidgetState extends State<EchecCommandeWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 24.0)),
+                          ].divide(SizedBox(height: 24.0)),
                         ),
                       ),
                     ),
